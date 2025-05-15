@@ -132,26 +132,5 @@
 
 <!-- ——— 3-D Skeleton Tech Stack ——— -->
 <h3 align="center" style="color:#0084ff;margin-top:2em;">3-D Skeleton Reconstruction · 技术栈总览</h3>
-<ul style="max-width:760px;margin:0 auto;font-size:14.3px;line-height:1.55;">
-  <!-- ❶ 捕捉层 -->
-  <li><b>多模态捕捉 (RGB-D / ToF / IMU)：</b>
-      <code>Intel RealSense D435</code> · <code>Azure Kinect</code> · <code>ZED 2i</code> ·
-      <code>iPhone LiDAR</code> · <code>BNO080 IMU</code></li>
-  <!-- ❷ 姿态估计 -->
-  <li><b>2-D 关键点检测：</b>
-      <code>MediaPipe Pose</code> · <code>ML Kit</code> · <code>MoveNet</code> · <code>OpenPose</code> ·
-      <code>AlphaPose</code> · <code>YOLO-v8 Pose</code></li>
-  <!-- ❸ 3-D Lift-up -->
-  <li><b>3-D Lift-up / 多视角融合：</b>
-      <code>VNect</code> · <code>Pose-Lifter</code> · <code>METRO</code> · <code>HybrIK</code> ·
-      <code>MMPose-3D</code> · <code>DeepLabCut-3D</code> (ICP / BA 对齐)</li>
-  <!-- ❹ 时空优化 -->
-  <li><b>时空/物理一致性优化：</b>
-      <code>Transformer-VAE</code> · <code>ST-GCN</code> · <code>Physics-Informed LSTM</code> ·
-      <code>EKF / UKF</code> 多传感器融合</li>
-  <!-- ❺ 推理加速 -->
-  <li><b>推理加速 &amp; 可解释：</b>
-      <code>TensorRT</code> · <code>ONNX-Runtime</code> · <code>Core ML</code> ·
-      <code>NNAPI</code> · <code>WebNN</code> + <code>Grad-CAM</code> / <code>SHAP</code></li>
-</ul>
+<div style="max-width:760px;margin:0 auto;font-size:14.3px;line-height:1.55;"> <ul> <li><b>多模态捕捉 (RGB-D / ToF / IMU)：</b> <code>Intel RealSense D435</code> · <code>Azure Kinect</code> · <code>ZED 2i</code> · <code>iPhone LiDAR</code> · <code>BNO080 IMU</code></li> <li><b>2-D 关键点检测：</b> <code>MediaPipe Pose</code> · <code>ML Kit</code> · <code>MoveNet</code> · <code>OpenPose</code> · <code>AlphaPose</code> · <code>YOLO-v8 Pose</code></li> <li><b>3-D Lift-up / 多视角融合：</b> <code>VNect</code> · <code>Pose-Lifter</code> · <code>METRO</code> · <code>HybrIK</code> · <code>MMPose-3D</code> · <code>DeepLabCut-3D</code> (配合 ICP / Bundle Adjustment 矫正)</li> <li><b>时空/物理一致性优化：</b> <code>Transformer-VAE</code> · <code>ST-GCN</code> · <code>Physics-Informed LSTM</code> · <code>EKF / UKF</code> 多传感器融合</li> <li><b>推理加速与可解释性：</b> <code>TensorRT</code> · <code>ONNX-Runtime</code> · <code>Core ML</code> · <code>NNAPI</code> · <code>WebNN</code> + <code>Grad-CAM</code> / <code>SHAP</code></li> </ul> </div> <p style="text-align:justify;font-size:14.3px;line-height:1.55;"> 本技术栈覆盖了从数据采集与预处理（2D / 3D 姿态检测、视角融合）到时空序列建模与可解释性评估的完整流程。通过引入物理约束与多模态融合策略，系统在实现高精度骨骼重建的同时，兼顾了实时性与可扩展性，为中风康复场景中的运动学分析提供坚实的技术支撑。 </p>
 
