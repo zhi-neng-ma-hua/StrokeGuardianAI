@@ -1,4 +1,4 @@
-!-- ---------- LANGUAGE SWITCH BADGE (centered) ---------- -->
+<!-- ---------- LANGUAGE SWITCH BADGE (centered) ---------- -->
 <p align="center">
   <a href="README.md">
     <img src="https://img.shields.io/badge/English-Docs-brightgreen?style=for-the-badge">
