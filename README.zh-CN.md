@@ -106,6 +106,8 @@
   本平台的首要目标在于支持精准的临床随访与早期风险预警：通过对运动学和生理学数据的实时监测与深度解析，系统可快速识别功能障碍趋势，并提供基于循证医学原则的干预方案。与传统康复流程相比，StrokeGuardian AI 显著缩短了临床评估时间，并在风险评估与个性化干预等关键节点展现更高灵活性与准确性。同时，其设计原则契合 AHA（American Heart Association）与 ESO（European Stroke Organisation）等权威指南，为中风康复的全流程管理提供了可靠且可扩展的技术与数据支持，进一步推动了在精确康复领域的临床与科研应用。
 </div>
 
+<br>
+
 <!-- ———  A B S T R A C T  ——— -->
 <h2 id="abstract" align="center" style="margin:2.2em 0 0.7em;color:#0084ff;">摘 要</h2>
 
@@ -120,6 +122,7 @@
   此外，系统内置的 <kbd>GPT-4 Turbo</kbd>（基于 RAG 与 Prompt Ensembling）可综合病历电子记录（EMR）、临床指南以及患者偏好，动态生成个性化训练处方、预测性风险评分及依从性摘要等自然语言输出；配合
   <kbd>LSTM-Survival</kbd> 和 <kbd>XGB-SHAP</kbd> 模型对跌倒及二次卒中的超限预警，本平台可在高时效性临床场景下提供可靠而精确的辅助决策，为中风康复全流程提供更为系统化的评估与干预支持。
 </div>
+
 <br>
 
 <!-- ———  Key Metrics  ——— -->
