@@ -69,6 +69,8 @@
   中风守护者 AI
 </h1>
 
+<div><strong>作者</strong>：曹学进</div>
+
 <!-- ——— 细分 tagline ——— -->
 <p align="center" style="font-size:14.5px;font-style:italic;line-height:1.6;margin:4px 0 12px;">
   ✨ AI 赋能 · 符合医院级安全与合规标准 · 实时精准的中风康复智能评估平台 ✨
