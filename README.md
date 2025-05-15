@@ -87,3 +87,33 @@
   Subsequently, the system employs a <kbd>Bayesian state-space</kbd> framework alongside <kbd>factor graphs</kbd> to interpret high-dimensional kinematic feature vectors, generating ICF (International Classification of Functioning, Disability and Health)-aligned biomarkers—such as gait symmetry, power spectral entropy, and synergy coupling indices—at intervals of <em>16 ms</em>. These metrics are encrypted via <kbd>gRPC-TLS</kbd> and mapped to <abbr title="HL7 Fast Healthcare Interoperability Resources">FHIR</abbr> resources, ensuring interoperability and clinical integration.<br><br>
   Furthermore, an embedded <kbd>GPT-4 Turbo</kbd> model (enhanced by RAG and Prompt Ensembling) synthesizes electronic medical records (EMR), clinical guidelines, and patient preferences to dynamically produce individualized training prescriptions, predictive risk scores, and adherence summaries in natural language. Complemented by <kbd>LSTM-Survival</kbd> and <kbd>XGB-SHAP</kbd> algorithms for fall and recurrent stroke threshold alerts, the platform delivers timely and reliable decision support in critical clinical workflows, advancing a more systematic approach to stroke rehabilitation assessment and intervention.
 </div>
+
+<br>
+
+<!-- ——— Key Metrics ——— -->
+<h2 id="key-metrics" align="center" style="margin:2em 0 0.7em;color:#0084ff;">Key Metrics</h2>
+
+<table align="center" style="margin:1.3em auto;font-size:14.5px;">
+  <tr>
+    <td align="center">👥 Multi-Center Prospective Cohort</td>
+    <td><b>N&nbsp;=&nbsp;312</b></td>
+    <td align="center">🔗 NIHSS Correlation</td>
+    <td><b>r&nbsp;=&nbsp;0.83</b></td>
+  </tr>
+  <tr>
+    <td align="center">⏱️ Reduction in Follow-up Time</td>
+    <td><b>-38% <i>(p&nbsp;&lt;&nbsp;0.001)</i></b></td>
+    <td align="center">⚙️ DevOps</td>
+    <td>Helm&nbsp;Chart • GitHub&nbsp;Actions • CNCF&nbsp;Compliance</td>
+  </tr>
+</table>
+
+<p style="text-align:justify; margin-top:1em; font-size:14.5px; line-height:1.6;">
+  In a multi-center prospective cohort (<b>N=312</b>), the system demonstrated a strong correlation (<b>r=0.83</b>) with the
+  NIHSS (<em>National Institutes of Health Stroke Scale</em>), indicating high accuracy and consistency in quantifying clinical
+  functional deficits. <br><br>
+  Additionally, follow-up times were reduced by <b>38%</b> (<i>p&lt;0.001</i>), underscoring StrokeGuardian AI’s efficacy in
+  improving rehabilitation efficiency and mitigating clinical workload. For streamlined deployment and maintenance, the platform
+  utilizes automated DevOps tools such as <b>Helm Chart</b> and <b>GitHub Actions</b>, along with a <b>CNCF</b>-compliant
+  containerized microservices architecture—ensuring scalability, adaptability, and compliance for broader clinical implementation.
+</p>
