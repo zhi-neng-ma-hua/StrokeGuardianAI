@@ -7,7 +7,7 @@
 <!-- ======= 语言切换（右上角） ======== -->
 <p align="right" style="margin-top:0;">
   <a href="README.md"
-     title="切换到英文"
+     title="Switch to Simplified Chinese"
      style="
        display:inline-flex;
        align-items:center;
@@ -21,7 +21,7 @@
        box-shadow:0 1px 2px rgba(0,0,0,.15);
      ">
     <img src="docs/assets/lang-zh.png" alt="🌐" width="32" height="32">
-    English
+    简体中文
   </a>
 </p>
 
