@@ -85,7 +85,7 @@
 <div style="
   max-width:760px;
   margin-top:1em;
-  line-height:10;
+  line-height:1.8;
   font:600 15px/1.56 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 ">
   <strong>StrokeGuardian AI</strong><br><br>
