@@ -216,6 +216,54 @@
 <br>
 
 <!-- ——— 3-D Skeleton Tech Stack ——— -->
-<h3 align="center" style="color:#0084ff;margin-top:2em;">3-D Skeleton Reconstruction · 技术栈总览</h3>
-<div style="max-width:760px;margin:0 auto;font-size:14.3px;line-height:1.55;"> <ul> <li><b>多模态捕捉 (RGB-D / ToF / IMU)：</b> <code>Intel RealSense D435</code> · <code>Azure Kinect</code> · <code>ZED 2i</code> · <code>iPhone LiDAR</code> · <code>BNO080 IMU</code></li> <li><b>2-D 关键点检测：</b> <code>MediaPipe Pose</code> · <code>ML Kit</code> · <code>MoveNet</code> · <code>OpenPose</code> · <code>AlphaPose</code> · <code>YOLO-v8 Pose</code></li> <li><b>3-D Lift-up / 多视角融合：</b> <code>VNect</code> · <code>Pose-Lifter</code> · <code>METRO</code> · <code>HybrIK</code> · <code>MMPose-3D</code> · <code>DeepLabCut-3D</code> (配合 ICP / Bundle Adjustment 矫正)</li> <li><b>时空/物理一致性优化：</b> <code>Transformer-VAE</code> · <code>ST-GCN</code> · <code>Physics-Informed LSTM</code> · <code>EKF / UKF</code> 多传感器融合</li> <li><b>推理加速与可解释性：</b> <code>TensorRT</code> · <code>ONNX-Runtime</code> · <code>Core ML</code> · <code>NNAPI</code> · <code>WebNN</code> + <code>Grad-CAM</code> / <code>SHAP</code></li> </ul> </div> <p style="text-align:justify;font-size:14.3px;line-height:1.55;"> 本技术栈覆盖了从数据采集与预处理（2D / 3D 姿态检测、视角融合）到时空序列建模与可解释性评估的完整流程。通过引入物理约束与多模态融合策略，系统在实现高精度骨骼重建的同时，兼顾了实时性与可扩展性，为中风康复场景中的运动学分析提供坚实的技术支撑。 </p>
+<h3 id="3D-skeleton-tech-stack" align="center" style="color:#0084ff; margin-top:2em;">3-D 骨骼重建 · 技术栈总览</h3>
+<div style="max-width:760px; margin:0 auto; font-size:14.3px; line-height:1.55;">
+  <ul>
+    <li>
+      <b>多模态捕捉 (RGB-D / ToF / IMU)：</b>
+      <code>Intel RealSense D435</code> · <code>Azure Kinect</code> · <code>ZED 2i</code> · 
+      <code>iPhone LiDAR</code> · <code>BNO080 IMU</code><br>
+      通过融合深度摄像头与惯性传感器，实现多通道、多角度的高分辨率数据采集，
+      为骨骼重建与运动分析提供多样化视角与丰富信息源。
+    </li>
+    <li>
+      <b>2-D 关键点检测：</b>
+      <code>MediaPipe Pose</code> · <code>ML Kit</code> · <code>MoveNet</code> · <code>OpenPose</code> · 
+      <code>AlphaPose</code> · <code>YOLO-v8 Pose</code><br>
+      在图像或视频帧中识别关节关键点，
+      提供准确的二维骨骼结构初始化与姿态估计，
+      为后续三维重建奠定基础。
+    </li>
+    <li>
+      <b>3-D Lift-up / 多视角融合：</b>
+      <code>VNect</code> · <code>Pose-Lifter</code> · <code>METRO</code> · <code>HybrIK</code> · 
+      <code>MMPose-3D</code> · <code>DeepLabCut-3D</code>
+      （搭配 <b>ICP / Bundle Adjustment</b> 矫正）<br>
+      利用多视角外参校准与几何对齐技术（如 ICP、BA），
+      将二维关键点映射至三维空间并进行全局优化，
+      提高骨骼追踪的精度与稳定性。
+    </li>
+    <li>
+      <b>时空/物理一致性优化：</b>
+      <code>Transformer-VAE</code> · <code>ST-GCN</code> · <code>Physics-Informed LSTM</code> · 
+      <code>EKF / UKF</code> 多传感器融合<br>
+      将空间几何约束与时间序列信息相结合，
+      引入卡尔曼滤波（EKF/UKF）等多源融合方法，
+      保障骨骼运动的物理可行性与时空一致性。
+    </li>
+    <li>
+      <b>推理加速与可解释性：</b>
+      <code>TensorRT</code> · <code>ONNX-Runtime</code> · <code>Core ML</code> · 
+      <code>NNAPI</code> · <code>WebNN</code> + <code>Grad-CAM</code> / <code>SHAP</code><br>
+      借助硬件加速与多框架部署实现高效推理，
+      结合可解释性可视化（Grad-CAM、SHAP）方法，
+      帮助临床与科研人员洞察模型决策机制。
+    </li>
+  </ul>
+</div>
 
+<p style="text-align:justify; font-size:14.3px; line-height:1.55; margin-top:1em;">
+  本技术栈以多模态捕捉和多视角融合为核心，实现高精度的三维骨骼建模和实时姿态跟踪。
+  通过对运动学特征和物理一致性的联合优化，系统能够在多种临床应用场景（如康复训练、术后随访、远程监护等）中提供精细化和可解释的运动分析结果，
+  进一步拓展了中风康复研究与实践的深度与广度。
+</p>
