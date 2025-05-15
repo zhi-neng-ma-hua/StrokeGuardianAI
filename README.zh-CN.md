@@ -4,7 +4,7 @@
 ══════════════════════════════════════════════════════
 -->
 
-<!-- ——— 语言切换（右上角） ——— -->
+<!-- ======= 语言切换（右上角） ======== -->
 <p align="right" style="margin-top:0;">
   <a href="README.md"
      title="切换到英文"
@@ -25,12 +25,12 @@
   </a>
 </p>
 
-<!-- ——— 项目 Logo ——— -->
+<!-- ======= 项目 Logo ======= -->
 <p align="center">
   <img src="docs/logo.png" width="96" height="96" alt="StrokeGuardian AI Logo"/>
 </p>
 
-<!-- ——— 徽章区域（自适应换行） ——— -->
+<!-- ======= 徽章区域（自适应换行） ======= -->
 <div align="center" style="display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin:8px 0;">
   <!-- 最新发行版 -->
   <a href="https://github.com/YourOrg/StrokeGuardianAI/releases" title="Latest stable release">
@@ -57,7 +57,7 @@
   </a>
 </div>
 
-<!-- ——— 主标题（渐变描边） ——— -->
+<!-- ======= 主标题（渐变描边） ======= -->
 <h1 align="center" style="
   margin:0.4em 0 0;
   font-size:2.4em;
@@ -69,7 +69,7 @@
   中风守护者 AI
 </h1>
 
-<!-- ——— 细分 tagline ——— -->
+<!-- ======= 细分 tagline ======= -->
 <p align="center" style="font-size:14.5px;font-style:italic;line-height:1.6;margin:4px 0 12px;">
   ✨ AI 赋能 · 符合医院级安全与合规标准 · 实时精准的中风康复智能评估平台 ✨
   
@@ -95,10 +95,10 @@
 </p>
 
 
-<!-- ——— 半透明分割线 ——— -->
+<!-- ======= 半透明分割线 ======= -->
 <hr style="width:82%;max-width:780px;border:0;border-top:1px solid rgba(0,0,0,.06);margin:12px auto 24px;">
 
-<!-- ——— 简介 ——— -->
+<!-- ======= 简介 ======= -->
 <div style="
   max-width:760px;
   margin-top:1em;
@@ -107,27 +107,17 @@
 ">
   <strong>StrokeGuardian AI</strong><br><br>
 
-  一款面向医疗机构的中风康复智能评估平台，通过端-云协同的深度学习架构，将患者的日常运动行为实时解析为符合国际标准的可量化康复指标；平台输出可追溯的多维数据报告，帮助临床团队精准制定个体化康复方案、优化随访流程，并为科研机构提供高可信度的全流程数据闭环。<br>
+  一款面向医疗机构的中风康复智能评估平台，通过端—云协同的深度学习架构，将患者的日常运动行为实时解析为符合国际标准的可量化康复指标；平台输出可追溯的多维数据报告，帮助临床团队精准制定个性化康复方案、优化随访流程，并为科研机构提供高可信度的全流程数据闭环。<br><br>
 
-  作为面向中风康复评估与风险管理的一体化
-  <kbd>端—云—边</kbd>
-  平台，StrokeGuardian AI 通过多模态数据采集（整合
-  <kbd>RGB-D 摄像机</kbd>
-  与
-  <kbd>IMU</kbd>）实现对患者自然运动特征的高精度捕捉；同时，结合前沿
-  <kbd>Transformer-VAE</kbd>
-  与
-  <kbd>检索增强型大语言模型（Retrieval-Augmented LLM）</kbd>
-  等深度学习方法，生成符合
-  <abbr title="International Classification of Functioning, Disability and Health, WHO 2001"><kbd>ICF</kbd></abbr>
-  标准的多维康复指标以及个性化干预建议。该模式不仅遵循 WHO 所倡导的全球统一健康分类框架，也契合临床实践对远程化与实时性的高需求。<br><br>
+  在全球范围内，脑卒中（中风）仍是导致高致残率和生活质量显著下降的主要疾病之一，且其康复过程常面临诊疗资源不足、患者依从性不佳等多重挑战。基于深度学习和多传感器融合技术的发展，大量指南（如世界卫生组织 WHO 与美国心脏协会 AHA）均呼吁建立数字化、连续化、可扩展的中风康复评估模式，以便更早发现运动功能障碍并及时干预。<br><br>
 
-  相较于传统依赖昂贵实验室设备或人工观察的中风康复评估方式，本平台在实时性、可扩展性和多场景适配方面具备显著优势。通过边缘端数据预处理和多视角姿态融合，StrokeGuardian AI 能够在遮挡、转身等复杂动作场景下依然保持对骨骼重建的精准度（ICC ≥ 0.94），并在端到端推理延迟低于 50 ms 的基础上，实现高频率（每 16 ms）更新的临床关键指标。进一步通过 gRPC-TLS 安全传输，将指标与患者信息映射为 FHIR 资源，为科研及跨团队协作提供可靠的数据互操作能力。<br><br>
+  有鉴于此，本平台整合了 <kbd>RGB-D 摄像机</kbd> 与 <kbd>IMU</kbd> 数据源，通过 <kbd>Transformer-VAE</kbd> 等核心算法，实现高精度骨骼重建（ICC≥0.94）并将端到端推理延迟控制在 50 ms 以内。其设计思路契合 HL7 FHIR 数据互操作标准和 WHO ICF（国际功能、残疾和健康分类）框架，保证在医院级环境中实现端—云—边的高效率部署与实时指标输出。同时，经容器化与 DevOps（CNCF 体系）加持，平台支持自动化版本迭代及跨区域多中心应用。<br><br>
 
-  在应用层面，嵌入式 GPT-4 Turbo（通过检索增强与 Prompt Ensembling）可根据电子病历（EMR）、相关指南以及患者特征生成循证级康复策略，搭配 LSTM-Survival 与 XGB-SHAP 实现对跌倒及二次卒中的风险预警。此多模块融合大幅度简化了临床工作流，并在 DevOps 层面借助 CNCF 标准容器化与 GitHub Actions 等工具，达成快速部署与版本迭代，兼顾安全与审计。结合 AHA（American Heart Association）与 ESO（European Stroke Organisation）等最新指南，本平台为中风康复的全流程管理（包括评估、干预、随访）提供高可用、可解释且可规模化的技术支持。<br><br>
+  不同于传统基于固定步态分析仪或单点人工观察的流程，该平台结合多视角姿态估计与检索增强型大语言模型（Retrieval-Augmented LLM）策略，贯穿从运动学监测到个性化康复干预的全周期，为中风康复提供动态、循证且具可解释性的科学支持。通过 LSTM-Survival 与 XGB-SHAP 风险模型，平台亦可就跌倒及二次卒中进行预警推送，并对临床决策提供量化依据。<br><br>
 
-  综合而言，StrokeGuardian AI 在医院级安全合规基础上，通过多视角 3D 姿态分析、可解释深度学习与自动化 DevOps，达成了从个体化康复方案制定到早期风险预警的闭环。其在多中心前瞻研究中展现出的高精确度（NIHSS 相关系数 0.83）和效率提升（随访周期缩短 38%），不仅验证了深度学习赋能下的中风康复前景，也为未来在大规模远程康复和智慧医疗领域的落地应用奠定了坚实的循证基础。
-</div>
+  此外，在多中心前瞻性研究（N=312）中，StrokeGuardian AI 与 NIHSS（<em>National Institutes of Health Stroke Scale</em>）评分间的相关系数达 0.83，说明其临床一致性与精确度已较为成熟；且随访效率提升 38%（p&lt;0.001）则进一步展示了其在医院级场景和家庭延伸监测中的高可行性。透过这些多维度优势，平台有助于加速构建跨学科、跨场景的智慧康复网络，为脑卒中患者提供更高质量、更广覆盖的长期康复支持，也为医学研究与公共卫生决策开辟新的数据与技术通道。
+
+  </div>
 
 <br>
 
