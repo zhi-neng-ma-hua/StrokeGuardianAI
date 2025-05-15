@@ -74,46 +74,45 @@
 </p>
 
 <!-- ——— Elevator Pitch ——— -->
-<p align="center" style="max-width:720px">
-  一款面向医疗机构的中风康复智能评估平台，通过端-云协同的深度学习架构，
-  将患者的日常运动行为实时解析为符合国际标准的数字化康复指标，
-  并输出可追溯的多维报告，助力精准随访与科研闭环。
+<p align="center" style="max-width:740px; font-size:15px; line-height:1.56; margin-top:0.8em;">
+  <strong>StrokeGuardian AI</strong> 是一款 <kbd>端-云协同</kbd> 的中风康复智能评估平台，
+  能够将患者在自然场景中的日常运动实时转化为<strong>国际标准</strong>的数字康复指标，
+  并以 <kbd>可追溯多维报告</kbd> 架起临床精准随访与科研数据闭环的桥梁。
 </p>
 
-<!-- ——— A B S T R A C T ——— --> 
-<h2 id="摘要">摘要</h2>
+<!-- ——— A B S T R A C T ——— -->
+<h2 id="摘要" style="margin:2.2em 0 0.6em; text-align:center;">摘 要</h2>
 
-<p>
-  <strong>StrokeGuardian AI</strong> 是一款面向医疗机构的端—云协同中风康复智能评估平台，
-  能够将普通摄像头采集的自然场景视频实时转化为符合法规要求的数字康复生物标志物。
+<p style="text-align:justify;">
+  <strong>StrokeGuardian AI</strong> 采用单目&nbsp;RGB-D 视觉链路在 <em>边缘端</em>
+  重建真实尺度的 3-D 骨骼序列，
+  借助 <kbd>Spatio-Temporal Transformer</kbd>（12 万小时预训练 &amp; Vicon 微调）
+  实现关节角度估计 <em>ICC ≥ 0.94</em>。
+  时序运动学特征随后被嵌入 <kbd>贝叶斯状态空间模型</kbd>，
+  连续输出与 <abbr title="International Classification of Functioning, Disability and Health">ICF</abbr>
+  对齐的康复生物标志物（步态对称性、关节耦合、代偿协同指数等），
+  刷新率 60&nbsp;Hz、端到端延迟 &lt; 50 ms。
 </p>
 
-<p>
-  平台在端侧采用单目 RGB-D 视觉链路重建真实尺度的三维骨骼序列；
-  其时空 Transformer 主干网络经过
-  12&nbsp;万小时人体运动数据预训练，并结合 Vicon 金标准微调，
-  在关节角度估计上实现 <em>ICC ≥ 0.94</em>。
-  随后，系统将时序运动学数据嵌入贝叶斯状态空间模型，
-  连续输出与
-  <abbr title="国际功能、残疾和健康分类">ICF</abbr>
-  体系对齐的康复指标（步态对称性、关节耦合度、代偿协同指数等），
-  刷新率 60 Hz，端到端延迟 &lt; 50 ms。
+<p style="text-align:justify;">
+  指标通过 <kbd>gRPC-TLS</kbd> 传输并封装为
+  <abbr title="HL7 Fast Healthcare Interoperability Resources">HL7 FHIR</abbr> 资源，
+  在临床仪表盘实时可视化；若患者恢复轨迹的 95 % 置信区间
+  偏离神经可塑性参考曲线，<em>纵向预测引擎</em> 将推送个性化干预建议。
 </p>
 
-<p>
-  所有指标经 gRPC 加密后映射为
-  <abbr title="Health Level 7 – Fast Healthcare Interoperability Resources"
-        >HL7 FHIR</abbr> 资源，
-  并在临床可视化面板中展示；当患者康复轨迹的 95 % 置信区间偏离
-  神经可塑性参考曲线时，纵向预测引擎会自动推送个性化干预建议。
-</p>
+<!-- ——— 关键指标 ——— -->
+<div align="center" style="margin:1.2em 0;">
+  <table>
+    <tr><td align="center">👥  四中心前瞻队列</td><td><strong>N&nbsp;= 312</strong></td></tr>
+    <tr><td align="center">🔗  与 NIHSS 相关</td><td><strong>r&nbsp;= 0.83</strong></td></tr>
+    <tr><td align="center">⏱️  随访时间节省</td><td><strong>-38 % <em>(p &lt; 0.001)</em></strong></td></tr>
+    <tr><td align="center">⚙️  部署形态</td><td>Helm Chart + GitHub&nbsp;Actions CI • CNCF 合规</td></tr>
+  </table>
+</div>
 
-<p>
-  在四中心前瞻性队列（<em>N</em> = 312）中，
-  平台与 NIHSS 评分的 Pearson 相关系数达到 <em>0.83</em>，
-  随访耗时减少 38 %（<em>p</em> &lt; 0.001）。
-  全部微服务以 Helm Chart 形式交付，并通过 GitHub Actions CI 流水线，
-  符合 CNCF 容器化最佳实践。
-  StrokeGuardian AI 将床旁观察与数据驱动的神经康复研究高效衔接，
-  打通了精确康复落地的最后一公里。
+<p style="text-align:justify;">
+  凭借模块化 <kbd>微服务</kbd> 架构和 <kbd>容器化交付</kbd>，StrokeGuardian AI
+  打通了床旁观察与数据驱动神经康复研究之间的最后一公里，
+  为 <em>精确康复 4.0</em> 奠定了可大规模复制的工程范式。
 </p>
