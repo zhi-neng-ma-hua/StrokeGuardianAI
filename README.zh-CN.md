@@ -71,14 +71,8 @@
 
 <!-- ——— 细分 tagline ——— -->
 <p align="center" style="font-size:14.5px;font-style:italic;line-height:1.6;margin:4px 0 12px;">
-  ✨ AI 赋能 · 医院级安全合规 · 实时精准的中风康复智能评估平台 ✨<br>
-  <span style="font-weight:normal;">
-    （多维度数据融合 × 循证医学，为临床与科研提供可扩展、可验证的康复评估与干预支持）
-  </span>
-</p>
-
-<p align="center" style="font-size:14.5px;font-style:italic;line-height:1.6;margin:4px 0 12px;">
-  ✨ AI 赋能 · 符合医院级安全与合规标准 · 实时精准的中风康复智能评估平台 ✨<br>
+  ✨ AI 赋能 · 符合医院级安全与合规标准 · 实时精准的中风康复智能评估平台 ✨
+  <br>
   <span style="font-weight:normal;">
     （融合多维度数据采集与循证医学策略，全面对接 WHO ICF 框架，为临床与科研提供
     <em>可拓展、可验证、可解释</em>的中风康复评估与干预范式）
