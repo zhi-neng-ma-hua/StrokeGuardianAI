@@ -107,9 +107,20 @@
 </div>
 
 <!-- ———  A B S T R A C T  ——— -->
-<h2 id="摘要" style="margin:2.2em 0 0.7em;color:#0084ff;">摘 要</h2>
+<h2 id="摘要" align="center" style="margin:2.2em 0 0.7em;color:#0084ff;">摘 要</h2>
 
-<div style="text-align:justify;font-size:14.6px;line-height:1.58;"> <strong>StrokeGuardian AI</strong> 致力于利用<kbd>≤ 7 路多角度 RGB-D + 惯性测量单元</kbd>（IMU）构建高精度稠密视锥。在<em>边缘端</em>，本系统首先采用<kbd>单目-双目混合姿态估计</kbd>对多视角数据进行初步处理；随后，通过<kbd>Spatio-Temporal Transformer-VAE</kbd>结合<kbd>ICP（Iterative Closest Point）/Bundle Adjustment</kbd>技术，重建亚毫米级精度的三维骨骼序列，实现关节角度估计的可靠性（ICC ≥ 0.94）及端到端推理延迟（< 50 ms）的平衡。 <br><br> 基于所获取的高维运动学特征向量，本系统采用<kbd>贝叶斯状态空间</kbd>与<kbd>因子图</kbd>推断方法，每<em>16 ms</em>即可输出与 ICF 标准相对齐的康复生物学标志物（如步态对称性、功率谱熵、协同耦合指数等），并通过<kbd>gRPC-TLS</kbd>隧道将其安全映射为<abbr title="HL7 Fast Healthcare Interoperability Resources">FHIR</abbr>格式资源。 <br><br> 此外，嵌入式<kbd>GPT-4 Turbo</kbd>（基于 RAG 与 Prompt Ensembling）可综合病历电子记录（EMR）、临床指南与患者偏好，动态生成个性化训练处方、预测性风险评分以及遵从性摘要等自然语言输出；而<kbd>LSTM-Survival</kbd>与<kbd>XGB-SHAP</kbd>模型则用于跌倒及二次卒中的超限预警，使本系统能够在时间敏感的临床场景中提供精确、可靠的决策辅助。 </div>
+<!-- 中文版本 -->
+<div style="text-align:justify;font-size:14.6px;line-height:1.58; margin-bottom:2em;">
+  <strong>StrokeGuardian AI</strong> 聚焦于利用 <kbd>≤ 7 路多角度 RGB-D + 惯性测量单元</kbd>（IMU）在
+  <em>边缘端</em>（Edge-side）构建高精度稠密视锥。首先采用 <kbd>单目-双目混合姿态估计</kbd> 以对多视角数据进行初步融合，
+  继而借助 <kbd>Spatio-Temporal Transformer-VAE</kbd> 结合 <kbd>ICP（Iterative Closest Point）/Bundle Adjustment</kbd>
+  技术实现亚毫米级精度的三维骨骼重建；同时在关节角度估计（ICC ≥ 0.94）与端到端推理时延（&lt; 50 ms）之间获得优化平衡。<br><br>
+  在此基础上，系统对提取的高维运动学特征向量进行 <kbd>贝叶斯状态空间</kbd> + <kbd>因子图</kbd> 推断，每
+  <em>16 ms</em> 生成与 ICF（International Classification of Functioning, Disability and Health）标准相匹配的运动学生物标志物——包括步态对称、功率谱熵、协同耦合指数等，并通过
+  <kbd>gRPC-TLS</kbd> 加密通道映射为 <abbr title="HL7 Fast Healthcare Interoperability Resources">FHIR</abbr> 格式资源，以实现可互操作的数据交换与临床整合。<br><br>
+  此外，系统内置的 <kbd>GPT-4 Turbo</kbd>（基于 RAG 与 Prompt Ensembling）可综合病历电子记录（EMR）、临床指南以及患者偏好，动态生成个性化训练处方、预测性风险评分及依从性摘要等自然语言输出；配合
+  <kbd>LSTM-Survival</kbd> 和 <kbd>XGB-SHAP</kbd> 模型对跌倒及二次卒中的超限预警，本平台可在高时效性临床场景下提供可靠而精确的辅助决策，为中风康复全流程提供更为系统化的评估与干预支持。
+</div>
 
 <!-- ———  Key Metrics  ——— -->
 <table align="center" style="margin:1.3em auto;font-size:14.5px;"> <tr> <td align="center">👥&nbsp;多中心前瞻队列</td><td><b>N&nbsp;=&nbsp;312</b></td> <td align="center">🔗&nbsp;NIHSS&nbsp;相关系数</td><td><b>r&nbsp;=&nbsp;0.83</b></td> </tr> <tr> <td align="center">⏱️&nbsp;随访时间缩减</td><td><b>-38 % <i>(p&nbsp;&lt;&nbsp;0.001)</i></b></td> <td align="center">⚙️&nbsp;DevOps</td><td>Helm&nbsp;Chart • GitHub&nbsp;Actions • CNCF&nbsp;合规</td> </tr> </table> <p style="text-align:justify;margin-top:1em;font-size:14.5px;line-height:1.6;"> 通过在多中心的前瞻性研究队列中测试，本系统达成了与 NIHSS（<em>National Institutes of Health Stroke Scale</em>）评分较高的相关性（r = 0.83），并显著缩短了临床随访所需时间（-38%，p &lt; 0.001）。在 DevOps 体系中采用 Helm Chart、GitHub Actions，以及符合 CNCF 标准的容器化微服务部署模式，进一步提升了整体服务的可扩展性与可维护性。 </p>
