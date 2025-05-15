@@ -1,6 +1,6 @@
 <!--
 ══════════════════════════════════════════════════════
-   StrokeGuardian AI · README 首屏（单 Logo | 微美化版）
+   StrokeGuardian AI · README 首屏
 ══════════════════════════════════════════════════════
 -->
 
@@ -80,7 +80,7 @@
 <!-- ——— 半透明分割线 ——— -->
 <hr style="width:82%;max-width:780px;border:0;border-top:1px solid rgba(0,0,0,.06);margin:12px auto 24px;">
 
-<!-- ——— Elevator Pitch ——— -->
+<!-- ——— 简介 ——— -->
 <div style="
   max-width:760px;
   margin-top:1em;
