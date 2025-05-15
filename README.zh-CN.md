@@ -1,14 +1,13 @@
-<!-- 
-════════════════════════════════════════════════════════════
-  StrokeGuardian AI · README Hero (single-logo | fully-polished)
-═════════════════════════════════════════════════════════════════
+<!--
+══════════════════════════════════════════════════════
+   StrokeGuardian AI · README 首屏（单 Logo | 微美化版）
+══════════════════════════════════════════════════════
 -->
 
-<!-- ——— Language Switch (top-right) ——— -->
-<!-- ========= Language Switch ========= -->
+<!-- ——— 语言切换（右上角） ——— -->
 <p align="right" style="margin-top:0;">
   <a href="README.zh-CN.md"
-     title="Switch to Simplified Chinese"
+     title="切换到简体中文"
      style="
        display:inline-flex;
        align-items:center;
@@ -26,63 +25,60 @@
   </a>
 </p>
 
-<!-- ——— Logo ——— -->
+<!-- ——— 项目 Logo ——— -->
 <p align="center">
   <img src="docs/logo.png" width="96" height="96" alt="StrokeGuardian AI Logo"/>
 </p>
 
-<!-- ——— Badge Row ——— -->
-<p align="center">
-
-  <!-- Release -->
+<!-- ——— 徽章区域（自适应换行） ——— -->
+<div align="center" style="display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin:8px 0;">
+  <!-- 最新发行版 -->
   <a href="https://github.com/YourOrg/StrokeGuardianAI/releases" title="Latest stable release">
-    <img
-      alt="Latest Release"
-      src="https://img.shields.io/github/v/release/YourOrg/StrokeGuardianAI?label=Release&labelColor=0084ff&color=00c7ff&style=flat-square">
+    <img alt="Latest Release"
+         src="https://img.shields.io/github/v/release/YourOrg/StrokeGuardianAI?label=Release&labelColor=0084ff&color=00c7ff&style=flat-square">
   </a>
 
-  <!-- License -->
+  <!-- 许可证 -->
   <a href="https://github.com/YourOrg/StrokeGuardianAI/blob/main/LICENSE" title="MIT License">
-    <img
-      alt="License: MIT"
-      src="https://img.shields.io/github/license/YourOrg/StrokeGuardianAI?label=License&labelColor=0084ff&color=00c7ff&style=flat-square">
+    <img alt="License: MIT"
+         src="https://img.shields.io/github/license/YourOrg/StrokeGuardianAI?label=License&labelColor=0084ff&color=00c7ff&style=flat-square">
   </a>
 
-  <!-- CI -->
-  <a href="https://github.com/YourOrg/StrokeGuardianAI/actions/workflows/ci.yml" title="Continuous Integration status">
-    <img
-      alt="CI Status"
-      src="https://img.shields.io/github/actions/workflow/status/YourOrg/StrokeGuardianAI/ci.yml?branch=main&label=CI&labelColor=0084ff&color=00c7ff&style=flat-square">
+  <!-- 持续集成状态 -->
+  <a href="https://github.com/YourOrg/StrokeGuardianAI/actions/workflows/ci.yml" title="CI 状态">
+    <img alt="CI Status"
+         src="https://img.shields.io/github/actions/workflow/status/YourOrg/StrokeGuardianAI/ci.yml?branch=main&label=CI&labelColor=0084ff&color=00c7ff&style=flat-square">
   </a>
 
-  <!-- Maintenance -->
-  <a href="https://github.com/YourOrg/StrokeGuardianAI/graphs/commit-activity" title="Commit activity (past 12 months)">
-    <img
-      alt="Maintenance"
-      src="https://img.shields.io/badge/maintenance-yes-00c7ff?labelColor=0084ff&style=flat-square">
+  <!-- 维护活跃度 -->
+  <a href="https://github.com/YourOrg/StrokeGuardianAI/graphs/commit-activity" title="最近 12 个月提交活跃度">
+    <img alt="Maintenance"
+         src="https://img.shields.io/badge/maintenance-yes-00c7ff?labelColor=0084ff&style=flat-square">
   </a>
+</div>
 
-</p>
-
-<!-- ——— Title ——— -->
-<h1 align="center" style="margin:0.4em 0 0.2em 0;">
-  StrokeGuardian&nbsp;<span style="color:#00c7ff;">AI</span>
+<!-- ——— 主标题（渐变描边） ——— -->
+<h1 align="center" style="
+  margin:0.4em 0 0;
+  font-size:2.4em;
+  font-weight:900;
+  background:linear-gradient(90deg,#00c7ff 0%,#0084ff 100%);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+">
+  StrokeGuardian AI
 </h1>
 
-<br>
-
-<!-- ——— Tagline ——— -->
-<p align="center">
-  <i><small>
-    ✨ AI 赋能 · 符合医院级安全与合规标准 · 实时精准的中风康复智能评估平台 ✨
-    <br>
-    <span style="font-weight:normal;">
-      （通过多维度数据融合与循证医学策略，为临床与科研提供可扩展、可验证的康复评估与干预支持）
-    </span>
-  </small></i>
+<!-- ——— 细分 tagline ——— -->
+<p align="center" style="font-size:14.5px;font-style:italic;line-height:1.6;margin:4px 0 12px;">
+  ✨ AI 赋能 · 医院级安全合规 · 实时精准的中风康复智能评估平台 ✨<br>
+  <span style="font-weight:normal;">
+    （多维度数据融合 × 循证医学，为临床与科研提供可扩展、可验证的康复评估与干预支持）
+  </span>
 </p>
 
-<br>
+<!-- ——— 半透明分割线 ——— -->
+<hr style="width:82%;max-width:780px;border:0;border-top:1px solid rgba(0,0,0,.06);margin:12px auto 24px;">
 
 <!-- ——— Elevator Pitch ——— -->
 <div style="
