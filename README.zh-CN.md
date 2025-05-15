@@ -78,7 +78,7 @@
   max-width:760px;
   margin-top:1em;
   font:600 15px/1.8 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  line-height:1.8;
+  line-height:4;
 ">
   <strong>StrokeGuardian AI</strong><br><br>
   — 一套面向中风康复评估的综合性
