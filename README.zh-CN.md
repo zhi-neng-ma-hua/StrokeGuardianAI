@@ -83,23 +83,7 @@
 <!-- ———  A B S T R A C T  ——— -->
 <h2 id="摘要" align="center" style="margin:2.2em 0 0.7em;color:#0084ff;">摘 要</h2>
 
-<p style="text-align:justify;font-size:14.6px;line-height:1.58;">
-  <strong>StrokeGuardian AI</strong> 采用 <kbd>≤ 7 路多角度 RGB-D ＋ 惯性单元</kbd> 构成稠密视锥，
-  在 <em>边缘端</em> 先行执行 <kbd>单目-双目联合姿态估计</kbd>，
-  再以 <kbd>Spatio-Temporal Transformer-VAE</kbd> 与 <kbd>ICP/Bundle&nbsp;Adjustment</kbd>
-  重建 <b>亚毫米级</b> 三维骨骼序列；
-  关节角度估计 <strong>ICC ≥ 0.94</strong>，端到端延迟 &lt; 50 ms。
-  <br><br>
-  高维运动学特征经 <kbd>贝叶斯状态空间</kbd> ＋ <kbd>因子图</kbd> 解析，
-  每 <strong>16 ms</strong> 输出 ICF 对齐的康复生物标志物（步态对称、功率谱熵、协同耦合指数…），
-  并通过 <kbd>gRPC-TLS</kbd> 加密映射为
-  <abbr title="HL7 Fast Healthcare Interoperability Resources">FHIR</abbr> 资源。
-  <br><br>
-  嵌入式 <kbd>GPT-4 Turbo</kbd>（RAG + Prompt Ensembling）综合 EMR、指南与患者偏好，
-  动态生成 <em>个体化训练处方、预测性风险评分、依从性摘要</em> 等自然语言报告；
-  <kbd>LSTM-Survival</kbd> 及 <kbd>XGB-SHAP</kbd>
-  则对跌倒与二次卒中进行阈值超限预报警。
-</p>
+<div style="text-align:justify;font-size:14.6px;line-height:1.58;"> <strong>StrokeGuardian AI</strong> 致力于利用<kbd>≤ 7 路多角度 RGB-D + 惯性测量单元</kbd>（IMU）构建高精度稠密视锥。在<em>边缘端</em>，本系统首先采用<kbd>单目-双目混合姿态估计</kbd>对多视角数据进行初步处理；随后，通过<kbd>Spatio-Temporal Transformer-VAE</kbd>结合<kbd>ICP（Iterative Closest Point）/Bundle Adjustment</kbd>技术，重建亚毫米级精度的三维骨骼序列，实现关节角度估计的可靠性（ICC ≥ 0.94）及端到端推理延迟（< 50 ms）的平衡。 <br><br> 基于所获取的高维运动学特征向量，本系统采用<kbd>贝叶斯状态空间</kbd>与<kbd>因子图</kbd>推断方法，每<em>16 ms</em>即可输出与 ICF 标准相对齐的康复生物学标志物（如步态对称性、功率谱熵、协同耦合指数等），并通过<kbd>gRPC-TLS</kbd>隧道将其安全映射为<abbr title="HL7 Fast Healthcare Interoperability Resources">FHIR</abbr>格式资源。 <br><br> 此外，嵌入式<kbd>GPT-4 Turbo</kbd>（基于 RAG 与 Prompt Ensembling）可综合病历电子记录（EMR）、临床指南与患者偏好，动态生成个性化训练处方、预测性风险评分以及遵从性摘要等自然语言输出；而<kbd>LSTM-Survival</kbd>与<kbd>XGB-SHAP</kbd>模型则用于跌倒及二次卒中的超限预警，使本系统能够在时间敏感的临床场景中提供精确、可靠的决策辅助。 </div>
 
 <!-- ———  Key Metrics  ——— -->
 <table align="center" style="margin:1.3em auto;font-size:14.5px;">
