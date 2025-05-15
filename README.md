@@ -6,9 +6,9 @@
 <p align="right">
   <a href="README.zh-CN.md" title="切换到简体中文文档">
     <img
+      src="docs/assets/lang-zh.png" 
       alt="简体中文"
-      src="https://img.shields.io/static/v1?label=%F0%9F%8C%90&message=%E4%B8%AD%E6%96%87&labelColor=0084ff&color=00c7ff&style=flat-square"
-    />
+      width="48">    
   </a>
 </p>
 
