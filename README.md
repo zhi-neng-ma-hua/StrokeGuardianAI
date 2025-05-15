@@ -1,8 +1,8 @@
 <!-- ======================= H E R O   B A N N E R ======================= -->
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="docs/banner-dark.svg">
-    <img alt="StrokeGuardian AI" src="docs/banner-light.svg" width="900">
+    <source media="(prefers-color-scheme: dark)" srcset="docs/logo.png">
+    <img alt="StrokeGuardian AI" src="docs/logo.png" width="900">
   </picture>
 </p>
 
