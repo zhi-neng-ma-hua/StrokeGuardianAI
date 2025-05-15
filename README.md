@@ -1,6 +1,6 @@
 <a href="README-zh.md">
   <img
-    alt="简体中文"
+    alt="🌐 简体中文"
     src="https://img.shields.io/static/v1?label=%F0%9F%8C%90%20%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87&message=%E6%9F%A5%E7%9C%8B&labelColor=00c6ff&color=0059ff&style=flat-square"
   />
 </a>
