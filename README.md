@@ -1,38 +1,71 @@
-<a href="README-zh.md">
-  <img
-    alt="🌐 简体中文"
-    src="https://img.shields.io/static/v1?label=%F0%9F%8C%90%20%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87&message=%E6%9F%A5%E7%9C%8B&labelColor=00c6ff&color=0059ff&style=flat-square"
-  />
-</a>
+<!-- ===========================================================
+  StrokeGuardian AI • README Hero
+=========================================================== -->
 
-<!-- ======================= H E R O   B A N N E R ======================= -->
+<!-- ——— Language switch (右上角) ——— -->
+<p align="right">
+  <a href="README.zh-CN.md">
+    <img
+      alt="简体中文"
+      src="https://img.shields.io/static/v1?label=%F0%9F%8C%90%20%E4%B8%AD%E6%96%87&message=%E6%8C%89%E6%88%91%E8%AF%BB&labelColor=00c6ff&color=0059ff&style=flat-square"
+    />
+  </a>
+</p>
+
+<!-- ——— Logo，自动适配深浅色 ——— -->
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="docs/logo.png">
-    <img alt="StrokeGuardian AI" src="docs/logo.png" width="80">
+    <!-- 深色模式 -->
+    <source srcset="docs/logo_dark@2x.png 2x, docs/logo_dark.png 1x"
+            media="(prefers-color-scheme: dark)" />
+    <!-- 亮色模式 -->
+    <source srcset="docs/logo_light@2x.png 2x, docs/logo_light.png 1x"
+            media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" />
+    <!-- Fallback -->
+    <img src="docs/logo_light.png" width="96" height="96" alt="StrokeGuardian AI Logo" />
   </picture>
 </p>
 
-<!-- ======================= B A D G E   R O W ========================== -->
+<!-- ——— Badge Row ——— -->
 <p align="center">
-  <!-- Language switch -->
-  <a href="README.zh-CN.md">
-    <img src="https://img.shields.io/static/v1?label=🌐 简体中文&message=查看&colorA=0059ff&colorB=00c6ff&style=plastic">
+  <!-- Release -->
+  <a href="https://github.com/YourOrg/StrokeGuardianAI/releases">
+    <img
+      alt="GitHub release (latest by date)"
+      src="https://img.shields.io/github/v/release/YourOrg/StrokeGuardianAI?color=00c6ff&style=flat-square"
+    />
   </a>
-  <!-- Version -->
-  <img src="https://img.shields.io/github/v/release/YourOrg/StrokeGuardianAI?color=0059ff&style=plastic">
   <!-- License -->
-  <img src="https://img.shields.io/github/license/YourOrg/StrokeGuardianAI?color=0059ff&style=plastic">
-  <!-- CI status -->
-  <img src="https://img.shields.io/github/actions/workflow/status/YourOrg/StrokeGuardianAI/ci.yml?label=CI&color=0059ff&style=plastic">
+  <a href="https://github.com/YourOrg/StrokeGuardianAI/blob/main/LICENSE">
+    <img
+      alt="GitHub license"
+      src="https://img.shields.io/github/license/YourOrg/StrokeGuardianAI?color=00c6ff&style=flat-square"
+    />
+  </a>
+  <!-- CI -->
+  <a href="https://github.com/YourOrg/StrokeGuardianAI/actions/workflows/ci.yml">
+    <img
+      alt="GitHub Workflow Status"
+      src="https://img.shields.io/github/actions/workflow/status/YourOrg/StrokeGuardianAI/ci.yml?branch=main&label=CI&color=00c6ff&style=flat-square"
+    />
+  </a>
+  <!-- Maintenance -->
+  <a href="https://github.com/YourOrg/StrokeGuardianAI/graphs/commit-activity">
+    <img
+      alt="Maintenance"
+      src="https://img.shields.io/badge/maintained-yes-00c6ff?style=flat-square"
+    />
+  </a>
 </p>
 
-<!-- ======================= T I T L E   &   T A G L I N E ============= -->
-<h1 align="center">StrokeGuardian&nbsp;AI</h1>
+<!-- ——— Title & Tagline ——— -->
+<h1 align="center">StrokeGuardian&nbsp;<span style="color:#00c6ff;">AI</span></h1>
+
 <p align="center">
   <i><small>✨ AI-powered · Clinical-grade · Real-time & Precision Stroke-Rehabilitation Assessment Platform ✨</small></i>
 </p>
 
-<!-- ...English documentation continues ... -->
-
-StrokeGuardian AI is an enterprise-grade intelligent assessment platform for post-stroke rehabilitation. Leveraging an edge-to-cloud deep-learning architecture, it converts patients’ everyday movements into standardized, quantifiable rehabilitation metrics in real time. The platform delivers traceable, multi-dimensional reports that enable clinical teams to personalise treatment decisions, streamline follow-up workflows, and furnish researchers with a high-fidelity, end-to-end data loop.
+<!-- ——— Blurb (英文简述，可按需删除 / 改写) ——— -->
+<p align="center">
+  <em>An edge-to-cloud system that transforms everyday movements into standardised, traceable rehabilitation metrics—empowering clinicians with data-driven decisions and researchers with an end-to-end, high-fidelity data loop.</em>
+</p>
