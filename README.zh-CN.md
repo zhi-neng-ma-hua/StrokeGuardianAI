@@ -120,6 +120,7 @@
   此外，系统内置的 <kbd>GPT-4 Turbo</kbd>（基于 RAG 与 Prompt Ensembling）可综合病历电子记录（EMR）、临床指南以及患者偏好，动态生成个性化训练处方、预测性风险评分及依从性摘要等自然语言输出；配合
   <kbd>LSTM-Survival</kbd> 和 <kbd>XGB-SHAP</kbd> 模型对跌倒及二次卒中的超限预警，本平台可在高时效性临床场景下提供可靠而精确的辅助决策，为中风康复全流程提供更为系统化的评估与干预支持。
 </div>
+<br>
 
 <!-- ———  Key Metrics  ——— -->
 <table align="center" style="margin:1.3em auto;font-size:14.5px;"> <tr> <td align="center">👥&nbsp;多中心前瞻队列</td><td><b>N&nbsp;=&nbsp;312</b></td> <td align="center">🔗&nbsp;NIHSS&nbsp;相关系数</td><td><b>r&nbsp;=&nbsp;0.83</b></td> </tr> <tr> <td align="center">⏱️&nbsp;随访时间缩减</td><td><b>-38 % <i>(p&nbsp;&lt;&nbsp;0.001)</i></b></td> <td align="center">⚙️&nbsp;DevOps</td><td>Helm&nbsp;Chart • GitHub&nbsp;Actions • CNCF&nbsp;合规</td> </tr> </table> <p style="text-align:justify;margin-top:1em;font-size:14.5px;line-height:1.6;"> 通过在多中心的前瞻性研究队列中测试，本系统达成了与 NIHSS（<em>National Institutes of Health Stroke Scale</em>）评分较高的相关性（r = 0.83），并显著缩短了临床随访所需时间（-38%，p &lt; 0.001）。在 DevOps 体系中采用 Helm Chart、GitHub Actions，以及符合 CNCF 标准的容器化微服务部署模式，进一步提升了整体服务的可扩展性与可维护性。 </p>
