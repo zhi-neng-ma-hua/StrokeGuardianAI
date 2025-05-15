@@ -83,9 +83,6 @@
 </p>
 
 
-# 题目（Title）
-基于多视角捕捉与智能算法融合的中风康复评估：StrokeGuardian AI 的平台设计与实证研究
-
 ## 作者信息（Authors）
 - 曹学进<sup>1,2</sup>  
 - 王晓琳<sup>1</sup>  
