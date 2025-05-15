@@ -107,7 +107,7 @@
 </div>
 
 <!-- ———  A B S T R A C T  ——— -->
-<h2 id="摘要" align="center" style="margin:2.2em 0 0.7em;color:#0084ff;">摘 要</h2>
+<h2 id="abstract" align="center" style="margin:2.2em 0 0.7em;color:#0084ff;">摘 要</h2>
 
 <div style="text-align:justify;font-size:14.6px;line-height:1.58; margin-bottom:2em;">
   <strong>StrokeGuardian AI</strong> 聚焦于利用 <kbd>≤ 7 路多角度 RGB-D + 惯性测量单元</kbd>（IMU）在
@@ -123,8 +123,34 @@
 <br>
 
 <!-- ———  Key Metrics  ——— -->
-<table align="center" style="margin:1.3em auto;font-size:14.5px;"> <tr> <td align="center">👥&nbsp;多中心前瞻队列</td><td><b>N&nbsp;=&nbsp;312</b></td> <td align="center">🔗&nbsp;NIHSS&nbsp;相关系数</td><td><b>r&nbsp;=&nbsp;0.83</b></td> </tr> <tr> <td align="center">⏱️&nbsp;随访时间缩减</td><td><b>-38 % <i>(p&nbsp;&lt;&nbsp;0.001)</i></b></td> <td align="center">⚙️&nbsp;DevOps</td><td>Helm&nbsp;Chart • GitHub&nbsp;Actions • CNCF&nbsp;合规</td> </tr> </table> <p style="text-align:justify;margin-top:1em;font-size:14.5px;line-height:1.6;"> 通过在多中心的前瞻性研究队列中测试，本系统达成了与 NIHSS（<em>National Institutes of Health Stroke Scale</em>）评分较高的相关性（r = 0.83），并显著缩短了临床随访所需时间（-38%，p &lt; 0.001）。在 DevOps 体系中采用 Helm Chart、GitHub Actions，以及符合 CNCF 标准的容器化微服务部署模式，进一步提升了整体服务的可扩展性与可维护性。 </p>
+<h2 id="key-metrics" align="center" style="margin:2em 0 0.7em;color:#0084ff;">关键指标</h2>
+
+<table align="center" style="margin:1.3em auto;font-size:14.5px;">
+  <tr>
+    <td align="center">👥 多中心前瞻队列</td>
+    <td><b>N&nbsp;=&nbsp;312</b></td>
+    <td align="center">🔗 NIHSS 相关系数</td>
+    <td><b>r&nbsp;=&nbsp;0.83</b></td>
+  </tr>
+  <tr>
+    <td align="center">⏱️ 随访时间缩减</td>
+    <td><b>-38 % <i>(p&nbsp;&lt;&nbsp;0.001)</i></b></td>
+    <td align="center">⚙️ DevOps</td>
+    <td>Helm&nbsp;Chart • GitHub&nbsp;Actions • CNCF&nbsp;合规</td>
+  </tr>
+</table>
+
+<p style="text-align:justify; margin-top:1em; font-size:14.5px; line-height:1.6;">
+  在多中心前瞻性研究队列（<b>N=312</b>）中对本系统进行评估，结果表明其与 
+  NIHSS（<em>National Institutes of Health Stroke Scale</em>）之间存在显著相关性（<b>r=0.83</b>）。此项结果代表了 
+  StrokeGuardian AI 在临床功能障碍量化评估方面具有较高准确度与一致性。<br><br>
+  同时，临床随访时间缩短了 <b>38%</b>（<i>p&lt;0.001</i>），说明本系统在提高康复效率、降低医疗负担方面成效显著。针对系统的持续部署和维护，采用 
+  <b>Helm Chart</b>、<b>GitHub Actions</b> 等自动化工具并配合 
+  <b>CNCF</b> 标准的容器化微服务架构，极大提升了平台的可扩展性、灵活性与合规性，为规模化临床应用奠定了稳固基础。
+</p>
+
 <br>
+
 <!-- ———  Feature Matrix  ——— -->
 <div style="max-width:760px;margin:0 auto;font-size:14.4px;line-height:1.55;"> <ul> <li><b>多视角 3-D Re-targeting：</b>基于≤7台摄像机与 IMU 的融合数据，实现动态遮挡补偿并提取精确三维骨骼信息。</li> <li><b>实时指标流输出：</b>最高 60 Hz 的推理频率，利用<kbd>WebSocket</kbd> 和 <kbd>gRPC</kbd>实现安全、零拷贝式数据传输。</li> <li><b>LLM 语义推理：</b>通过 RAG 与 Prompt Ensembling 机制，为临床提供循证级康复处方及药物警示。</li> <li><b>预测与预警：</b>应用<kbd>LSTM-Survival</kbd>预测跌倒与再次卒中的可能性，一旦超限即刻发出预警。</li> <li><b>数据治理：</b>系统将采集的多维指标映射为 FHIR 资源并汇聚至 Data Lake，配合<kbd>OpenTelemetry</kbd>与<kbd>Prometheus</kbd>实现全链路可观测性。</li> <li><b>灰度式 DevOps：</b>基于<kbd>Kubernetes</kbd>的容器化微服务部署，蓝绿切换时间低于 5 分钟，并保留合规审计记录。</li> </ul> </div> <p style="text-align:justify;margin-top:1.15em;font-size:14.5px;line-height:1.6;"> 通过整合<kbd>可解释性人工智能</kbd>、<kbd>云—边混合计算</kbd>以及<kbd>LLM 驱动的自然语言报告</kbd>，StrokeGuardian AI 有效地将床旁观察、远程随访与科研需求无缝衔接。该平台为“精准康复 4.0”提供可大规模部署与推广的技术基础与数据支撑，进一步拓宽了中风康复评估与干预的研究与实践边界。 </p>
 
