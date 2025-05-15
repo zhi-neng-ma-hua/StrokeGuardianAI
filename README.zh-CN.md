@@ -122,7 +122,7 @@
 ## 摘要（Abstract）
 
 本研究聚焦于名为 <strong>StrokeGuardian AI</strong> 的一体化中风康复评估与干预平台，旨在通过多视角视频与深度学习技术，实现对患者步态及运动功能的精准量化和远程支持。
-平台在边缘端借助 <kbd>RGB-D + IMU</kbd> 多模态数据捕捉，并通过 <kbd>Spatio-Temporal Transformer-VAE</kbd> 结合 <kbd>ICP</kbd> / <kbd>Bundle Adjustment</kbd> 技术，构建高精度三维骨骼序列（ICC ≥ 0.94），同时将端到端推理时延控制在 < 50 ms 范围内。
+平台在边缘端借助 <kbd>RGB-D + IMU</kbd> 多模态数据捕捉，并通过 <code>Spatio-Temporal Transformer-VAE</code> 结合 <kbd>ICP</kbd> / <kbd>Bundle Adjustment</kbd> 技术，构建高精度三维骨骼序列（ICC ≥ 0.94），同时将端到端推理时延控制在 < 50 ms 范围内。
 基于对高维运动学特征的实时解析，系统以 <kbd>贝叶斯状态空间</kbd> 和 <kbd>因子图</kbd> 每 16 ms 更新对应 <abbr title="International Classification of Functioning, Disability and Health"><strong>ICF</strong></abbr> 标准的关键康复指标，并通过 <kbd>gRPC-TLS</kbd> 加密管道输出为 <abbr title="Fast Healthcare Interoperability Resources">FHIR</abbr> 兼容格式，契合 WHO、HL7 等国际规范对于跨平台数据互操作的需求。<br><br>
 
 在应用层面，平台内嵌 <kbd>GPT-4 Turbo</kbd>（RAG + Prompt Ensembling）整合 EMR、临床指南（AHA / ESO）及患者偏好，能动态生成个性化康复训练与预测性风险评分；而 <kbd>LSTM-Survival</kbd> 与 <kbd>XGB-SHAP</kbd> 模块则实现对跌倒及二次卒中的超限预警。
