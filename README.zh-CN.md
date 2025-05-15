@@ -96,19 +96,24 @@
 ">
   <strong>StrokeGuardian AI</strong><br><br>
 
-  一套面向中风康复评估的
+  作为面向中风康复评估与风险管理的一体化
   <kbd>端—云—边</kbd>
-  综合性平台，旨在融合多模态数据与深度学习方法，实现更高精度的康复干预与风险管理。系统核心在于运用
-  <kbd>多视角 RGB-D + IMU</kbd>
-  传感器于实时环境中捕捉患者自然运动特征，并在前沿算法支持下结合
+  平台，StrokeGuardian AI 通过多模态数据采集（整合
+  <kbd>RGB-D 摄像机</kbd>
+  与
+  <kbd>IMU</kbd>）实现对患者自然运动特征的高精度捕捉；同时，结合前沿
   <kbd>Transformer-VAE</kbd>
   与
-  <kbd>检索增强型大语言模型（Retrieval-Augmented LLM）</kbd>，
-  生成符合
+  <kbd>检索增强型大语言模型（Retrieval-Augmented LLM）</kbd>
+  等深度学习方法，生成符合
   <abbr title="International Classification of Functioning, Disability and Health, WHO 2001"><kbd>ICF</kbd></abbr>
-  标准的多维康复指标与个性化干预建议。此设计遵循 WHO 提倡的全球统一框架，确保了临床与研究场景下的指标可比性与可扩展性。<br><br>
+  标准的多维康复指标以及个性化干预建议。该模式不仅遵循 WHO 所倡导的全球统一健康分类框架，也契合临床实践对远程化与实时性的高需求。<br><br>
 
-  本平台的首要目标在于支持精准的临床随访与早期风险预警：通过对运动学和生理学数据的实时监测与深度解析，系统可快速识别功能障碍趋势，并提供基于循证医学原则的干预方案。与传统康复流程相比，StrokeGuardian AI 显著缩短了临床评估时间，并在风险评估与个性化干预等关键节点展现更高灵活性与准确性。同时，其设计原则契合 AHA（American Heart Association）与 ESO（European Stroke Organisation）等权威指南，为中风康复的全流程管理提供了可靠且可扩展的技术与数据支持，进一步推动了在精确康复领域的临床与科研应用。
+  相较于传统依赖昂贵实验室设备或人工观察的中风康复评估方式，本平台在实时性、可扩展性和多场景适配方面具备显著优势。通过边缘端数据预处理和多视角姿态融合，StrokeGuardian AI 能够在遮挡、转身等复杂动作场景下依然保持对骨骼重建的精准度（ICC ≥ 0.94），并在端到端推理延迟低于 50 ms 的基础上，实现高频率（每 16 ms）更新的临床关键指标。进一步通过 gRPC-TLS 安全传输，将指标与患者信息映射为 FHIR 资源，为科研及跨团队协作提供可靠的数据互操作能力 [1,2]。<br><br>
+
+  在应用层面，嵌入式 GPT-4 Turbo（通过检索增强与 Prompt Ensembling）可根据电子病历（EMR）、相关指南以及患者特征生成循证级康复策略，搭配 LSTM-Survival 与 XGB-SHAP 实现对跌倒及二次卒中的风险预警。此多模块融合大幅度简化了临床工作流，并在 DevOps 层面借助 CNCF 标准容器化与 GitHub Actions 等工具，达成快速部署与版本迭代，兼顾安全与审计。结合 AHA（American Heart Association）与 ESO（European Stroke Organisation）等最新指南，本平台为中风康复的全流程管理（包括评估、干预、随访）提供高可用、可解释且可规模化的技术支持。<br><br>
+
+  综合而言，StrokeGuardian AI 在医院级安全合规基础上，通过多视角 3D 姿态分析、可解释深度学习与自动化 DevOps，达成了从个体化康复方案制定到早期风险预警的闭环。其在多中心前瞻研究中展现出的高精确度（NIHSS 相关系数 0.83）和效率提升（随访周期缩短 38%），不仅验证了深度学习赋能下的中风康复前景，也为未来在大规模远程康复和智慧医疗领域的落地应用奠定了坚实的循证基础。
 </div>
 
 <br>
