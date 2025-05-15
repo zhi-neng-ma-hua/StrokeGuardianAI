@@ -84,7 +84,7 @@
 
 <!-- ======= 作者信息卡片 ======= -->
 <p align="center">
-  <strong>曹学进</strong> · 马来西亚国立大学  
+  <strong>曹学进</strong> | 马来西亚国立大学  
   <br>
   📧 <a href="mailto:zhinengmahua@gmail.com">zhinengmahua@gmail.com</a> &nbsp;•&nbsp;
   💬 微信&nbsp;<code>XJ-Cao</code>&nbsp;•&nbsp;
