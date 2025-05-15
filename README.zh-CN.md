@@ -141,6 +141,22 @@
 
 中风康复；多视角捕捉；Transformer-VAE；检索增强型大语言模型；随访效率；可解释人工智能
 
+<div style="margin-top:1em;">
+  <strong>关键词（Keywords）</strong><br><br>
+  <ul style="
+    margin-left: 1.2em;
+    line-height:1.7;
+    font-weight:500;
+  ">
+    <li><em>中风康复（Stroke Rehabilitation）</em> — 基于 WHO、AHA、ESO 等国际标准的多场景康复策略与临床实践</li>
+    <li><em>多视角智能捕捉（Multiview Sensing & Integration）</em> — 综合 RGB-D 摄像机、IMU 协同，实现亚毫米级骨骼重建</li>
+    <li><em>Transformer-VAE</em> — 融合变分自编码与时空注意力机制，增强多帧骨骼重建的精度与可解释度</li>
+    <li><em>检索增强型大语言模型（RAG-LLM）</em> — 提升个性化干预与风险预警质量，支持快速、循证的康复决策</li>
+    <li><em>随访效率（Follow-up Efficiency）</em> — 通过 DevOps（CNCF、GitHub Actions）与自动化报告生成，使随访周期缩短 38%</li>
+    <li><em>可解释人工智能（Explainable AI）</em> — 结合 SHAP、Grad-CAM 等方法，对中风运动学数据与风险评估过程进行可视化解释</li>
+  </ul>
+</div>
+
 ---
 
 ## 1. 引言（Introduction）
