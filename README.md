@@ -16,7 +16,7 @@
 <p align="center">
   <picture>
     <!-- 深色模式 -->
-    <source srcset="docs/logo_dark@2x.png 2x, docs/logo_dark.png 1x"
+    <source srcset="docs/logo_dark@2x.png 2x, docs/logo.png 1x"
             media="(prefers-color-scheme: dark)" />
     <!-- 亮色模式 -->
     <source srcset="docs/logo_light@2x.png 2x, docs/logo_light.png 1x"
