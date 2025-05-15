@@ -1,10 +1,11 @@
-<!-- ════════════════════════════════════════════════════════════
+<!-- 
+════════════════════════════════════════════════════════════
   StrokeGuardian AI · README Hero (single-logo | fully-polished)
-═════════════════════════════════════════════════════════════════-->
+═════════════════════════════════════════════════════════════════
+-->
 
 <!-- ——— Language Switch (top-right) ——— -->
 <!-- ========= Language Switch ========= -->
-<!-- 放在 README 顶部；右浮动，带阴影 & 圆角 -->
 <p align="right" style="margin-top:0;">
   <a href="README.zh-CN.md"
      title="Switch to Simplified Chinese"
@@ -74,6 +75,6 @@
 </p>
 
 <!-- ——— 1-line abstract ——— -->
-<p align="center">
+<p>
   An edge-to-cloud system that transforms everyday movements into standardised, traceable rehabilitation metrics—empowering clinicians with data-driven decisions and researchers with an end-to-end, high-fidelity data loop.
 </p>
