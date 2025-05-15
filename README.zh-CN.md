@@ -74,7 +74,7 @@
 </p>
 
 <!-- ——— Elevator Pitch ——— -->
-<div align="center" style="max-width:760px;margin-top:1em;font:600 15px/1.56 'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;"> 
+<div style="max-width:760px;margin-top:1em;font:600 15px/1.56 'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;"> 
   <strong>StrokeGuardian AI</strong>
   —— 基于一体化<kbd>端—云—边</kbd>协同的中风康复智能评估平台。 本系统利用<kbd>多视角 RGB-D + IMU</kbd>手段实时捕捉病患的自然运动特征，并通过融合<kbd>Transformer-VAE</kbd>与<kbd>检索增强型大语言模型</kbd>（Retrieval-Augmented LLM），精准输出符合 
   <abbr title="International Classification of Functioning, Disability and Health">ICF</abbr>标准的康复指标序列与个性化干预方案。其核心目标在于辅助临床实现精准随访与风险预警，为中风康复过程提供可靠的证据支撑与效率提升。 
