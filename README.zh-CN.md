@@ -75,9 +75,9 @@
   <i><small>
     ✨ AI 赋能 · 符合医院级安全与合规标准 · 实时精准的中风康复智能评估平台 ✨
     <br>
-    <span style="font-weight:normal;">
+    <p style="font-weight:normal;">
       （通过多维度数据融合与循证医学策略，为临床与科研提供可扩展、可验证的康复评估与干预支持）
-    </span>
+    </p>
   </small></i>
 </p>
 <br>
