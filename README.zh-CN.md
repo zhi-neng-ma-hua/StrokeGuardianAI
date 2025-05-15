@@ -75,8 +75,10 @@
   
    <br>
   <span style="font-weight:normal;">
+     <p>
     （融合多维度数据采集与循证医学策略，全面对接 WHO ICF 框架，为临床与科研提供
     <em>可拓展、可验证、可解释</em>的中风康复评估与干预范式）
+     </p>
   </span>
 </p>
 
