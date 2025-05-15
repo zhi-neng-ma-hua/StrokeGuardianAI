@@ -109,7 +109,6 @@
 <!-- ———  A B S T R A C T  ——— -->
 <h2 id="摘要" align="center" style="margin:2.2em 0 0.7em;color:#0084ff;">摘 要</h2>
 
-<!-- 中文版本 -->
 <div style="text-align:justify;font-size:14.6px;line-height:1.58; margin-bottom:2em;">
   <strong>StrokeGuardian AI</strong> 聚焦于利用 <kbd>≤ 7 路多角度 RGB-D + 惯性测量单元</kbd>（IMU）在
   <em>边缘端</em>（Edge-side）构建高精度稠密视锥。首先采用 <kbd>单目-双目混合姿态估计</kbd> 以对多视角数据进行初步融合，
