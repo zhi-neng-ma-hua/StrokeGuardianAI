@@ -83,15 +83,8 @@
 </p>
 
 
-## 作者信息（Authors）
-- 曹学进<sup>1,2</sup>  
-- 王晓琳<sup>1</sup>  
-- 张悦<sup>2</sup>  
 
-<small>
-1. 马来西亚国立大学 康复医学中心  
-2. 虚拟医院智慧医疗实验室
-</small>
+- 曹学进<sup>1,2</sup>  马来西亚国立大学    zhinengmahua@gmail.com
 
 <!-- ——— 半透明分割线 ——— -->
 <hr style="width:82%;max-width:780px;border:0;border-top:1px solid rgba(0,0,0,.06);margin:12px auto 24px;">
