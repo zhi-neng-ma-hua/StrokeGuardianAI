@@ -75,7 +75,7 @@
   
    <br>
   <span style="font-weight:normal;">
-     <p>
+     <p align="center">
     (Integrating multi-dimensional data acquisition with evidence-based medical strategies,
     fully aligned with the WHO ICF framework, offering
     <em>extensible, verifiable, and explainable</em> stroke rehabilitation assessment and intervention solutions for clinical and research needs)
