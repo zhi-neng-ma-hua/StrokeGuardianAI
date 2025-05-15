@@ -322,14 +322,27 @@
 ---
 
 ## 5. 结论（Conclusion）
-综上所述，StrokeGuardian AI 通过整合多视角 RGB-D + IMU 数据、Transformer-VAE、RAG-LLM 与高可靠容器化 DevOps 部署，为中风康复评估提供了低延迟、高精度、可解释且可扩展的技术方案。多中心前瞻结果在量化指标与临床量表之间呈现高度一致性，并显著提升了随访效率与自动化程度。在未来研究中，可结合多模态传感、联邦学习与国际多中心随机对照试验，进一步扩展该平台在跨语言、跨文化环境中的实用性，推动中风患者精准康复在更大范围内落地应用。
 
----
+综合本研究在多中心队列中的实证结果与算法验证可知，StrokeGuardian AI 已在中风康复评估领域展现出如下关键价值与深远意义：
 
-## 参考文献（References）
-1. Brown JM, et al. “Global Burden of Stroke: Epidemiological Trends and Management Strategies.” *Lancet Neurol.*, 2023, 22(3), 210–220.  
-2. Smith A & Johnson LL. “Innovation in Neural Rehabilitation for Stroke Patients.” *Nat. Rev. Neurol.*, 2022, 19, 45–59.  
-3. World Health Organization. *Global Status Report on NCDs*. WHO Press, 2022.  
-4. Coyle D & Marsh D. “AI-Driven Assessment in Stroke Recovery: Integrating Clinical Scales and Sensor Data.” *Nat. Biomed. Eng.*, 2024, 5(2), 358–370.  
-5. HL7. “FHIR Specification (v4.0.1).” Available online: <https://www.hl7.org/fhir/>  
+1. **多维度数据融合与精准量化**
+   
+   借助多视角 RGB-D 摄像头与 IMU 传感器，平台能够在多样化的临床及居家环境中捕捉到患者自然行走与动作模式，并通过 Transformer-VAE 等深度学习模型，实现亚毫米级精度的骨骼重建与高频率（16 ms 间隔）的数据输出。与 NIHSS 等主流量表的相关性验证（r = 0.83）表明，该平台可为临床决策与科研提供可与传统评估方法相当，甚至更细化的量化指标。
 
+3. **实时性与远程化适配**
+   
+   本平台在“端—云—边”协同框架下达成低于 50 ms 的端到端推理延迟，满足远程与实时康复监测的需求。此在大规模门诊、家庭康复以及多中心随访场景中，均能有效降低时间与空间限制，契合 AHA 和 ESO 指南对持续性、动态化中风康复管理的倡导。
+
+5. **个性化干预与可解释预警**
+   
+   结合检索增强型大语言模型（RAG-LLM）与 LSTM-Survival、XGB-SHAP 风控模型，StrokeGuardian AI 在提供个性化康复建议的同时，也能通过可解释可视化（SHAP）揭示患者关键风险因子。当监测指标越界时，系统即时推送预警，提高临床与家庭协作的效率与安全性，符合 WHO 强调的 “早期干预” 与 “智能监测” 理念。
+
+7. **DevOps 体系与国际化扩展潜力**
+   
+   通过 CNCF 容器化标准与 GitHub Actions 等自动化工具，平台具备敏捷迭代与可审计性，为多语言、多中心随机对照试验与全球推广奠定了可行基础。版本灰度更新低于 5 分钟的部署能力，进一步证明了系统在医院级安全与合规条件下的高扩展性，满足 HL7 FHIR 对数据互操作和跨系统交互的核心要求。
+
+9. **对未来智慧康复的启示**
+    
+   StrokeGuardian AI 不仅在中风康复评估方面取得了显著实效，也为更大范围的精准康复与智慧医疗提供了可行范式。在后续研究中，若能结合更多模态（如肌电、脑电）或联邦学习策略，并在多文化人群中进行大规模验证，将进一步强化其在国际康复医学与数字健康生态中的核心地位。
+
+总之，通过对多维度传感信息的深度学习解析与自动化风险管理机制，StrokeGuardian AI 成功缩短了临床随访时间（-38%，p < 0.001），并在 NIHSS 等关键量表维度上展现了良好一致性（r = 0.83）。其可解释、高扩展与实时化的特征，呼应了 WHO、AHA 与 ESO 等全球卫生与专业组织对中风康复“数字化、连续化、个体化”的发展方向。未来若能在更多样本、更多区域与更复杂应用情境中进行跨文化验证，本平台将有望成为精准康复 4.0 时代下的重要支柱，为更多中风患者提供科学且普惠的康复支持与风险防控。
