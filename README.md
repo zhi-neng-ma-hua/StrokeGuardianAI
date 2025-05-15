@@ -81,8 +81,8 @@
 
 <!-- ——— A B S T R A C T ——— --> 
 <h2 id="abstract">Abstract</h2> 
-<blockquote>
-  StrokeGuardian AI is an edge-to-cloud platform that transforms commodity video streams into regulatory-grade evidence for post-stroke motor recovery.
+<p>
+StrokeGuardian AI is an edge-to-cloud platform that transforms commodity video streams into regulatory-grade evidence for post-stroke motor recovery.
 
 Perception layer – monocular RGB-D is lifted to metrically-scaled 3-D skeleton graphs on device; a spatio-temporal Transformer—pre-trained on 120 k h of human-motion video and fine-tuned against Vicon ground truth—achieves an ICC ≥ 0.92 for joint-angle estimation.
 
@@ -92,6 +92,4 @@ Workflow layer – results are encrypted via gRPC, mapped to HL7 FHIR, and surfa
 
 A four-site prospective cohort (N = 312) demonstrates a Pearson r = 0.81 with NIHSS and a 38 % reduction in follow-up time (p < 0.001). All micro-services ship as CNCF-compliant Helm charts and pass GitHub CI on every pull request. By converting free-living movement into traceable, standardised metrics, StrokeGuardian AI closes the translational loop between bedside observation and data-driven neuro-rehabilitation research.
 
-
-
-</blockquote> 
+</p> 
