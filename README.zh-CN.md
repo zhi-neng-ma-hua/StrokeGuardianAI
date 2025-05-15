@@ -143,6 +143,8 @@
   </tr>
 </table>
 
+<br>
+
 <p style="text-align:justify; margin-top:1em; font-size:14.5px; line-height:1.6;">
   在多中心前瞻性研究队列（<b>N=312</b>）中对本系统进行评估，结果表明其与 
   NIHSS（<em>National Institutes of Health Stroke Scale</em>）之间存在显著相关性（<b>r=0.83</b>）。此项结果代表了 
