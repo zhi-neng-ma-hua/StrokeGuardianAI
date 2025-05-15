@@ -110,7 +110,7 @@
 
 <br>
 
-<!-- ———  A B S T R A C T  ——— -->
+<!-- ———  Aastract ——— -->
 <h2 id="abstract" align="center" style="margin:2.2em 0 0.7em;color:#0084ff;">摘 要</h2>
 
 <div style="text-align:justify;font-size:14.6px;line-height:1.58; margin-bottom:2em;">
