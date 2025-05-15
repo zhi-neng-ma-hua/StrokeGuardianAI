@@ -110,9 +110,8 @@
 
 <br>
 
-<!-- ———  Aastract ——— -->
+<!-- ———  Aastract  ——— -->
 <h2 id="abstract" align="center" style="margin:2.2em 0 0.7em;color:#0084ff;">摘 要</h2>
-
 <div style="text-align:justify;font-size:14.6px;line-height:1.58; margin-bottom:2em;">
   <strong>StrokeGuardian AI</strong> 聚焦于利用 <kbd>≤ 7 路多角度 RGB-D + 惯性测量单元</kbd>（IMU）在
   <em>边缘端</em>（Edge-side）构建高精度稠密视锥。首先采用 <kbd>单目-双目混合姿态估计</kbd> 以对多视角数据进行初步融合，
@@ -129,7 +128,6 @@
 
 <!-- ———  Key Metrics  ——— -->
 <h2 id="key-metrics" align="center" style="margin:2em 0 0.7em;color:#0084ff;">关键指标</h2>
-
 <table align="center" style="margin:1.3em auto;font-size:14.5px;">
   <tr>
     <td align="center">👥 多中心前瞻队列</td>
@@ -157,7 +155,109 @@
 <br>
 
 <!-- ———  Feature Matrix  ——— -->
-<div style="max-width:760px;margin:0 auto;font-size:14.4px;line-height:1.55;"> <ul> <li><b>多视角 3-D Re-targeting：</b>基于≤7台摄像机与 IMU 的融合数据，实现动态遮挡补偿并提取精确三维骨骼信息。</li> <li><b>实时指标流输出：</b>最高 60 Hz 的推理频率，利用<kbd>WebSocket</kbd> 和 <kbd>gRPC</kbd>实现安全、零拷贝式数据传输。</li> <li><b>LLM 语义推理：</b>通过 RAG 与 Prompt Ensembling 机制，为临床提供循证级康复处方及药物警示。</li> <li><b>预测与预警：</b>应用<kbd>LSTM-Survival</kbd>预测跌倒与再次卒中的可能性，一旦超限即刻发出预警。</li> <li><b>数据治理：</b>系统将采集的多维指标映射为 FHIR 资源并汇聚至 Data Lake，配合<kbd>OpenTelemetry</kbd>与<kbd>Prometheus</kbd>实现全链路可观测性。</li> <li><b>灰度式 DevOps：</b>基于<kbd>Kubernetes</kbd>的容器化微服务部署，蓝绿切换时间低于 5 分钟，并保留合规审计记录。</li> </ul> </div> <p style="text-align:justify;margin-top:1.15em;font-size:14.5px;line-height:1.6;"> 通过整合<kbd>可解释性人工智能</kbd>、<kbd>云—边混合计算</kbd>以及<kbd>LLM 驱动的自然语言报告</kbd>，StrokeGuardian AI 有效地将床旁观察、远程随访与科研需求无缝衔接。该平台为“精准康复 4.0”提供可大规模部署与推广的技术基础与数据支撑，进一步拓宽了中风康复评估与干预的研究与实践边界。 </p>
+<h2 id="feature-metrics" align="center" style="margin:2em 0 0.7em;color:#0084ff;">核心功能矩阵</h2>
+<div style="max-width:760px; margin:0 auto; font-size:14.4px; line-height:1.55;">
+  <ul>
+    <li>
+      <b>多视角 3-D Re-targeting：</b>
+      基于 ≤7 台摄像机与 IMU 融合的数据采集管线，
+      动态处理遮挡并恢复精确的三维骨骼表征，
+      为运动学与生理学研究提供高分辨率的多模态输入。
+    </li>
+    <li>
+      <b>实时指标流输出：</b>
+      以最高 60 Hz 的推理频率对患者运动特征进行识别与追踪，
+      并通过 <kbd>WebSocket</kbd> 与 <kbd>gRPC</kbd>
+      实现安全的零拷贝数据传输，满足低时延临床应用需求。
+    </li>
+    <li>
+      <b>LLM 语义推理：</b>
+      通过 RAG（Retrieval-Augmented Generation）与 Prompt Ensembling 技术，
+      针对患者个体状况提供循证级康复处方与药物警示，
+      兼具解释性与个性化。
+    </li>
+    <li>
+      <b>预测与预警：</b>
+      采用 <kbd>LSTM-Survival</kbd> 模型对跌倒与二次卒中风险进行预测，
+      一旦超限即刻发出预警，
+      提升临床干预的主动性与及时性。
+    </li>
+    <li>
+      <b>数据治理：</b>
+      将多维指标映射为 FHIR 资源，并汇聚至 Data Lake 中，
+      配合 <kbd>OpenTelemetry</kbd> 与 <kbd>Prometheus</kbd>
+      搭建全链路可观测体系，
+      满足科研与合规审计需求。
+    </li>
+    <li>
+      <b>灰度式 DevOps：</b>
+      借助 <kbd>Kubernetes</kbd> 容器化微服务，
+      支持蓝绿切换（&lt; 5 分钟），并保留审计记录，
+      为快速迭代与合规运营提供完备技术支撑。
+    </li>
+  </ul>
+</div>
+
+<p style="text-align:justify; margin-top:1.15em; font-size:14.5px; line-height:1.6;">
+  整合 <kbd>可解释性人工智能</kbd>、<kbd>云—边混合计算</kbd> 与
+  <kbd>LLM 驱动的自然语言报告</kbd>等关键技术，StrokeGuardian AI
+  将床旁临床观察、远程随访以及科研分析密切衔接，构建“精准康复 4.0”的可扩展落地方案。
+  通过高度模块化的系统设计与标准化的数据接口，本平台为广域化部署与临床转化奠定了坚实基础，
+  并为中风康复评估、个性化干预及大规模纵向研究提供了系统性与前瞻性的支持。
+</p>
+
+<br><h2 align="center" style="margin:2em 0 0.7em;color:#0084ff;">核心功能矩阵</h2>
+<div style="max-width:760px; margin:0 auto; font-size:14.4px; line-height:1.55;">
+  <ul>
+    <li>
+      <b>多视角 3-D Re-targeting：</b>
+      基于 ≤7 台摄像机与 IMU 融合的数据采集管线，
+      动态处理遮挡并恢复精确的三维骨骼表征，
+      为运动学与生理学研究提供高分辨率的多模态输入。
+    </li>
+    <li>
+      <b>实时指标流输出：</b>
+      以最高 60 Hz 的推理频率对患者运动特征进行识别与追踪，
+      并通过 <kbd>WebSocket</kbd> 与 <kbd>gRPC</kbd>
+      实现安全的零拷贝数据传输，满足低时延临床应用需求。
+    </li>
+    <li>
+      <b>LLM 语义推理：</b>
+      通过 RAG（Retrieval-Augmented Generation）与 Prompt Ensembling 技术，
+      针对患者个体状况提供循证级康复处方与药物警示，
+      兼具解释性与个性化。
+    </li>
+    <li>
+      <b>预测与预警：</b>
+      采用 <kbd>LSTM-Survival</kbd> 模型对跌倒与二次卒中风险进行预测，
+      一旦超限即刻发出预警，
+      提升临床干预的主动性与及时性。
+    </li>
+    <li>
+      <b>数据治理：</b>
+      将多维指标映射为 FHIR 资源，并汇聚至 Data Lake 中，
+      配合 <kbd>OpenTelemetry</kbd> 与 <kbd>Prometheus</kbd>
+      搭建全链路可观测体系，
+      满足科研与合规审计需求。
+    </li>
+    <li>
+      <b>灰度式 DevOps：</b>
+      借助 <kbd>Kubernetes</kbd> 容器化微服务，
+      支持蓝绿切换（&lt; 5 分钟），并保留审计记录，
+      为快速迭代与合规运营提供完备技术支撑。
+    </li>
+  </ul>
+</div>
+
+<p style="text-align:justify; margin-top:1.15em; font-size:14.5px; line-height:1.6;">
+  整合 <kbd>可解释性人工智能</kbd>、<kbd>云—边混合计算</kbd> 与
+  <kbd>LLM 驱动的自然语言报告</kbd>等关键技术，StrokeGuardian AI
+  将床旁临床观察、远程随访以及科研分析密切衔接，构建“精准康复 4.0”的可扩展落地方案。
+  通过高度模块化的系统设计与标准化的数据接口，本平台为广域化部署与临床转化奠定了坚实基础，
+  并为中风康复评估、个性化干预及大规模纵向研究提供了系统性与前瞻性的支持。
+</p>
+
+<br>
 
 <br>
 
