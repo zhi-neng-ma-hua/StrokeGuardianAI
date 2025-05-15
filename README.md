@@ -85,21 +85,21 @@
 
 <br>
 
-<!-- ======= 作者信息卡片 ======= -->
+<!-- ======= Author Info Card ======= -->
 <p align="center">
-  <strong>曹学进</strong> &nbsp;&nbsp;|&nbsp;&nbsp; 马来西亚国立大学
+  <strong>Xuejin Cao</strong> &nbsp;&nbsp;|&nbsp;&nbsp; National University of Malaysia
   <br>
   <br>
   📧 <a href="mailto:zhinengmahua@gmail.com">zhinengmahua@gmail.com</a> &nbsp;•&nbsp;
-  💬 微信&nbsp;<code>zhinengmahua</code>&nbsp;•&nbsp;
+  💬 WeChat&nbsp;<code>zhinengmahua</code>&nbsp;•&nbsp;
   📱 WhatsApp&nbsp;<code>+60 123 456 789</code>
 </p>
 
 
-<!-- ======= 半透明分割线 ======= -->
+<!-- ======= Semi-Transparent Divider ======= -->
 <hr style="width:82%;max-width:780px;border:0;border-top:1px solid rgba(0,0,0,.06);margin:12px auto 24px;">
 
-<!-- ======= 简介 ======= -->
+<!-- ======= Introduction ======= -->
 <div style="
   max-width:760px;
   margin-top:1em;
@@ -107,12 +107,14 @@
   font:600 15px/1.56 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 ">
   <p>
-    <strong>StrokeGuardian AI</strong> 是一款面向医疗机构的中风康复智能评估平台，基于 <strong><em>端—云</em></strong> 协同与 <strong><em>深度学习</em ></strong> 架构，
-     将患者日常运动行为实时解析为符合 <em>WHO ICF</em> 与 <em>HL7 FHIR</em> 等国际标准的可量化康复指标。平台通过多模态数据采集（整合 <code>RGB-D 摄像机 </code> 与 <code>IMU</code>），
-     并采用 <code>Transformer-VAE</code> 等前沿算法实现亚毫米级骨骼重建（ICC ≥ 0.94）及 <code>&lt; 50 ms</code> 的端到端推理延迟，可有效支持医院级场景和家庭延伸监测。
-     系统输出可追溯、多维度的康复报告，协助临床团队制定个性化康复方案，优化随访流程，并为科研机构提供全流程数据闭环与验证支持。通过 <code>RAG-LLM</code> 与 <code>LSTM-Survival / XGB-SHAP</code> 风险模型，
-     平台亦能高效生成个性化训练建议与跌倒、再卒中预警提示，整体随访效率提升达 <strong>38%</strong>（<em>p &lt; 0.001</em>），并与 NIHSS 量表结果维持较高相关性（<em>r = 0.83</em>）。
-     综观而言，该平台在国际康复指南（<em>AHA、ESO</em>）的技术范式下，为快速、精准、可解释的中风康复评估与科研拓展提供了有力支撑。
+    <strong>StrokeGuardian AI</strong> is a stroke rehabilitation intelligence assessment platform designed for medical institutions, based on <strong><em>edge–cloud</em></strong> collaboration and a <strong><em>deep learning</em></strong> architecture.
+    It transforms patients’ daily movement behaviors into quantifiable rehabilitation metrics in real time, in accordance with international standards such as <em>WHO ICF</em> and <em>HL7 FHIR</em>.
+    By integrating multi-modal data acquisition (<code>RGB-D cameras</code> and <code>IMU</code>), and employing cutting-edge algorithms like <code>Transformer-VAE</code>, the system achieves sub-millimeter skeletal reconstruction (ICC ≥ 0.94)
+    and end-to-end inference latency of <code>&lt; 50 ms</code>, making it suitable for hospital-grade settings and extended home-based monitoring.
+    The platform outputs traceable, multi-dimensional rehabilitation reports, assisting clinical teams in devising personalized rehabilitation plans, optimizing follow-up processes, and providing a full-cycle data loop with validation support for research institutions.
+    Through <code>RAG-LLM</code> and <code>LSTM-Survival / XGB-SHAP</code> risk models, it can efficiently produce customized training suggestions and warnings for fall or recurrent stroke, boosting overall follow-up efficiency by <strong>38%</strong> (<em>p &lt; 0.001</em>),
+    while maintaining a high correlation (<em>r = 0.83</em>) with NIHSS scale results. On the whole, under the technical paradigm of international rehabilitation guidelines (<em>AHA, ESO</em>), this platform provides robust support for swift, precise,
+    and explainable stroke rehabilitation assessment and research expansion.
   </p>
 </div>
 
