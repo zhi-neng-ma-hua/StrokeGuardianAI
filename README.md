@@ -2,7 +2,7 @@
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="docs/logo.png">
-    <img alt="StrokeGuardian AI" src="docs/logo.png" width="48">
+    <img alt="StrokeGuardian AI" src="docs/logo.png" width="62">
   </picture>
 </p>
 
