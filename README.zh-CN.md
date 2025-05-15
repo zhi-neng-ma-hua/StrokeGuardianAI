@@ -6,8 +6,8 @@
 
 <!-- ——— 语言切换（右上角） ——— -->
 <p align="right" style="margin-top:0;">
-  <a href="README.zh-CN.md"
-     title="切换到简体中文"
+  <a href="README.md"
+     title="切换到英文"
      style="
        display:inline-flex;
        align-items:center;
