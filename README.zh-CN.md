@@ -84,7 +84,7 @@
 
 
 
-- 曹学进<sup>1,2</sup>  马来西亚国立大学    zhinengmahua@gmail.com
+<p align="center">曹学进  马来西亚国立大学    zhinengmahua@gmail.com</p>
 
 <!-- ——— 半透明分割线 ——— -->
 <hr style="width:82%;max-width:780px;border:0;border-top:1px solid rgba(0,0,0,.06);margin:12px auto 24px;">
