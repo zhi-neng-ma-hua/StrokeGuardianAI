@@ -8,7 +8,7 @@
   <a href="README.zh-CN.md">
     <img
       alt="简体中文"
-      src="docs/assets/lang-zh.svg"
+      src="docs/assets/lang-zh.png"
       width="120"
     />
   </a>
