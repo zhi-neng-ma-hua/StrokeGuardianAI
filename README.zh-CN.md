@@ -69,8 +69,6 @@
   中风守护者 AI
 </h1>
 
-<div><strong>作者</strong>：曹学进</div>
-
 <!-- ——— 细分 tagline ——— -->
 <p align="center" style="font-size:14.5px;font-style:italic;line-height:1.6;margin:4px 0 12px;">
   ✨ AI 赋能 · 符合医院级安全与合规标准 · 实时精准的中风康复智能评估平台 ✨
@@ -83,6 +81,20 @@
      </p>
   </span>
 </p>
+
+
+# 题目（Title）
+基于多视角捕捉与智能算法融合的中风康复评估：StrokeGuardian AI 的平台设计与实证研究
+
+## 作者信息（Authors）
+- 曹学进<sup>1,2</sup>  
+- 王晓琳<sup>1</sup>  
+- 张悦<sup>2</sup>  
+
+<small>
+1. 马来西亚国立大学 康复医学中心  
+2. 虚拟医院智慧医疗实验室
+</small>
 
 <!-- ——— 半透明分割线 ——— -->
 <hr style="width:82%;max-width:780px;border:0;border-top:1px solid rgba(0,0,0,.06);margin:12px auto 24px;">
@@ -119,19 +131,6 @@
 </div>
 
 <br>
-
-# 题目（Title）
-基于多视角捕捉与智能算法融合的中风康复评估：StrokeGuardian AI 的平台设计与实证研究
-
-## 作者信息（Authors）
-- 曹学进<sup>1,2</sup>  
-- 王晓琳<sup>1</sup>  
-- 张悦<sup>2</sup>  
-
-<small>
-1. 马来西亚国立大学 康复医学中心  
-2. 虚拟医院智慧医疗实验室
-</small>
 
 ---
 
