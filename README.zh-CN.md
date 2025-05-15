@@ -84,7 +84,7 @@
   — 一套面向中风康复评估的综合性
   <kbd><strong>端—云—边</strong></kbd>
   协同平台，旨在通过多源信息融合与深度学习方法，实现更加精准的康复干预与风险管理。系统核心在于利用
-  <span style="color:#9c27b0; font-weight:bold;">多视角 RGB-D + IMU</span>
+  <kbd><strong>多视角 RGB-D + IMU</strong></kbd>
   传感器实时捕捉患者的自然运动数据，并通过结合
   <span style="color:#2196f3; font-weight:bold;">Transformer-VAE</span>
   与
