@@ -68,6 +68,7 @@
 <h1 align="center" style="margin:0.4em 0 0.2em 0;">
   StrokeGuardian&nbsp;<span style="color:#00c7ff;">AI</span>
 </h1>
+
 <br>
 
 <!-- ——— Tagline ——— -->
@@ -80,6 +81,7 @@
     </span>
   </small></i>
 </p>
+
 <br>
 
 <!-- ——— Elevator Pitch ——— -->
@@ -109,7 +111,7 @@
 <br>
 
 <!-- ———  A B S T R A C T  ——— -->
-<h2 id="abstract" align="center" style="margin:2.2em 0 0.7em;color:#0084ff;">摘 要</h2>
+<h3 id="abstract" align="center" style="margin:2.2em 0 0.7em;color:#0084ff;">摘 要</h3>
 
 <div style="text-align:justify;font-size:14.6px;line-height:1.58; margin-bottom:2em;">
   <strong>StrokeGuardian AI</strong> 聚焦于利用 <kbd>≤ 7 路多角度 RGB-D + 惯性测量单元</kbd>（IMU）在
