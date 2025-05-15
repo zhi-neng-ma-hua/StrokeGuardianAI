@@ -166,24 +166,28 @@
       动态处理遮挡并恢复精确的三维骨骼表征，
       为运动学与生理学研究提供高分辨率的多模态输入。
     </li>
+    <br>
     <li>
       <b>实时指标流输出：</b>
       以最高 60 Hz 的推理频率对患者运动特征进行识别与追踪，
       并通过 <kbd>WebSocket</kbd> 与 <kbd>gRPC</kbd>
       实现安全的零拷贝数据传输，满足低时延临床应用需求。
     </li>
+    <br>
     <li>
       <b>LLM 语义推理：</b>
       通过 RAG（Retrieval-Augmented Generation）与 Prompt Ensembling 技术，
       针对患者个体状况提供循证级康复处方与药物警示，
       兼具解释性与个性化。
     </li>
+    <br>
     <li>
       <b>预测与预警：</b>
       采用 <kbd>LSTM-Survival</kbd> 模型对跌倒与二次卒中风险进行预测，
       一旦超限即刻发出预警，
       提升临床干预的主动性与及时性。
     </li>
+    <br>
     <li>
       <b>数据治理：</b>
       将多维指标映射为 FHIR 资源，并汇聚至 Data Lake 中，
@@ -191,6 +195,7 @@
       搭建全链路可观测体系，
       满足科研与合规审计需求。
     </li>
+    <br>
     <li>
       <b>灰度式 DevOps：</b>
       借助 <kbd>Kubernetes</kbd> 容器化微服务，
