@@ -83,26 +83,14 @@
 </p>
 
 <!-- ======= 作者信息卡片 ======= -->
-<p align="center"
-   style="
-     font-size:14px;
-     line-height:1.55;
-     margin:1.6em auto 0;
-   ">
-  <strong>曹学进</strong>&nbsp;|&nbsp;马来西亚国立大学<br>
-
-  <!-- 电子邮箱 -->
-  📧&nbsp;<a href="mailto:zhinengmahua@gmail.com"
-            style="color:#00a9ff;text-decoration:none;">
-        zhinengmahua@gmail.com
-      </a>&nbsp;&nbsp;•&nbsp;&nbsp;
-
-  <!-- 微信 -->
-  💬&nbsp;微信&nbsp;<code>zhinengmahua</code>&nbsp;&nbsp;•&nbsp;&nbsp;
-
-  <!-- WhatsApp -->
-  📱&nbsp;WhatsApp&nbsp;<code>+60&nbsp;123&nbsp;456&nbsp;789</code>
+<p align="center">
+  <strong>曹学进</strong> · 马来西亚国立大学  
+  <br>
+  📧 <a href="mailto:zhinengmahua@gmail.com">zhinengmahua@gmail.com</a> &nbsp;•&nbsp;
+  💬 微信&nbsp;<code>XJ-Cao</code>&nbsp;•&nbsp;
+  📱 WhatsApp&nbsp;<code>+60 123 456 789</code>
 </p>
+
 
 <!-- ——— 半透明分割线 ——— -->
 <hr style="width:82%;max-width:780px;border:0;border-top:1px solid rgba(0,0,0,.06);margin:12px auto 24px;">
