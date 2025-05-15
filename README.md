@@ -1,0 +1,5 @@
+中文
+StrokeGuardian AI 是一款面向医疗机构的中风康复智能评估平台，通过端-云协同的深度学习架构，将患者的日常运动行为实时解析为符合国际标准的可量化康复指标；平台输出可追溯的多维数据报告，帮助临床团队精准制定个体化康复方案、优化随访流程，并为科研机构提供高可信度的全流程数据闭环。
+
+English
+StrokeGuardian AI is an enterprise-grade intelligent assessment platform for post-stroke rehabilitation. Leveraging an edge-to-cloud deep-learning architecture, it converts patients’ everyday movements into standardized, quantifiable rehabilitation metrics in real time. The platform delivers traceable, multi-dimensional reports that enable clinical teams to personalise treatment decisions, streamline follow-up workflows, and furnish researchers with a high-fidelity, end-to-end data loop.
