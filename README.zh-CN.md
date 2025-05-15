@@ -77,23 +77,23 @@
 <div style="
   max-width:760px;
   margin-top:1em;
-  font:600 15px/1.8 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  line-height:4;
+  line-height:1.8;
+  font:600 15px/1.56 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 ">
   <strong>StrokeGuardian AI</strong><br><br>
-  — 一套面向中风康复评估的综合性
-  <kbd><strong>端—云—边</strong></kbd>
+
+  —— 一套面向中风康复评估的综合性
+  <kbd>端—云—边</kbd>
   协同平台，旨在通过多源信息融合与深度学习方法，实现更加精准的康复干预与风险管理。系统核心在于利用
-  <kbd><strong>多视角 RGB-D + IMU</strong></kbd>
+  <kbd>多视角 RGB-D + IMU</kbd>
   传感器实时捕捉患者的自然运动数据，并通过结合
-  <span style="color:#2196f3; font-weight:bold;">Transformer-VAE</span>
+  <kbd>Transformer-VAE</kbd>
   与
-  <span style="color:#009688; font-weight:bold;">检索增强型大语言模型</span>
-  （Retrieval-Augmented LLM）的前沿技术框架，生成符合
-  <abbr title="International Classification of Functioning, Disability and Health, WHO 2001">
-    <span style="color:#ff5722; font-weight:bold;">ICF</span>
-  </abbr>
+  <kbd>检索增强型大语言模型（Retrieval-Augmented LLM）</kbd>
+  的前沿技术框架，生成符合
+  <abbr title="International Classification of Functioning, Disability and Health, WHO 2001"><kbd>ICF</kbd></abbr>
   标准的多维康复指标序列与个性化干预建议。此设计在借助 WHO 所倡导的全球统一标准（ICF）的同时，保证了可比性与可推广性。<br><br>
+
   本平台的首要目标在于支持临床实践的精准随访与风险预警：通过对运动学与生理学特征的实时监测和深度分析，系统可帮助医生快速识别功能障碍趋势并生成量化指标，进而为个案提供依据充分且循证严谨的康复方案。与传统康复流程相比，StrokeGuardian AI 不仅显著缩短了临床评估周期，而且在风险评估与干预建议等关键环节上展现出更高的灵活性与准确性，为中风康复的全流程管理提供了稳健、有效且高效率的技术支撑。
 </div>
 
