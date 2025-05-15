@@ -98,7 +98,7 @@
       </a>&nbsp;&nbsp;•&nbsp;&nbsp;
 
   <!-- 微信 -->
-  💬&nbsp;微信&nbsp;<code>XJ-Cao</code>&nbsp;&nbsp;•&nbsp;&nbsp;
+  💬&nbsp;微信&nbsp;<code>zhinengmahua</code>&nbsp;&nbsp;•&nbsp;&nbsp;
 
   <!-- WhatsApp -->
   📱&nbsp;WhatsApp&nbsp;<code>+60&nbsp;123&nbsp;456&nbsp;789</code>
