@@ -74,42 +74,59 @@
 </p>
 
 <!-- ——— Elevator Pitch ——— -->
-<p align="center" style="max-width:740px; font-size:15px; line-height:1.56; margin-top:0.8em;">
-  <strong>StrokeGuardian AI</strong> 是一款 <kbd>端-云协同</kbd> 的中风康复智能评估平台，
-  能够将患者在自然场景中的日常运动实时转化为<strong>国际标准</strong>的数字康复指标，
-  并以 <kbd>可追溯多维报告</kbd> 架起临床精准随访与科研数据闭环的桥梁。
+<p align="center" style="max-width:760px;font-size:15px;line-height:1.58;margin-top:1em;">
+  <strong>StrokeGuardian AI</strong> 是一体化 <kbd>端-云-边</kbd> 中风康复智能评估平台：  
+  通过 <kbd>多视角摄像 + 传感融合</kbd> 捕获患者自然运动，  
+  以 <kbd>Transformer-VAE</kbd> &amp; <kbd>LLM</kbd> 联合模型实时生成符合 <abbr title="ICF">ICF</abbr> 标准的康复指标与个性化干预方案，  
+  构建临床 <em>精准随访 &amp; 风险预警</em> 的数据闭环。
 </p>
 
 <!-- ——— A B S T R A C T ——— -->
-<h2 id="摘要" style="margin:2.2em 0 0.6em; text-align:center;">摘 要</h2>
+<h2 id="摘要" style="margin:2.2em 0 0.6em;text-align:center;">摘 要</h2>
 
 <p style="text-align:justify;">
-  <strong>StrokeGuardian AI</strong> 采用单目&nbsp;RGB-D 视觉链路在 <em>边缘端</em>
-  重建真实尺度的 3-D 骨骼序列，
-  借助 <kbd>Spatio-Temporal Transformer</kbd>（12 万小时预训练 &amp; Vicon 微调）
-  实现关节角度估计 <em>ICC ≥ 0.94</em>。
-  时序运动学特征随后被嵌入 <kbd>贝叶斯状态空间模型</kbd>，
-  连续输出与 <abbr title="International Classification of Functioning, Disability and Health">ICF</abbr>
-  对齐的康复生物标志物（步态对称性、关节耦合、代偿协同指数等），
-  刷新率 60&nbsp;Hz、端到端延迟 &lt; 50 ms。
+  <strong>StrokeGuardian AI</strong> 采用 <kbd>多角度 RGB-D 摄像 + 惯性单元</kbd> 形成稠密视锥，  
+  在 <em>边缘端</em> 先行执行 <kbd>单目-双目联合姿态估计</kbd>，  
+  随后通过 <kbd>时空同步-ICP 融合</kbd> 重建 <strong>亚毫米级</strong> 三维骨骼序列。  
+  主干 <kbd>Spatio-Temporal Transformer-VAE</kbd> 经 12 万小时人体运动预训练并以 Vicon 数据微调，  
+  关节角度估计 <em>ICC ≥ 0.94</em>，时序补帧误差 &lt; 1.1°。
 </p>
 
 <p style="text-align:justify;">
-  指标通过 <kbd>gRPC-TLS</kbd> 传输并封装为
-  <abbr title="HL7 Fast Healthcare Interoperability Resources">HL7 FHIR</abbr> 资源，
-  在临床仪表盘实时可视化；若患者恢复轨迹的 95 % 置信区间
-  偏离神经可塑性参考曲线，<em>纵向预测引擎</em> 将推送个性化干预建议。
+  生成的高维运动学特征流被注入 <kbd>贝叶斯状态空间</kbd> 与 <kbd>因子图</kbd>，  
+  每 16 ms 输出 ICF 对齐的康复生物标志物（步态对称、功率谱熵、协同耦合指数等）。  
+  指标经 <kbd>gRPC-TLS</kbd> 加密后映射为 <abbr title="HL7 Fast Healthcare Interoperability Resources">FHIR</abbr> 资源；  
+  嵌入式 <kbd>GPT-4Turbo</kbd> 通过检索增强 (RAG) 综合 EMR、指南与患者偏好，  
+  自动生成 <em>个体化训练菜单、预测性风险评分、行为依从性摘要</em> 等自然语言报告。
 </p>
 
-<!-- ——— 关键指标 ——— -->
+<!-- ——— 关 键 指 标 ——— -->
 <div align="center" style="margin:1.2em 0;">
   <table>
-    <tr><td align="center">👥  四中心前瞻队列</td><td><strong>N&nbsp;= 312</strong></td></tr>
-    <tr><td align="center">🔗  与 NIHSS 相关</td><td><strong>r&nbsp;= 0.83</strong></td></tr>
-    <tr><td align="center">⏱️  随访时间节省</td><td><strong>-38 % <em>(p &lt; 0.001)</em></strong></td></tr>
-    <tr><td align="center">⚙️  部署形态</td><td>Helm Chart + GitHub&nbsp;Actions CI • CNCF 合规</td></tr>
+    <tr><td align="center">👥 多中心前瞻队列</td><td><strong>N = 312</strong></td></tr>
+    <tr><td align="center">🔗 NIHSS 相关</td><td><strong>r = 0.83</strong></td></tr>
+    <tr><td align="center">⏱️ 随访时间缩减</td><td><strong>-38 % <em>(p &lt; 0.001)</em></strong></td></tr>
+    <tr><td align="center">⚙️ 部署形态</td><td>Helm Chart • GitHub Actions CI • CNCF 合规</td></tr>
   </table>
 </div>
+
+<!-- ——— 功 能 矩 阵 ——— -->
+<h3 align="center">核心功能一览</h3>
+<ul style="max-width:760px;margin:0 auto;font-size:14.5px;line-height:1.55;">
+  <li><strong>多视角 3-D Re-targeting</strong>：同步 ≤ 7 台摄像 + IMU 融合；动态遮挡补偿。</li>
+  <li><strong>实时指标流</strong>：60 Hz 推理；<kbd>WebSocket</kbd> + <kbd>gRPC</kbd> 零拷贝传输。</li>
+  <li><strong>LLM 语义推理</strong>：RAG + Prompt Ensembling，生成循证级个性化康复方案、药物/运动交互警示。</li>
+  <li><strong>风险预警</strong>：基于 <kbd>LSTM-Survival</kbd> 预测跌倒 / 二次卒中概率，阈值超限自动报警。</li>
+  <li><strong>数据治理</strong>：指标→FHIR→临床数据湖；OpenTelemetry + Prometheus 全链路可观测。</li>
+  <li><strong>DevOps</strong>：微服务容器&nbsp;(<kbd>K8s</kbd>)，灰度发布 ≤ 5 min；合规审计轨迹全程保留。</li>
+</ul>
+
+<p style="text-align:justify;margin-top:1.1em;">
+  通过 <kbd>可解释 AI</kbd>、<kbd>LLM 驱动报告</kbd> 与 <kbd>云边混合算力</kbd>，StrokeGuardian AI  
+  将床旁观察、远程随访与科研验证无缝整合，  
+  为 <em>精准康复 4.0</em> 提供可规模化落地的技术与数据基座。
+</p>
+
 
 <p style="text-align:justify;">
   凭借模块化 <kbd>微服务</kbd> 架构和 <kbd>容器化交付</kbd>，StrokeGuardian AI
