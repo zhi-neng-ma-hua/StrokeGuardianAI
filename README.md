@@ -193,9 +193,9 @@ In summary, this research provides a detailed exposition of StrokeGuardian AI’
 To achieve multi-dimensional, high-precision monitoring of the stroke rehabilitation process, StrokeGuardian AI adopts a three-tier <strong>edge–cloud–client</strong> collaborative architecture:
 
 1. **Edge**
-   
-   Deployed at the patient’s location (e.g., ward or home), multiple RGB-D cameras and IMUs collect initial data and carry out preliminary preprocessing.
 
+   Deployed at the patient’s location (e.g., ward or home), multiple RGB-D cameras and IMUs collect initial data and carry out preliminary preprocessing.
+   
 3. **Cloud**
    
    High-performance cloud servers provide storage and computing power for tasks such as Transformer-VAE skeletal reconstruction and RAG-LLM inference with heavy workloads.
