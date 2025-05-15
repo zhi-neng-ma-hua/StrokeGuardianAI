@@ -65,7 +65,6 @@
 </p>
 
 <!-- ——— Title ——— -->
-<br>
 <h1 align="center" style="margin:0.4em 0 0.2em 0;">
   StrokeGuardian&nbsp;<span style="color:#00c7ff;">AI</span>
 </h1>
