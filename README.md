@@ -1,10 +1,10 @@
 <!--
 ══════════════════════════════════════════════════════
-   StrokeGuardian AI · README 首屏
+   StrokeGuardian AI · README Top Section
 ══════════════════════════════════════════════════════
 -->
 
-<!-- ======= 语言切换（右上角） ======== -->
+<!-- ======= Language Switch (top-right corner) ======== -->
 <p align="right" style="margin-top:0;">
   <a href="README.md"
      title="Switch to Simplified Chinese"
@@ -25,39 +25,39 @@
   </a>
 </p>
 
-<!-- ======= 项目 Logo ======= -->
+<!-- ======= Project Logo ======= -->
 <p align="center">
   <img src="docs/logo.png" width="96" height="96" alt="StrokeGuardian AI Logo"/>
 </p>
 
-<!-- ======= 徽章区域（自适应换行） ======= -->
+<!-- ======= Badge Section (responsive wrapping) ======= -->
 <div align="center" style="display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin:8px 0;">
-  <!-- 最新发行版 -->
-  <a href="https://github.com/YourOrg/StrokeGuardianAI/releases" title="Latest stable release">
+  <!-- Latest Stable Release -->
+  <a href="https://github.com/zhi-neng-ma-hua/StrokeGuardianAI/releases" title="Latest stable release">
     <img alt="Latest Release"
-         src="https://img.shields.io/github/v/release/YourOrg/StrokeGuardianAI?label=Release&labelColor=0084ff&color=00c7ff&style=flat-square">
+         src="https://img.shields.io/github/v/release/zhi-neng-ma-hua/StrokeGuardianAI?label=Release&labelColor=0084ff&color=00c7ff&style=flat-square">
   </a>
 
-  <!-- 许可证 -->
-  <a href="https://github.com/YourOrg/StrokeGuardianAI/blob/main/LICENSE" title="MIT License">
+  <!-- License -->
+  <a href="https://github.com/zhi-neng-ma-hua/StrokeGuardianAI/blob/main/LICENSE" title="MIT License">
     <img alt="License: MIT"
-         src="https://img.shields.io/github/license/YourOrg/StrokeGuardianAI?label=License&labelColor=0084ff&color=00c7ff&style=flat-square">
+         src="https://img.shields.io/github/license/zhi-neng-ma-hua/StrokeGuardianAI?label=License&labelColor=0084ff&color=00c7ff&style=flat-square">
   </a>
 
-  <!-- 持续集成状态 -->
-  <a href="https://github.com/YourOrg/StrokeGuardianAI/actions/workflows/ci.yml" title="CI 状态">
+  <!-- Continuous Integration Status -->
+  <a href="https://github.com/zhi-neng-ma-hua/StrokeGuardianAI/actions/workflows/ci.yml" title="CI Status">
     <img alt="CI Status"
-         src="https://img.shields.io/github/actions/workflow/status/YourOrg/StrokeGuardianAI/ci.yml?branch=main&label=CI&labelColor=0084ff&color=00c7ff&style=flat-square">
+         src="https://img.shields.io/github/actions/workflow/status/zhi-neng-ma-hua/StrokeGuardianAI/ci.yml?branch=main&label=CI&labelColor=0084ff&color=00c7ff&style=flat-square">
   </a>
 
-  <!-- 维护活跃度 -->
-  <a href="https://github.com/YourOrg/StrokeGuardianAI/graphs/commit-activity" title="最近 12 个月提交活跃度">
+  <!-- Maintenance Activity -->
+  <a href="https://github.com/zhi-neng-ma-hua/StrokeGuardianAI/graphs/commit-activity" title="Commit activity over the last 12 months">
     <img alt="Maintenance"
          src="https://img.shields.io/badge/maintenance-yes-00c7ff?labelColor=0084ff&style=flat-square">
   </a>
 </div>
 
-<!-- ======= 主标题（渐变描边） ======= -->
+<!-- ======= Main Title (gradient outline) ======= -->
 <h1 align="center" style="
   margin:0.4em 0 0;
   font-size:2.4em;
@@ -69,15 +69,16 @@
   Stroke Guardian AI
 </h1>
 
-<!-- ======= 细分 tagline ======= -->
+<!-- ======= Subdivided Tagline ======= -->
 <p align="center" style="font-size:14.5px;font-style:italic;line-height:1.6;margin:4px 0 12px;">
-  ✨ AI 赋能 · 符合医院级安全与合规标准 · 实时精准的中风康复智能评估平台 ✨
+  ✨ AI-Powered · Compliant with Hospital-Grade Security & Regulations · Real-Time, Precise Stroke Rehabilitation Assessment Platform ✨
   
    <br>
   <span style="font-weight:normal;">
      <p>
-    （融合多维度数据采集与循证医学策略，全面对接 WHO ICF 框架，为临床与科研提供
-    <em>可拓展、可验证、可解释</em> &nbsp; 的中风康复评估与干预范式）
+    (Integrating multi-dimensional data acquisition with evidence-based medical strategies,
+    fully aligned with the WHO ICF framework, offering
+    <em>extensible, verifiable, and explainable</em> stroke rehabilitation assessment and intervention solutions for clinical and research needs)
      </p>
   </span>
 </p>
