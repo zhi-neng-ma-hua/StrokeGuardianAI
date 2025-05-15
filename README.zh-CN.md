@@ -69,6 +69,7 @@
 <h1 align="center" style="margin:0.4em 0 0.2em 0;">
   StrokeGuardian&nbsp;<span style="color:#00c7ff;">AI</span>
 </h1>
+<br>
 
 <!-- ——— Tagline ——— -->
 <p align="center">
@@ -79,6 +80,7 @@
     </span>
   </small></i>
 </p>
+<br>
 
 <!-- ——— Elevator Pitch ——— -->
 <div style="
