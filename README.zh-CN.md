@@ -1,14 +1,14 @@
 <!-- 
 ════════════════════════════════════════════════════════════
-  StrokeGuardian AI · README Hero (single-logo | fully-polished)
-═════════════════════════════════════════════════════════════════
+  StrokeGuardian AI · README 首屏（单 Logo | 完整美化）
+════════════════════════════════════════════════════════════
 -->
 
-<!-- ——— Language Switch (top-right) ——— -->
-<!-- ========= Language Switch ========= -->
+<!-- ——— 语言切换（右上角） ——— -->
+<!-- ========= 语言切换 ========= -->
 <p align="right" style="margin-top:0;">
   <a href="README.zh-CN.md"
-     title="Switch to Simplified Chinese"
+     title="切换到简体中文"
      style="
        display:inline-flex;
        align-items:center;
@@ -26,36 +26,36 @@
   </a>
 </p>
 
-<!-- ——— Logo ——— -->
+<!-- ——— 项目 Logo ——— -->
 <p align="center">
   <img src="docs/logo.png" width="96" height="96" alt="StrokeGuardian AI Logo"/>
 </p>
 
-<!-- ——— Badge Row ——— -->
+<!-- ——— 徽章区域 ——— -->
 <p align="center">
 
-  <!-- Release -->
+  <!-- 最新发行版 -->
   <a href="https://github.com/YourOrg/StrokeGuardianAI/releases" title="Latest stable release">
     <img
       alt="Latest Release"
       src="https://img.shields.io/github/v/release/YourOrg/StrokeGuardianAI?label=Release&labelColor=0084ff&color=00c7ff&style=flat-square">
   </a>
 
-  <!-- License -->
+  <!-- 许可证 -->
   <a href="https://github.com/YourOrg/StrokeGuardianAI/blob/main/LICENSE" title="MIT License">
     <img
       alt="License: MIT"
       src="https://img.shields.io/github/license/YourOrg/StrokeGuardianAI?label=License&labelColor=0084ff&color=00c7ff&style=flat-square">
   </a>
 
-  <!-- CI -->
+  <!-- 持续集成状态 -->
   <a href="https://github.com/YourOrg/StrokeGuardianAI/actions/workflows/ci.yml" title="Continuous Integration status">
     <img
       alt="CI Status"
       src="https://img.shields.io/github/actions/workflow/status/YourOrg/StrokeGuardianAI/ci.yml?branch=main&label=CI&labelColor=0084ff&color=00c7ff&style=flat-square">
   </a>
 
-  <!-- Maintenance -->
+  <!-- 维护活跃度 -->
   <a href="https://github.com/YourOrg/StrokeGuardianAI/graphs/commit-activity" title="Commit activity (past 12 months)">
     <img
       alt="Maintenance"
@@ -64,14 +64,14 @@
 
 </p>
 
-<!-- ——— Title ——— -->
+<!-- ——— 主标题 ——— -->
 <h1 align="center" style="margin:0.4em 0 0.2em 0;">
   StrokeGuardian&nbsp;<span style="color:#00c7ff;">AI</span>
 </h1>
 
 <br>
 
-<!-- ——— Tagline ——— -->
+<!-- ——— 宣传语 / 副标题 ——— -->
 <p align="center">
   <i><small>
     ✨ AI 赋能 · 符合医院级安全与合规标准 · 实时精准的中风康复智能评估平台 ✨
