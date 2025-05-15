@@ -66,7 +66,7 @@
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
 ">
-  StrokeGuardian AI
+  StrokeGuardian AI (中风守护者 AI)
 </h1>
 
 <!-- ——— 细分 tagline ——— -->
