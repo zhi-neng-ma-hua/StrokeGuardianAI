@@ -208,59 +208,6 @@
   并为中风康复评估、个性化干预及大规模纵向研究提供了系统性与前瞻性的支持。
 </p>
 
-<br><h2 align="center" style="margin:2em 0 0.7em;color:#0084ff;">核心功能矩阵</h2>
-<div style="max-width:760px; margin:0 auto; font-size:14.4px; line-height:1.55;">
-  <ul>
-    <li>
-      <b>多视角 3-D Re-targeting：</b>
-      基于 ≤7 台摄像机与 IMU 融合的数据采集管线，
-      动态处理遮挡并恢复精确的三维骨骼表征，
-      为运动学与生理学研究提供高分辨率的多模态输入。
-    </li>
-    <li>
-      <b>实时指标流输出：</b>
-      以最高 60 Hz 的推理频率对患者运动特征进行识别与追踪，
-      并通过 <kbd>WebSocket</kbd> 与 <kbd>gRPC</kbd>
-      实现安全的零拷贝数据传输，满足低时延临床应用需求。
-    </li>
-    <li>
-      <b>LLM 语义推理：</b>
-      通过 RAG（Retrieval-Augmented Generation）与 Prompt Ensembling 技术，
-      针对患者个体状况提供循证级康复处方与药物警示，
-      兼具解释性与个性化。
-    </li>
-    <li>
-      <b>预测与预警：</b>
-      采用 <kbd>LSTM-Survival</kbd> 模型对跌倒与二次卒中风险进行预测，
-      一旦超限即刻发出预警，
-      提升临床干预的主动性与及时性。
-    </li>
-    <li>
-      <b>数据治理：</b>
-      将多维指标映射为 FHIR 资源，并汇聚至 Data Lake 中，
-      配合 <kbd>OpenTelemetry</kbd> 与 <kbd>Prometheus</kbd>
-      搭建全链路可观测体系，
-      满足科研与合规审计需求。
-    </li>
-    <li>
-      <b>灰度式 DevOps：</b>
-      借助 <kbd>Kubernetes</kbd> 容器化微服务，
-      支持蓝绿切换（&lt; 5 分钟），并保留审计记录，
-      为快速迭代与合规运营提供完备技术支撑。
-    </li>
-  </ul>
-</div>
-
-<p style="text-align:justify; margin-top:1.15em; font-size:14.5px; line-height:1.6;">
-  整合 <kbd>可解释性人工智能</kbd>、<kbd>云—边混合计算</kbd> 与
-  <kbd>LLM 驱动的自然语言报告</kbd>等关键技术，StrokeGuardian AI
-  将床旁临床观察、远程随访以及科研分析密切衔接，构建“精准康复 4.0”的可扩展落地方案。
-  通过高度模块化的系统设计与标准化的数据接口，本平台为广域化部署与临床转化奠定了坚实基础，
-  并为中风康复评估、个性化干预及大规模纵向研究提供了系统性与前瞻性的支持。
-</p>
-
-<br>
-
 <br>
 
 <!-- ——— 3-D Skeleton Tech Stack ——— -->
