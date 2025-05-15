@@ -74,7 +74,39 @@
   <i><small>✨ AI-powered · Clinical-grade · Real-time & Precision Stroke-Rehabilitation Assessment Platform ✨</small></i>
 </p>
 
-<!-- ——— 1-line abstract ——— -->
+<!-- Language Switch -->
+<p align="right" style="margin-top:0;">
+  <a href="README.zh-CN.md"
+     title="切换到简体中文"
+     style="display:inline-flex;align-items:center;gap:6px;
+            padding:4px 10px;font:600 13px/1 'Segoe UI',sans-serif;
+            background:#00a9ff;color:#fff;border-radius:6px;
+            text-decoration:none;">
+    <img src="docs/assets/lang-zh.svg" width="20" height="20" alt="🌐">
+    简体中文
+  </a>
+</p>
+
+<!-- Logo -->
+<p align="center">
+  <img src="docs/logo.png" width="96" height="96" alt="StrokeGuardian AI logo">
+</p>
+
+<!-- Badge Row (Shields.io 仍保持实时数据) -->
+<p align="center">
+  <a href="https://github.com/YourOrg/StrokeGuardianAI/releases">
+    <img alt="Latest Release"
+         src="https://img.shields.io/github/v/release/YourOrg/StrokeGuardianAI?label=Release&color=00c7ff&style=flat-square">
+  </a>
+  …
+</p>
+
+<h1 align="center">
+  StrokeGuardian&nbsp;<span style="color:#00c7ff;">AI</span>
+</h1>
+<p align="center"><em>✨ AI-powered · Clinical-grade · Real-time & Precision Stroke-Rehab Assessment ✨</em></p>
+
+<!-- ——— abstract ——— -->
 <p>
   An edge-to-cloud system that transforms everyday movements into standardised, traceable rehabilitation metrics—empowering clinicians with data-driven decisions and researchers with an end-to-end, high-fidelity data loop.
 </p>
