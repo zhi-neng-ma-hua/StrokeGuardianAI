@@ -136,9 +136,13 @@
 ---
 
 ## 摘要（Abstract）
-本研究聚焦于名为 <strong>StrokeGuardian AI</strong> 的一体化中风康复评估与干预平台，旨在通过多视角视频与深度学习技术，实现对患者步态及运动功能的精准量化和远程支持。平台在边缘端借助 <kbd>RGB-D + IMU</kbd> 多模态数据捕捉，并通过 <kbd>Spatio-Temporal Transformer-VAE</kbd> 结合 <kbd>ICP</kbd> / <kbd>Bundle Adjustment</kbd> 技术，构建高精度三维骨骼序列（ICC ≥ 0.94），同时将端到端推理时延控制在 < 50 ms 范围内。基于对高维运动学特征的实时解析，系统以 <kbd>贝叶斯状态空间</kbd> 和 <kbd>因子图</kbd> 每 16 ms 更新对应 <abbr title="International Classification of Functioning, Disability and Health"><strong>ICF</strong></abbr> 标准的关键康复指标，并通过 <kbd>gRPC-TLS</kbd> 加密管道输出为 <abbr title="Fast Healthcare Interoperability Resources">FHIR</abbr> 兼容格式，契合 WHO、HL7 等国际规范对于跨平台数据互操作的需求。<br><br>
+本研究聚焦于名为 <strong>StrokeGuardian AI</strong> 的一体化中风康复评估与干预平台，旨在通过多视角视频与深度学习技术，实现对患者步态及运动功能的精准量化和远程支持。
+平台在边缘端借助 <kbd>RGB-D + IMU</kbd> 多模态数据捕捉，并通过 <kbd>Spatio-Temporal Transformer-VAE</kbd> 结合 <kbd>ICP</kbd> / <kbd>Bundle Adjustment</kbd> 技术，构建高精度三维骨骼序列（ICC ≥ 0.94），同时将端到端推理时延控制在 < 50 ms 范围内。
+基于对高维运动学特征的实时解析，系统以 <kbd>贝叶斯状态空间</kbd> 和 <kbd>因子图</kbd> 每 16 ms 更新对应 <abbr title="International Classification of Functioning, Disability and Health"><strong>ICF</strong></abbr> 标准的关键康复指标，并通过 <kbd>gRPC-TLS</kbd> 加密管道输出为 <abbr title="Fast Healthcare Interoperability Resources">FHIR</abbr> 兼容格式，契合 WHO、HL7 等国际规范对于跨平台数据互操作的需求。<br><br>
 
-在应用层面，平台内嵌 <kbd>GPT-4 Turbo</kbd>（RAG + Prompt Ensembling）整合 EMR、临床指南（AHA / ESO）及患者偏好，能动态生成个性化康复训练与预测性风险评分；而 <kbd>LSTM-Survival</kbd> 与 <kbd>XGB-SHAP</kbd> 模块则实现对跌倒及二次卒中的超限预警。本研究于多中心前瞻队列（N=312）验证了系统性能，结果显示其与 NIHSS 评分显著相关（r = 0.83），随访周期则较传统方案缩短 38%（p < 0.001）。综上所述，StrokeGuardian AI 在多场景中展现出实时、精准、可解释的中风康复评估潜力，并通过 CNCF 等容器化标准支持大规模部署，为国际化远程康复与个性化干预提供了高价值的技术与循证支撑。
+在应用层面，平台内嵌 <kbd>GPT-4 Turbo</kbd>（RAG + Prompt Ensembling）整合 EMR、临床指南（AHA / ESO）及患者偏好，能动态生成个性化康复训练与预测性风险评分；而 <kbd>LSTM-Survival</kbd> 与 <kbd>XGB-SHAP</kbd> 模块则实现对跌倒及二次卒中的超限预警。
+本研究于多中心前瞻队列（N=312）验证了系统性能，结果显示其与 NIHSS 评分显著相关（r = 0.83），随访周期则较传统方案缩短 38%（p < 0.001）。
+综上所述，StrokeGuardian AI 在多场景中展现出实时、精准、可解释的中风康复评估潜力，并通过 CNCF 等容器化标准支持大规模部署，为国际化远程康复与个性化干预提供了高价值的技术与循证支撑。
 
 **关键词（Keywords）**  
 中风康复；多视角捕捉；Transformer-VAE；检索增强型大语言模型；随访效率；可解释人工智能
