@@ -106,27 +106,12 @@
   font:600 15px/1.56 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 ">
   <p>
-    <strong>StrokeGuardian AI</strong> 是一款面向医疗机构的中风康复智能评估平台，基于
-    <em>端—云</em>
-    协同与
-    <em>深度学习</em>
-    架构，将患者日常运动行为实时解析为符合
-    <em>WHO ICF</em>
-    与
-    <em>HL7 FHIR</em>
-    等国际标准的可量化康复指标。平台通过多模态数据采集（整合
-    <code>RGB-D 摄像机</code>
-    与
-    <code>IMU</code>），并采用
-    <code>Transformer-VAE</code>
-    等前沿算法实现亚毫米级骨骼重建（ICC ≥ 0.94）及
-    <code>&lt; 50 ms</code>
-    的端到端推理延迟，可有效支持医院级场景和家庭延伸监测。系统输出可追溯、多维度的康复报告，协助临床团队制定个性化康复方案，优化随访流程，并为科研机构提供全流程数据闭环与验证支持。通过
-    <code>RAG-LLM</code>
-    与
-    <code>LSTM-Survival / XGB-SHAP</code>
-    风险模型，平台亦能高效生成个性化训练建议与跌倒、再卒中预警提示，整体随访效率提升达
-    <strong>38%</strong>（<em>p &lt; 0.001</em>），并与 NIHSS 量表结果维持较高相关性（<em>r = 0.83</em>）。综观而言，该平台在国际康复指南（<em>AHA、ESO</em>）的技术范式下，为快速、精准、可解释的中风康复评估与科研拓展提供了有力支撑。
+    <strong>StrokeGuardian AI</strong> 是一款面向医疗机构的中风康复智能评估平台，基于<em>端—云</em>协同与<em>深度学习</em>架构，
+     将患者日常运动行为实时解析为符合<em>WHO ICF</em>与<em>HL7 FHIR</em>等国际标准的可量化康复指标。平台通过多模态数据采集（整合<code>RGB-D 摄像机</code>与<code>IMU</code>），
+     并采用<code>Transformer-VAE</code>等前沿算法实现亚毫米级骨骼重建（ICC ≥ 0.94）及<code>&lt; 50 ms</code>的端到端推理延迟，可有效支持医院级场景和家庭延伸监测。
+     系统输出可追溯、多维度的康复报告，协助临床团队制定个性化康复方案，优化随访流程，并为科研机构提供全流程数据闭环与验证支持。通过<code>RAG-LLM</code>与<code>LSTM-Survival / XGB-SHAP</code>风险模型，
+     平台亦能高效生成个性化训练建议与跌倒、再卒中预警提示，整体随访效率提升达<strong>38%</strong>（<em>p &lt; 0.001</em>），并与 NIHSS 量表结果维持较高相关性（<em>r = 0.83</em>）。
+     综观而言，该平台在国际康复指南（<em>AHA、ESO</em>）的技术范式下，为快速、精准、可解释的中风康复评估与科研拓展提供了有力支撑。
   </p>
 </div>
 
