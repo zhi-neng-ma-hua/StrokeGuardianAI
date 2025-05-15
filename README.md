@@ -9,7 +9,7 @@
     <img
       alt="简体中文"
       src="docs/assets/lang-zh.png"
-      width="120"
+      width="48"
     />
   </a>
 </p>
