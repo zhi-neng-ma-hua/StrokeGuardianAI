@@ -1,3 +1,10 @@
+<a href="README-zh.md">
+  <img
+    alt="简体中文"
+    src="https://img.shields.io/static/v1?label=%F0%9F%8C%90%20%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87&message=%E6%9F%A5%E7%9C%8B&labelColor=00c6ff&color=0059ff&style=flat-square"
+  />
+</a>
+
 <!-- ======================= H E R O   B A N N E R ======================= -->
 <p align="center">
   <picture>
@@ -23,7 +30,7 @@
 <!-- ======================= T I T L E   &   T A G L I N E ============= -->
 <h1 align="center">StrokeGuardian&nbsp;AI</h1>
 <p align="center">
-  <i><small>✨ ENTERPRISE-GRADE&nbsp;· REAL-TIME&nbsp;· PRECISION&nbsp;REHABILITATION&nbsp;INTELLIGENCE ✨</small></i>
+  <i><small>✨ AI-powered · Clinical-grade · Real-time & Precision Stroke-Rehabilitation Assessment Platform ✨</small></i>
 </p>
 
 <!-- ...English documentation continues ... -->
