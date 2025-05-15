@@ -21,7 +21,7 @@
        box-shadow:0 1px 2px rgba(0,0,0,.15);
      ">
     <!-- 你的图标，可是 flag / 地球 / logo —— 建议 24×24 PNG/SVG -->
-    <img src="docs/assets/lang-zh.png" alt="🌐" width="24" height="24">
+    <img src="docs/assets/lang-zh.png" alt="🌐" width="48" height="48">
     简体中文
   </a>
 </p>
