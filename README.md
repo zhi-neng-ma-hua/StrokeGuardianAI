@@ -6,7 +6,7 @@
 
 <!-- ======= Language Switch (top-right corner) ======== -->
 <p align="right" style="margin-top:0;">
-  <a href="README.md"
+  <a href="README.zh-CN.md"
      title="Switch to Simplified Chinese"
      style="
        display:inline-flex;
