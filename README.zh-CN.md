@@ -216,7 +216,7 @@
 <br>
 
 <!-- ——— 3-D Skeleton Tech Stack ——— -->
-<h3 id="3D-skeleton-tech-stack" align="center" style="color:#0084ff; margin-top:2em;">3-D 骨骼重建 · 技术栈总览</h3>
+<h2 id="3D-skeleton-tech-stack" align="center" style="color:#0084ff; margin-top:2em;">3-D 骨骼重建 · 技术栈总览</h2>
 <div style="max-width:760px; margin:0 auto; font-size:14.3px; line-height:1.55;">
   <ul>
     <li>
@@ -226,6 +226,7 @@
       通过融合深度摄像头与惯性传感器，实现多通道、多角度的高分辨率数据采集，
       为骨骼重建与运动分析提供多样化视角与丰富信息源。
     </li>
+    <br>
     <li>
       <b>2-D 关键点检测：</b>
       <code>MediaPipe Pose</code> · <code>ML Kit</code> · <code>MoveNet</code> · <code>OpenPose</code> · 
@@ -234,6 +235,7 @@
       提供准确的二维骨骼结构初始化与姿态估计，
       为后续三维重建奠定基础。
     </li>
+    <br>
     <li>
       <b>3-D Lift-up / 多视角融合：</b>
       <code>VNect</code> · <code>Pose-Lifter</code> · <code>METRO</code> · <code>HybrIK</code> · 
@@ -243,6 +245,7 @@
       将二维关键点映射至三维空间并进行全局优化，
       提高骨骼追踪的精度与稳定性。
     </li>
+    <br>
     <li>
       <b>时空/物理一致性优化：</b>
       <code>Transformer-VAE</code> · <code>ST-GCN</code> · <code>Physics-Informed LSTM</code> · 
@@ -251,6 +254,7 @@
       引入卡尔曼滤波（EKF/UKF）等多源融合方法，
       保障骨骼运动的物理可行性与时空一致性。
     </li>
+    <br>
     <li>
       <b>推理加速与可解释性：</b>
       <code>TensorRT</code> · <code>ONNX-Runtime</code> · <code>Core ML</code> · 
@@ -261,6 +265,8 @@
     </li>
   </ul>
 </div>
+
+<br>
 
 <p style="text-align:justify; font-size:14.3px; line-height:1.55; margin-top:1em;">
   本技术栈以多模态捕捉和多视角融合为核心，实现高精度的三维骨骼建模和实时姿态跟踪。
