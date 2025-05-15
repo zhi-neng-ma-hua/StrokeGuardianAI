@@ -1,8 +1,8 @@
 <!-- ======================= H E R O   B A N N E R ======================= -->
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="docs/banner-dark.svg">
-    <img alt="StrokeGuardian AI" src="docs/banner-light.svg" width="900">
+    <source media="(prefers-color-scheme: dark)" srcset="docs/logo.png">
+    <img alt="StrokeGuardian AI" src="docs/logo.png" width="80">
   </picture>
 </p>
 
@@ -21,7 +21,7 @@
 <!-- ======================= T I T L E   &   T A G L I N E ============= -->
 <h1 align="center">StrokeGuardian&nbsp;AI</h1>
 <p align="center">
-  <i><small>✨ 医 院 级 · 实 时 化 · 精 准 化 的 中 风 康 复 智 能 评 估 平 台 ✨</small></i>
+  <i><small>✨ AI 赋能 · 医 院 级 · 实 时 精 准 的 中 风 康 复 智 能 评 估 平 台 ✨</small></i>
 </p>
 
 <!-- ...中文版正文 ... -->
