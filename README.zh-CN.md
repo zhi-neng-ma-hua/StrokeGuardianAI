@@ -64,13 +64,19 @@
 
 </p>
 
-<!-- ——— Title & Tagline ——— -->
+<!-- ——— Title ——— -->
 <h1 align="center" style="margin:0.4em 0 0.2em 0;">
   StrokeGuardian&nbsp;<span style="color:#00c7ff;">AI</span>
 </h1>
 
+<!-- ——— Tagline ——— -->
 <p align="center">
-  <i><small>✨ AI 赋能 · 医 院 级 · 实 时 精 准 的 中 风 康 复 智 能 评 估 平 台 ✨</small></i>
+  <i><small>
+    ✨ AI 赋能 · 符合医院级安全与合规标准 · 实时精准的中风康复智能评估平台 ✨<br>
+    <span style="font-weight:normal;">
+      （通过多维度数据融合与循证医学策略，为临床与科研提供可扩展、可验证的康复评估与干预支持）
+    </span>
+  </small></i>
 </p>
 
 <!-- ——— Elevator Pitch ——— -->
