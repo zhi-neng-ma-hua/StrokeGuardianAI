@@ -108,6 +108,8 @@
   </tr>
 </table>
 
+<br>
+
 <p style="text-align:justify; margin-top:1em; font-size:14.5px; line-height:1.6;">
   In a multi-center prospective cohort (<b>N=312</b>), the system demonstrated a strong correlation (<b>r=0.83</b>) with the
   NIHSS (<em>National Institutes of Health Stroke Scale</em>), indicating high accuracy and consistency in quantifying clinical
