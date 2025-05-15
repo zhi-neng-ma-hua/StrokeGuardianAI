@@ -80,16 +80,10 @@
 </p>
 
 <!-- ——— A B S T R A C T ——— --> 
-<h2 id="abstract">Abstract</h2> 
-<p>
-StrokeGuardian AI is an edge-to-cloud platform that transforms commodity video streams into regulatory-grade evidence for post-stroke motor recovery.
+<h2 id="abstract" align="center" style="margin:2.2em 0 0.7em;color:#0084ff;">Abstract</h2>
 
-Perception layer – monocular RGB-D is lifted to metrically-scaled 3-D skeleton graphs on device; a spatio-temporal Transformer—pre-trained on 120 k h of human-motion video and fine-tuned against Vicon ground truth—achieves an ICC ≥ 0.92 for joint-angle estimation.
-
-Analytics layer – kinematic time-series are embedded in a Bayesian state-space model that yields ICF-aligned biomarkers (stride-to-stance ratio, inter-joint coupling, compensatory-synergy indices) at 60 Hz.
-
-Workflow layer – results are encrypted via gRPC, mapped to HL7 FHIR, and surfaced in a clinician dashboard where a longitudinal probabilistic forecaster issues adaptive “nudge” recommendations when a patient’s 95 % credible interval diverges from the expected neuro-plasticity curve.
-
-A four-site prospective cohort (N = 312) demonstrates a Pearson r = 0.81 with NIHSS and a 38 % reduction in follow-up time (p < 0.001). All micro-services ship as CNCF-compliant Helm charts and pass GitHub CI on every pull request. By converting free-living movement into traceable, standardised metrics, StrokeGuardian AI closes the translational loop between bedside observation and data-driven neuro-rehabilitation research.
-
-</p> 
+<div style="text-align:justify;font-size:14.6px;line-height:1.58;">
+  <strong>StrokeGuardian AI</strong> leverages <kbd>up to 7 channels of multi-angle RGB-D and Inertial Measurement Units (IMUs)</kbd> to construct a high-precision dense frustum on the <em>edge side</em>. Initially, it applies <kbd>single-dual viewpoint pose estimation</kbd> for multi-view data fusion, followed by <kbd>Spatio-Temporal Transformer-VAE</kbd> in conjunction with <kbd>ICP (Iterative Closest Point)/Bundle Adjustment</kbd> to achieve sub-millimeter accuracy in 3D skeletal reconstruction. This design balances joint angle reliability (ICC ≥ 0.94) with end-to-end latency (< 50 ms).<br><br>
+  Subsequently, the system employs a <kbd>Bayesian state-space</kbd> framework alongside <kbd>factor graphs</kbd> to interpret high-dimensional kinematic feature vectors, generating ICF (International Classification of Functioning, Disability and Health)-aligned biomarkers—such as gait symmetry, power spectral entropy, and synergy coupling indices—at intervals of <em>16 ms</em>. These metrics are encrypted via <kbd>gRPC-TLS</kbd> and mapped to <abbr title="HL7 Fast Healthcare Interoperability Resources">FHIR</abbr> resources, ensuring interoperability and clinical integration.<br><br>
+  Furthermore, an embedded <kbd>GPT-4 Turbo</kbd> model (enhanced by RAG and Prompt Ensembling) synthesizes electronic medical records (EMR), clinical guidelines, and patient preferences to dynamically produce individualized training prescriptions, predictive risk scores, and adherence summaries in natural language. Complemented by <kbd>LSTM-Survival</kbd> and <kbd>XGB-SHAP</kbd> algorithms for fall and recurrent stroke threshold alerts, the platform delivers timely and reliable decision support in critical clinical workflows, advancing a more systematic approach to stroke rehabilitation assessment and intervention.
+</div>
