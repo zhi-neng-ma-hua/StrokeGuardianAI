@@ -3,10 +3,13 @@
 ════════════════════════════════════════════════════════════════ -->
 
 <!-- ——— Language Switch ——— -->
+<!-- Language Switch -->
 <p align="right">
   <a href="README.zh-CN.md">
-    <img alt="简体中文"
-         src="https://img.shields.io/static/v1?label=%F0%9F%8C%90%20中文&message=点击查看&labelColor=00c7ff&color=0084ff&style=for-the-badge"/>
+    <img
+      alt="简体中文"
+      src="https://img.shields.io/static/v1?label=%F0%9F%8C%90%20%E4%B8%AD%E6%96%87&message=%E7%82%B9%E5%87%BB%E6%9F%A5%E7%9C%8B&labelColor=00c7ff&color=0084ff&style=for-the-badge"
+    />
   </a>
 </p>
 
