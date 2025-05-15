@@ -106,7 +106,7 @@
   font:600 15px/1.56 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 ">
   <p>
-    <strong>StrokeGuardian AI</strong> 是一款面向医疗机构的中风康复智能评估平台，基于 <em>端—云</em> 协同与 <em>深度学习</em > 架构，
+    <strong>StrokeGuardian AI</strong> 是一款面向医疗机构的中风康复智能评估平台，基于 <strong><em>端—云</em></strong> 协同与 <strong><em>深度学习</em ></strong> 架构，
      将患者日常运动行为实时解析为符合 <em>WHO ICF</em> 与 <em>HL7 FHIR</em> 等国际标准的可量化康复指标。平台通过多模态数据采集（整合 <code>RGB-D 摄像机 </code> 与 <code>IMU</code>），
      并采用 <code>Transformer-VAE</code> 等前沿算法实现亚毫米级骨骼重建（ICC ≥ 0.94）及 <code>&lt; 50 ms</code> 的端到端推理延迟，可有效支持医院级场景和家庭延伸监测。
      系统输出可追溯、多维度的康复报告，协助临床团队制定个性化康复方案，优化随访流程，并为科研机构提供全流程数据闭环与验证支持。通过 <code>RAG-LLM</code> 与 <code>LSTM-Survival / XGB-SHAP</code> 风险模型，
