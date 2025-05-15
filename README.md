@@ -1,5 +1,5 @@
 <!-- ===========================================================
-  StrokeGuardian AI • README Hero
+  StrokeGuardian AI • README Hero  (single-logo version)
 =========================================================== -->
 
 <!-- ——— Language switch (右上角) ——— -->
@@ -12,18 +12,9 @@
   </a>
 </p>
 
-<!-- ——— Logo，自动适配深浅色 ——— -->
+<!-- ——— 统一 Logo ——— -->
 <p align="center">
-  <picture>
-    <!-- 深色模式 -->
-    <source srcset="docs/logo_dark@2x.png 2x, docs/logo.png 1x"
-            media="(prefers-color-scheme: dark)" />
-    <!-- 亮色模式 -->
-    <source srcset="docs/logo_light@2x.png 2x, docs/logo_light.png 1x"
-            media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" />
-    <!-- Fallback -->
-    <img src="docs/logo_light.png" width="96" height="96" alt="StrokeGuardian AI Logo" />
-  </picture>
+  <img src="docs/logo.png" width="96" height="96" alt="StrokeGuardian AI-Logo" />
 </p>
 
 <!-- ——— Badge Row ——— -->
@@ -65,7 +56,12 @@
   <i><small>✨ AI-powered · Clinical-grade · Real-time & Precision Stroke-Rehabilitation Assessment Platform ✨</small></i>
 </p>
 
-<!-- ——— Blurb (英文简述，可按需删除 / 改写) ——— -->
+<!-- ———（可选）中文子标题 ——— -->
+<p align="center">
+  <i><small>✨ AI 赋能 · 医 院 级 · 实 时 精 准 的 中 风 康 复 智 能 评 估 平 台 ✨</small></i>
+</p>
+
+<!-- ——— 简要英文简介 ——— -->
 <p align="center">
   <em>An edge-to-cloud system that transforms everyday movements into standardised, traceable rehabilitation metrics—empowering clinicians with data-driven decisions and researchers with an end-to-end, high-fidelity data loop.</em>
 </p>
