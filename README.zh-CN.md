@@ -135,12 +135,6 @@
 
 <br>
 
-**关键词（Keywords）**  
-
-<br>
-
-中风康复；多视角捕捉；Transformer-VAE；检索增强型大语言模型；随访效率；可解释人工智能
-
 <div style="margin-top:1em;">
   <strong>关键词（Keywords）</strong><br><br>
   <ul style="
@@ -162,7 +156,11 @@
   </ul>
 </div>
 
+<br>
+
 ---
+
+<br>
 
 ## 1. 引言（Introduction）
 
