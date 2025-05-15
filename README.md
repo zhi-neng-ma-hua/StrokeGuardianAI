@@ -95,7 +95,6 @@
   📱 WhatsApp&nbsp;<code>+60 123 456 789</code>
 </p>
 
-
 <!-- ======= Semi-Transparent Divider ======= -->
 <hr style="width:82%;max-width:780px;border:0;border-top:1px solid rgba(0,0,0,.06);margin:12px auto 24px;">
 
@@ -213,13 +212,21 @@ At the <strong>edge</strong>, the system integrates up to seven RGB-D cameras an
 
 Detailed steps:
 
-1. **Data Synchronization**: Align multiple cameras and IMU data accurately using timestamps and network time protocols (NTP or PTP).
+1. **Data Synchronization**
+  
+   Align multiple cameras and IMU data accurately using timestamps and network time protocols (NTP or PTP).
 
-3. **2D Keypoint Detection**: Use YOLO-v8 Pose, MediaPipe, or similar algorithms to identify joint positions in each video frame.
+4. **2D Keypoint Detection**
+  
+   Use YOLO-v8 Pose, MediaPipe, or similar algorithms to identify joint positions in each video frame.
 
-5. **Multiview Fusion**: Employ Pose-Lifter and multiview geometry to raise 2D keypoints into 3D coordinates, followed by ICP/BA for global consistency optimization.
+7. **Multiview Fusion**
+  
+   Employ Pose-Lifter and multiview geometry to raise 2D keypoints into 3D coordinates, followed by ICP/BA for global consistency optimization.
 
-7. **IMU Collaboration**: Incorporate EKF/UKF filters to fuse IMU data for skeletal reconstruction and motion estimation, enhancing adaptability to fast movements and occlusion scenarios.
+10. **IMU Collaboration**
+   
+    Incorporate EKF/UKF filters to fuse IMU data for skeletal reconstruction and motion estimation, enhancing adaptability to fast movements and occlusion scenarios.
 
 #### 2.3 Spatiotemporal Optimization and Explainability
 
@@ -237,13 +244,21 @@ To ensure accuracy in skeletal reconstruction and motion analysis, while retaini
 
 Every 16 ms, **StrokeGuardian AI** generates an updated stream of high-dimensional rehabilitation metrics—such as gait symmetry, power spectral entropy, and coordination coupling indices—closely related to stroke rehabilitation biomarkers. The process follows these steps:
 
-1. **Kinematic Inference**: Calculate joint angles, stride length, stance phases, and other parameters from the extracted skeletal sequences.
+1. **Kinematic Inference**
+  
+   Calculate joint angles, stride length, stance phases, and other parameters from the extracted skeletal sequences.
 
-3. **Bayesian State Space + Factor Graphs**: Dynamically track multi-timestep motion features and quantify uncertainties, capturing both long-term trends and instantaneous changes.
+4. **Bayesian State Space + Factor Graphs**
+  
+   Dynamically track multi-timestep motion features and quantify uncertainties, capturing both long-term trends and instantaneous changes.
 
-5. **ICF Alignment**: Map these metrics to WHO ICF standards, enabling clinicians and researchers to assess patient functionality within an internationally recognized framework.
+7. **ICF Alignment**
+  
+   Map these metrics to WHO ICF standards, enabling clinicians and researchers to assess patient functionality within an internationally recognized framework.
 
-7. **FHIR Resource Mapping**: Securely package metrics as HL7 FHIR resources via gRPC-TLS encryption, ensuring interoperability with Hospital Information Systems (HIS), research databases, or other clinical applications.
+10. **FHIR Resource Mapping**
+   
+    Securely package metrics as HL7 FHIR resources via gRPC-TLS encryption, ensuring interoperability with Hospital Information Systems (HIS), research databases, or other clinical applications.
 
 ### 2.5 Retrieval-Augmented Language Model (RAG-LLM) and Risk Alerts
 
