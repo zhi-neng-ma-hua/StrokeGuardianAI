@@ -133,3 +133,52 @@
   打通了床旁观察与数据驱动神经康复研究之间的最后一公里，
   为 <em>精确康复 4.0</em> 奠定了可大规模复制的工程范式。
 </p>
+
+<!-- ——— 3-D Skeleton Tech Stack ——— -->
+<h3 align="center">3-D Skeleton Reconstruction · 技术栈总览</h3>
+
+<ul style="max-width:760px;margin:0 auto;font-size:14.5px;line-height:1.55;">
+  <!-- ❶ 捕捉层 -->
+  <li>
+    <strong>多模态捕捉 (RGB / RGB-D / ToF / IMU)</strong>  
+    ── <code>Intel RealSense D435</code> · <code>Azure Kinect</code> · <code>ZED 2i</code> ·
+    <code>iPhone LiDAR</code> · <code>BNO080 IMU</code>
+  </li>
+
+  <!-- ❷ 姿态估计 & 2-D 关键点 -->
+  <li>
+    <strong>实时 2-D 关键点检测</strong>  
+    ── <code>MediaPipe Pose / BlazePose-GHUM</code>
+    · <code>Google ML Kit Pose Detection</code>
+    · <code>MoveNet Lightning/Thunder</code>
+    · <code>OpenPose</code>
+    · <code>AlphaPose</code>
+    · <code>YOLO-Paf / YOLOv8-Pose</code>
+  </li>
+
+  <!-- ❸ 3-D Lift-Up / 三维重建 -->
+  <li>
+    <strong>3-D Lift-up / 多视角融合</strong>  
+    ── <code>VNect</code> · <code>Pose-Lifter</code> · <code>METRO</code>
+    · <code>HybrIK</code> · <code>OpenMMLab MMPose 3-D</code>
+    · <code>DeepLabCut-3D</code>  
+    （多视角配准 + ICP / Bundle Adjustment）
+  </li>
+
+  <!-- ❹ 时空建模 / 优化 -->
+  <li>
+    <strong>时空 / 物理一致性优化</strong>  
+    ── <code>Transformer-VAE</code> · <code>TCN-ST-GCN</code>
+    · <code>Physics-Informed LSTM</code> ·
+    <code>EKF / UKF</code> 传感器融合
+  </li>
+
+  <!-- ❺ 可解释 & 加速 -->
+  <li>
+    <strong>推理加速 & 可解释</strong>  
+    ── <code>TensorRT</code> · <code>ONNX-Runtime</code> ·
+    <code>Core ML / NNAPI / WebNN</code>  
+    + <code>Grad-CAM / SHAP</code> 逐帧显著性映射
+  </li>
+</ul>
+
