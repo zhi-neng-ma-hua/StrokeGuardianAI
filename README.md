@@ -3,12 +3,26 @@
 ═════════════════════════════════════════════════════════════════-->
 
 <!-- ——— Language Switch (top-right) ——— -->
-<p align="right">
-  <a href="README.zh-CN.md" title="切换到简体中文文档">
-    <img
-      src="docs/assets/lang-zh.png" 
-      alt="简体中文"
-      width="48">    
+<!-- ========= Language Switch ========= -->
+<!-- 放在 README 顶部；右浮动，带阴影 & 圆角 -->
+<p align="right" style="margin-top:0;">
+  <a href="README.zh-CN.md"
+     title="Switch to Simplified Chinese"
+     style="
+       display:inline-flex;
+       align-items:center;
+       gap:6px;
+       padding:4px 10px 4px 8px;
+       font:600 13px/1 'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
+       color:#fff;
+       background:#00a9ff;
+       border-radius:6px;
+       text-decoration:none;
+       box-shadow:0 1px 2px rgba(0,0,0,.15);
+     ">
+    <!-- 你的图标，可是 flag / 地球 / logo —— 建议 24×24 PNG/SVG -->
+    <img src="docs/assets/lang-zh.svg" alt="🌐" width="20" height="20">
+    简体中文
   </a>
 </p>
 
