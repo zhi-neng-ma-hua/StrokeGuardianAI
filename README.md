@@ -87,12 +87,3 @@
   A longitudinal Bayesian state-space filter propagates individual recovery trajectories and triggers precision nudges when the 95 % credible interval deviates from the expected motor-learning curve. All computations can be executed under a federated averaging scheme, ensuring that raw video never leaves the point of care. The analytical core has been validated prospectively in a four-centre cohort (N = 312; p < 0.001 vs. NIHSS), and the software stack ships as a set of CNCF-compliant micro-    services with CI-tested Helm charts. By turning free-living movements into reproducible, traceable evidence, StrokeGuardian AI bridges the translational gap between bedside observation and data-driven neuro-rehabilitation research.
 
 </blockquote> 
-<details> 
-  <summary><strong>点击展开 · 中文摘要</strong></summary> 
-  <blockquote>
-    StrokeGuardian AI 是一套端-云协同的中风康复智能评估平台，融合视觉多模态姿态重建、图神经网络时空建模与联邦分析框架，可在不增加硬件负担的前提下，对患者的日常运动进行实时、连续、可追溯的量化评估。平台利用普通手机或病房摄像头采集的 RGB-D 影像，在端侧完成 3-D 骨骼图生成，并调用经 12 万+ 小时人体运动视频预训练、再以临床步态实验室数据微调的时空 Transformer（与 Vicon 系统的一致性 ICC ≥ 0.92），输出符合 ICF 标准的核心运动表型指标——步长对称性、关节耦合、代偿协同指数等。
-
-    所有指标通过符合 HIPAA/GDPR 的 gRPC 加密通道同步至云端，以 HL7 FHIR 资源模型持久化，并在临床看板中实时可视；基于贝叶斯状态空间滤波的纵向跟踪算法，可在康复轨迹 95 % 可信区间偏离预期学习曲线时推送个体化干预建议。整套计算流程支持联邦平均策略，保障原始视频永不出域。平台已在四中心前瞻性队列（N = 312）中完成临床验证（对 NIHSS 相关性 p < 0.001），并以通过 CI 测试的 Helm Chart 形式交付，符合 CNCF 微服务规范。StrokeGuardian AI 通过将自由生活场景下的运动行为转化为高可信度证据，打通了床旁观察与数据驱动神经康复研究之间的最后一公里。
-
-  </blockquote> 
-</details>
