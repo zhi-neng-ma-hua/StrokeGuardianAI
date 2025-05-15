@@ -122,11 +122,15 @@
 ## 摘要（Abstract）
 
 本研究聚焦于名为 <strong>StrokeGuardian AI</strong> 的一体化中风康复评估与干预平台，旨在通过多视角视频与深度学习技术，实现对患者步态及运动功能的精准量化和远程支持。
-平台在边缘端借助 <kbd>RGB-D + IMU</kbd> 多模态数据捕捉，并通过 <code>Spatio-Temporal Transformer-VAE</code> 结合 <kbd>ICP</kbd> / <kbd>Bundle Adjustment</kbd> 技术，构建高精度三维骨骼序列（ICC ≥ 0.94），同时将端到端推理时延控制在 < 50 ms 范围内。
-基于对高维运动学特征的实时解析，系统以 <kbd>贝叶斯状态空间</kbd> 和 <kbd>因子图</kbd> 每 16 ms 更新对应 <abbr title="International Classification of Functioning, Disability and Health"><strong>ICF</strong></abbr> 标准的关键康复指标，并通过 <kbd>gRPC-TLS</kbd> 加密管道输出为 <abbr title="Fast Healthcare Interoperability Resources">FHIR</abbr> 兼容格式，契合 WHO、HL7 等国际规范对于跨平台数据互操作的需求。<br><br>
 
-在应用层面，平台内嵌 <kbd>GPT-4 Turbo</kbd>（RAG + Prompt Ensembling）整合 EMR、临床指南（AHA / ESO）及患者偏好，能动态生成个性化康复训练与预测性风险评分；而 <kbd>LSTM-Survival</kbd> 与 <kbd>XGB-SHAP</kbd> 模块则实现对跌倒及二次卒中的超限预警。
+平台在边缘端借助 <code>RGB-D + IMU</code> 多模态数据捕捉，并通过 <code>Spatio-Temporal Transformer-VAE</code> 结合 <code>ICP</code> / <code>Bundle Adjustment</code> 技术，构建高精度三维骨骼序列（ICC ≥ 0.94），同时将端到端推理时延控制在 < 50 ms 范围内。
+
+基于对高维运动学特征的实时解析，系统以 <code>>贝叶斯状态空间</code> 和 <code>因子图</code> 每 16 ms 更新对应 <abbr title="International Classification of Functioning, Disability and Health"><strong>ICF</strong></abbr> 标准的关键康复指标，并通过 <code>gRPC-TLS</code> 加密管道输出为 <abbr title="Fast Healthcare Interoperability Resources">FHIR</abbr> 兼容格式，契合 WHO、HL7 等国际规范对于跨平台数据互操作的需求。<br><br>
+
+在应用层面，平台内嵌 <code>GPT-4 Turbo</code>（RAG + Prompt Ensembling）整合 EMR、临床指南（AHA / ESO）及患者偏好，能动态生成个性化康复训练与预测性风险评分；而 <code>LSTM-Survival</code> 与 <code>XGB-SHAP</code> 模块则实现对跌倒及二次卒中的超限预警。
+
 本研究于多中心前瞻队列（N=312）验证了系统性能，结果显示其与 NIHSS 评分显著相关（r = 0.83），随访周期则较传统方案缩短 38%（p < 0.001）。
+
 综上所述，StrokeGuardian AI 在多场景中展现出实时、精准、可解释的中风康复评估潜力，并通过 CNCF 等容器化标准支持大规模部署，为国际化远程康复与个性化干预提供了高价值的技术与循证支撑。
 
 <br>
@@ -143,19 +147,19 @@
 传统中风康复评估多基于单一场景（如实验室）或人工观察、问卷调查及简化量表等方式，难以及时反映患者在真实多场景（居家、户外、社区）中的运动行为与功能状态。此外，已有高精度步态分析仪或运动捕捉系统虽具优异的准确性，但成本高昂、部署复杂，且缺乏远程化适配与大规模应用的可行性。在此背景下，如何借助多传感器融合与深度学习算法，为临床与科研提供可解释、可持续的远程中风康复评估方案，成为业界与学界的共同关切。<br><br>
 
 本研究聚焦于 **StrokeGuardian AI** 平台，其通过
-<kbd>端—云—边</kbd>
+<code>端—云—边</code>
 协同整合
-<kbd>RGB-D 摄像机</kbd>
+<code>RGB-D 摄像机</code>
 与
-<kbd>IMU</kbd>
+<code>IMU</code>
 等多模态数据，实现对患者姿态与骨骼运动轨迹的高精度重建与实时性分析。平台结合
-<kbd>Transformer-VAE</kbd>
+<code>Transformer-VAE</code>
 （强化时空一致性与可解释度）及
-<kbd>检索增强型大语言模型（Retrieval-Augmented LLM）</kbd>
+<code>检索增强型大语言模型（Retrieval-Augmented LLM）</code>
 （辅助个性化干预与自动化决策），输出符合 WHO 所倡导的全球健康分类框架
-(<abbr title="International Classification of Functioning, Disability and Health"><kbd>ICF</kbd></abbr>)
+(<abbr title="International Classification of Functioning, Disability and Health"><code>ICF</code></abbr>)
 与 HL7
-(<abbr title="Fast Healthcare Interoperability Resources"><kbd>FHIR</kbd></abbr>)
+(<abbr title="Fast Healthcare Interoperability Resources"><code>FHIR</code></abbr>)
 规范的多维康复指标。除精细化康复评估外，平台还通过 LSTM-Survival、XGB-SHAP 等模型实现跌倒与二次卒中风险的提前预警，兼顾安全合规与可溯源性。<br><br>
 
 值得强调的是，平台在多中心前瞻研究（N=312）中已展现出与 NIHSS（<em>National Institutes of Health Stroke Scale</em>）评分的较高相关性（r=0.83），其自动化评估策略相较于传统流程可将临床随访周期缩短 38%，契合 AHA（American Heart Association）、ESO（European Stroke Organisation）等权威指南对中风康复 “早期介入、动态监测” 的趋势要求。与此同时，平台依托 CNCF 标准化容器与 GitHub Actions，可实现敏捷 DevOps 流程及跨地域扩展，为远程康复与国际多中心试验提供坚实的技术基础与循证支持。<br><br>
