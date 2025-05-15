@@ -90,7 +90,7 @@
   <br>
   <br>
   📧 <a href="mailto:zhinengmahua@gmail.com">zhinengmahua@gmail.com</a> &nbsp;•&nbsp;
-  💬 微信&nbsp;<code>XJ-Cao</code>&nbsp;•&nbsp;
+  💬 微信&nbsp;<code>zhinengmahua</code>&nbsp;•&nbsp;
   📱 WhatsApp&nbsp;<code>+60 123 456 789</code>
 </p>
 
