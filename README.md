@@ -117,3 +117,60 @@
   utilizes automated DevOps tools such as <b>Helm Chart</b> and <b>GitHub Actions</b>, along with a <b>CNCF</b>-compliant
   containerized microservices architecture—ensuring scalability, adaptability, and compliance for broader clinical implementation.
 </p>
+
+<br>
+
+<!-- ——— Feature Matrix  ——— -->
+<h2 id="feature-matrix" align="center" style="margin:2em 0 0.7em;color:#0084ff;">Feature Matrix</h2>
+<div style="max-width:760px; margin:0 auto; font-size:14.4px; line-height:1.55;">
+  <ul>
+    <li>
+      <b>Multi-View 3-D Re-targeting:</b>
+      Integrates data from up to seven cameras and IMUs,
+      dynamically compensating for occlusions and reconstructing precise 3D skeletal representations
+      to facilitate high-resolution kinematic and physiological analyses.
+    </li>
+    <li>
+      <b>Real-Time Stream of Metrics:</b>
+      Delivers inference results at up to 60 Hz via
+      <kbd>WebSocket</kbd> and <kbd>gRPC</kbd>,
+      ensuring secure, zero-copy data transmission with minimal latency
+      for time-sensitive clinical environments.
+    </li>
+    <li>
+      <b>LLM-Based Semantic Reasoning:</b>
+      Employs Retrieval-Augmented Generation (RAG) and Prompt Ensembling
+      to produce evidence-based rehabilitation prescriptions and pharmacological alerts
+      tailored to individual patient profiles.
+    </li>
+    <li>
+      <b>Prediction &amp; Early Warning:</b>
+      Leverages the <kbd>LSTM-Survival</kbd> model to forecast risks of falls and recurrent stroke,
+      issuing instant alerts upon threshold exceedance,
+      thereby enabling proactive and timely clinical interventions.
+    </li>
+    <li>
+      <b>Data Governance:</b>
+      Maps multi-dimensional metrics into FHIR resources,
+      aggregates them in a centralized Data Lake,
+      and adopts <kbd>OpenTelemetry</kbd> and <kbd>Prometheus</kbd>
+      for full-stack observability and compliance auditing.
+    </li>
+    <li>
+      <b>Progressive DevOps:</b>
+      Utilizes containerized microservices on <kbd>Kubernetes</kbd>
+      with blue-green deployment (< 5 minutes) and comprehensive audit trails,
+      offering robust support for rapid iteration and regulatory compliance.
+    </li>
+  </ul>
+</div>
+
+<p style="text-align:justify; margin-top:1.15em; font-size:14.5px; line-height:1.6;">
+  By integrating <kbd>explainable AI</kbd>, <kbd>cloud-edge hybrid computing</kbd>,
+  and <kbd>LLM-driven natural language reporting</kbd>,
+  StrokeGuardian AI seamlessly unifies bedside observation, remote follow-up, and research analytics,
+  forming a scalable foundation for “Precision Rehabilitation 4.0.”
+  The platform’s modular architecture and standardized data interfaces not only facilitate broad-scale deployment
+  and clinical translation but also provide comprehensive and forward-looking support
+  for stroke rehabilitation assessment, personalized intervention, and large-scale longitudinal studies.
+</p>
