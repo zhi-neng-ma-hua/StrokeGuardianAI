@@ -27,7 +27,7 @@
 
 <!-- ======= 项目 Logo ======= -->
 <p align="center">
-  <img src="docs/assets/logo.png" width="96" height="96" alt="StrokeGuardian AI Logo"/>
+  <img src="docs/assets/img/logo.png" width="96" height="96" alt="StrokeGuardian AI Logo"/>
 </p>
 
 <!-- ======= 徽章区域（自适应换行） ======= -->
