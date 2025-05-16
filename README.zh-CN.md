@@ -20,38 +20,38 @@
        text-decoration:none;
        box-shadow:0 1px 2px rgba(0,0,0,.15);
      ">
-    <img src="docs/assets/lang-en.png" alt="🌐" width="32" height="32">
+    <img src="docs/assets/img/lang-en.png" alt="🌐" width="32" height="32">
     English
   </a>
 </p>
 
 <!-- ======= 项目 Logo ======= -->
 <p align="center">
-  <img src="docs/logo.png" width="96" height="96" alt="StrokeGuardian AI Logo"/>
+  <img src="docs/assets/logo.png" width="96" height="96" alt="StrokeGuardian AI Logo"/>
 </p>
 
 <!-- ======= 徽章区域（自适应换行） ======= -->
 <div align="center" style="display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin:8px 0;">
   <!-- 最新发行版 -->
-  <a href="https://github.com/YourOrg/StrokeGuardianAI/releases" title="Latest stable release">
+  <a href="https://github.com/zhi-neng-ma-hua/StrokeGuardianAI/releases" title="Latest stable release">
     <img alt="Latest Release"
-         src="https://img.shields.io/github/v/release/YourOrg/StrokeGuardianAI?label=Release&labelColor=0084ff&color=00c7ff&style=flat-square">
+         src="https://img.shields.io/github/v/release/zhi-neng-ma-hua/StrokeGuardianAI?label=Release&labelColor=0084ff&color=00c7ff&style=flat-square">
   </a>
 
   <!-- 许可证 -->
-  <a href="https://github.com/YourOrg/StrokeGuardianAI/blob/main/LICENSE" title="MIT License">
+  <a href="https://github.com/zhi-neng-ma-hua/StrokeGuardianAI/blob/main/LICENSE" title="MIT License">
     <img alt="License: MIT"
-         src="https://img.shields.io/github/license/YourOrg/StrokeGuardianAI?label=License&labelColor=0084ff&color=00c7ff&style=flat-square">
+         src="https://img.shields.io/github/license/zhi-neng-ma-hua/StrokeGuardianAI?label=License&labelColor=0084ff&color=00c7ff&style=flat-square">
   </a>
 
   <!-- 持续集成状态 -->
-  <a href="https://github.com/YourOrg/StrokeGuardianAI/actions/workflows/ci.yml" title="CI 状态">
+  <a href="https://github.com/zhi-neng-ma-hua/StrokeGuardianAI/actions/workflows/ci.yml" title="CI 状态">
     <img alt="CI Status"
-         src="https://img.shields.io/github/actions/workflow/status/YourOrg/StrokeGuardianAI/ci.yml?branch=main&label=CI&labelColor=0084ff&color=00c7ff&style=flat-square">
+         src="https://img.shields.io/github/actions/workflow/status/zhi-neng-ma-hua/StrokeGuardianAI/ci.yml?branch=main&label=CI&labelColor=0084ff&color=00c7ff&style=flat-square">
   </a>
 
   <!-- 维护活跃度 -->
-  <a href="https://github.com/YourOrg/StrokeGuardianAI/graphs/commit-activity" title="最近 12 个月提交活跃度">
+  <a href="https://github.com/zhi-neng-ma-hua/StrokeGuardianAI/graphs/commit-activity" title="最近 12 个月提交活跃度">
     <img alt="Maintenance"
          src="https://img.shields.io/badge/maintenance-yes-00c7ff?labelColor=0084ff&style=flat-square">
   </a>
