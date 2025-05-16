@@ -20,14 +20,14 @@
        text-decoration:none;
        box-shadow:0 1px 2px rgba(0,0,0,.15);
      ">
-    <img src="docs/assets/lang-zh.png" alt="🌐" width="32" height="32">
+    <img src="docs/assets/img/lang-zh.png" alt="🌐" width="32" height="32">
     简体中文
   </a>
 </p>
 
 <!-- ======= Project Logo ======= -->
 <p align="center">
-  <img src="docs/logo.png" width="96" height="96" alt="StrokeGuardian AI Logo"/>
+  <img src="docs/assets/img/logo.png" width="96" height="96" alt="StrokeGuardian AI Logo"/>
 </p>
 
 <!-- ======= Badge Section (responsive wrapping) ======= -->
