@@ -29,7 +29,7 @@ Usage:
         python forest_plot_meta_analysis.py
     Or import and use the MetaAnalysis and ForestPlotter classes in other scripts as needed.
 
-Author: Intelligent Mahua
+Author: zhinengmahua
 Date: 2025-05-14
 """
 
