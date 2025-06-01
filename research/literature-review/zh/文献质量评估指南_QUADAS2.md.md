@@ -234,7 +234,7 @@ _系统综述：Vision-Based AI Systems for Post-Stroke Gait Assessment_
 </div>
 
 <details>
-<summary><strong>字段补充说明</strong></summary>
+<summary><strong>字段补充说明（点开查看）</strong></summary>
 
 * **ENUM 值区分大小写**：<code>Y</code>/<code>N</code>/<code>U</code> 均需大写，便于 R/Python 解析。  
 * **文本字段避免换行**：若需多行，使用 <code>&lt;br/&gt;</code> 以兼容 CSV→HTML 转换。  
@@ -249,6 +249,7 @@ _系统综述：Vision-Based AI Systems for Post-Stroke Gait Assessment_
       qc = 'pass'
 
 ---
+</details>
 
 <a id="sec5"></a>
 ## 5 │ 19 项信号问题与可操作判据
