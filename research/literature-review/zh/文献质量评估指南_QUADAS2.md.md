@@ -81,20 +81,19 @@ _系统综述：Vision-Based AI Systems for Post-Stroke Gait Assessment_
 
 <!-- ───── 简明工作流示意 ───── -->
 <div align="center">
-```mermaid
 flowchart LR
-    %% ---------- Layer 1 ----------
-    subgraph RawScoring["Step 1: Raw Scoring (03_QUADAS2_Items)"]
+    %% ---------- Step 1 ----------
+    subgraph Step1["Step 1: Raw Scoring (03_QUADAS2_Items)"]
         A["19 x SQ per study"]
     end
 
-    %% ---------- Layer 2 ----------
-    subgraph DomainAgg["Step 2: Domain Aggregation (D1-D4)"]
-        B["Domain-level\nRisk & Applicability"]
+    %% ---------- Step 2 ----------
+    subgraph Step2["Step 2: Domain Aggregation (D1–D4)"]
+        B["Domain-level Risk & Applicability"]
     end
 
-    %% ---------- Layer 3 ----------
-    subgraph StudyLevel["Step 3: Study-level Outputs (03_QUADAS2)"]
+    %% ---------- Step 3 ----------
+    subgraph Step3["Step 3: Study-level Outputs (03_QUADAS2)"]
         C1["LowRisk_Count"]
         C2["Overall_Score4"]
         C3["Overall_RiskLevel"]
