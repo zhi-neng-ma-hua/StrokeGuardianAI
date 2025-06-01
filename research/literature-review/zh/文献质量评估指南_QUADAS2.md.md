@@ -38,7 +38,7 @@ _系统综述：Vision-Based AI Systems for Post-Stroke Gait Assessment_
 ---
 
 <a id="sec3"></a>
-## 3 │ 字段定义 — `03_QUADAS2`（研究级）
+## 3 │ 字段定义 — `QUADAS2`（研究级）
 
 | 字段 | 数据型 | 合法值 | 说明 |
 |------|--------|--------|------|
@@ -58,7 +58,7 @@ _系统综述：Vision-Based AI Systems for Post-Stroke Gait Assessment_
 ---
 
 <a id="sec4"></a>
-## 4 │ 字段定义 — `03_QUADAS2_Items`（信号问题级）
+## 4 │ 字段定义 — `QUADAS2_Items`（信号问题级）
 
 | 字段 | 数据型 | 合法值 | 说明 |
 |------|--------|--------|------|
