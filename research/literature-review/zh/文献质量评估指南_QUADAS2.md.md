@@ -247,9 +247,9 @@ _系统综述：Vision-Based AI Systems for Post-Stroke Gait Assessment_
       qc = 'warn'
   else:
       qc = 'pass'
+</details>
 
 ---
-</details>
 
 <a id="sec5"></a>
 ## 5 │ 19 项信号问题与可操作判据
