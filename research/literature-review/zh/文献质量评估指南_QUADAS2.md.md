@@ -1,6 +1,8 @@
 # 文献质量评估指南 · **QUADAS-2 数据字典**  
+
 _系统综述：Vision-Based AI Systems for Post-Stroke Gait Assessment_  
-**Ver 1.3 | 更新日期 2025-06-01**
+
+**Version 1.0 | 更新日期 2025-06-01**
 
 ---
 
