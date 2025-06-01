@@ -82,7 +82,6 @@
 ---
 
 ## 4 │ 域级与整体评分算法
-```mermaid
 flowchart LR
   subgraph SQ级
     A1[19× SQ<br>(Y/N/U)]
