@@ -85,7 +85,7 @@ flowchart LR
     %% ---------- Step 1 ----------
     subgraph STEP1["步骤 1｜原始打分<br/>(03_QUADAS2_Items)"]
         direction TB
-        A["19 × 信号问题<br/>（每篇文献）"]
+        A["19 × 信号问题（每篇文献）"]
     end
 
     %% ---------- Step 2 ----------
