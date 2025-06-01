@@ -110,15 +110,17 @@ _系统综述：Vision-Based AI Systems for Post-Stroke Gait Assessment_
 
 ```mermaid
 flowchart LR
-    %% -------- Signalling-question layer ----------
-    subgraph SQ19["Signalling Questions – total 19"]
-        A["19 SQ  Y / N / U"]
-    end
+    %% ---------- 信号问题 ----------
+    SQ["19 条信号问题\n(Y / N / U)"]
 
-    %% -------------- Domain layer -----------------
-    A -- "scoring rules" --> B["Domain level<br>Risk & Applicability"]
+    %% ---------- 域 ----------
+    SQ -->|域内规则| D["4 大域\n风险 & 适用性"]
 
-    %% -------------- Study layer ------------------
-    B --> C["LowRisk_Count"]
-    C --> D["Overall_Score4"]
-    B --> E["Overall_RiskLevel"]
+    %% ---------- 研究整体 ----------
+    D --> C["LowRisk_Count"]
+    C --> S4["Overall_Score4"]
+    D --> R["Overall_RiskLevel"]
+
+    %% ---------- 样式 ----------
+    classDef box fill:#f8f9fa,stroke:#333,stroke-width:1px;
+    class SQ,D,C,S4,R box
