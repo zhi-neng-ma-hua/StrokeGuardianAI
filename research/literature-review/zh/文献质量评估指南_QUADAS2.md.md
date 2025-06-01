@@ -37,8 +37,6 @@ _系统综述：Vision-Based AI Systems for Post-Stroke Gait Assessment_
 | **`QUADAS2`** | 研究级（1 行 = 1 篇文献） | 汇总四域 RoB & AC，计算总体风险级别，并标记核心 40 篇 |
 | **`QUADAS2_Items`** | 信号问题级（19 行 × 每篇） | 记录原始打分、共识与佐证；规则自动回写域级标志 |
 
-<p align="center">
-
 ```mermaid
 flowchart LR
   %% ─────────── ① 原始打分 ───────────
@@ -72,7 +70,6 @@ flowchart LR
   class A,B,C1,C2,C3,C4 box;
 C2,C3,C4 node;
 ```
-</p>
 
 ---
 
