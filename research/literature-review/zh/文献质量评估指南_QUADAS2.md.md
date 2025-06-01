@@ -1,29 +1,62 @@
-# 文献质量评估指南 — QUADAS-2 数据字典  
+# 文献质量评估指南 · **QUADAS-2 数据字典**  
 _系统综述：Vision-Based AI Systems for Post-Stroke Gait Assessment_  
-**Version 1.2 | Last update 2025-06-01**
+**Ver 1.3 | 更新日期 2025-06-01**
 
 ---
 
 ## 目录
 1. [工具定位](#sec1)  
 2. [数据表概览](#sec2)  
-3. [`QUADAS2` 字段定义（Study level）](#sec3)  
-4. [`QUADAS2_Items` 字段定义（SQ level）](#sec4)  
-5. [19 项信号问题与“是/否”判据](#sec5)  
-6. [域级与研究级评分算法](#sec6)  
-7. [自动质量控制（Auto-QC）脚本规则](#sec7)  
+3. [`QUADAS2` 字段定义（研究级）](#sec3)  
+4. [`QUADAS2_Items` 字段定义（信号问题级）](#sec4)  
+5. [19 项信号问题与判定标准](#sec5)  
+6. [域级 & 研究级评分算法](#sec6)  
+7. [自动质量控制（Auto-QC）规则](#sec7)  
 8. [参考文献](#sec8)  
 
 ---
 
 <a id="sec1"></a>
-## 1 │ 工具定位
-本指南将 **QUADAS-2** (Quality Assessment of Diagnostic Accuracy Studies-2) 扩展为 _深度学习+步态学_ 语境专用模板，用于评价单篇研究的 **风险偏倚 (RoB)** 与 **可适用性顾虑 (AC)**。  
-- **Sheet `QUADAS2`** 域级/研究级聚合结论  
-- **Sheet `QUADAS2_Items`** 19 条信号问题逐项打分与证据链  
+## 1 │ 工具定位 — Why QUADAS-2？
 
-> **自下而上链式更新**  
-> `SQ → Domain → Study` 任何上游改动必须向下游自动同步，保证可追溯性与机读一致性。
+| 目标 | 说明 |
+|------|------|
+| **风险偏倚 (Risk of Bias, RoB)** | 判断研究设计、实施与报告过程中是否可能系统性地夸大或低估 AI 步态评估性能。 |
+| **可适用性顾虑 (Applicability Concern, AC)** | 评估研究结果在 _Post-Stroke Gait_ 场景中的外推有效性，与本系统综述的 PICO 是否契合。 |
+
+> **本模板在 QUADAS-2 基础上做两处扩展**  
+> 1. **AI-特异信号问题**：D2_SQ3（模型冻结）与 D2_SQ4（数据泄漏）  
+> 2. **自动脚本校验**：字段范围、逻辑一致性与版本时间戳
+
+### Sheet 结构与信息流
+
+| Sheet 名称 | 角色与粒度 | 关键任务 |
+|------------|------------|----------|
+| **`QUADAS2`** | 研究级 (一行 = 一篇文献) | 汇总四域 RoB & AC，计算总体风险级别，标记核心 40 篇深度分析池。 |
+| **`QUADAS2_Items`** | 信号问题级 (19 行 × 每篇文献) | 记录原始打分、共识结果与佐证；经规则自动回写域级标志。 |
+
+<div align="center">
+
+```mermaid
+flowchart LR
+    subgraph S1["步骤 ①　原始打分 (`QUADAS2_Items`)"]
+      A["19 × 信号问题 / 文献"]
+    end
+    subgraph S2["步骤 ②　域级聚合 (D1–D4)"]
+      B["域级 RoB & AC"]
+    end
+    subgraph S3["步骤 ③　研究级输出 (`QUADAS2`)"]
+      C1["LowRisk_Count"]
+      C2["Overall_Score4"]
+      C3["Overall_RiskLevel"]
+      C4["Core40_Flag"]
+    end
+    A -- 规则映射 --> B
+    B --> C1 & C3
+    C1 --> C2
+    C3 --> C4
+    classDef node fill:#E8F7F0,stroke:#2CA58D,stroke-width:1px,color:#145A32,rx:4,ry:4;
+    class A,B,C1,C2,C3,C4 node;
 
 ---
 
@@ -79,7 +112,7 @@ _系统综述：Vision-Based AI Systems for Post-Stroke Gait Assessment_
 </table>
 </div>
 
-### QUADAS-2 数据处理三步流 · 总览示意图
+#### QUADAS-2 数据处理三步流 · 总览示意图
 
 ```mermaid
 flowchart LR
