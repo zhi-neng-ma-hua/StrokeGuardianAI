@@ -95,7 +95,7 @@ flowchart LR
 <!-- ─────────── 数据表一览 ─────────── -->
 <div style="overflow-x:auto; font-size:15px; line-height:1.55">
 
-<table>
+<table style="width:100%">
   <colgroup>
     <col style="width:22%">
     <col style="width:28%">
