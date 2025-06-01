@@ -79,16 +79,17 @@ _系统综述：Vision-Based AI Systems for Post-Stroke Gait Assessment_
 </table>
 </div>
 
-%% ==============
+%% ===============
 %%   QUADAS-2 数据处理三步流 · 总览示意图
 %%   —— 通过 “SPACER” 隐形节点留白
-%% ==============
+%% ===============
 ```mermaid
 flowchart LR
     %% ---------- Step 1 ----------
     subgraph STEP1["步骤 1｜原始打分<br/>(03_QUADAS2_Items)"]
         direction TB
-        SP1[" "]        %% 占位留白
+        %% 空白占位，避免标题压盖
+        SP1[" "]
         A["19 × 信号问题<br/>(每篇文献)"]
     end
 
@@ -96,7 +97,7 @@ flowchart LR
     subgraph STEP2["步骤 2｜域级聚合<br/>(D1–D4)"]
         direction TB
         SP2[" "]
-        B["域级结果<br/>Risk + Applicability"]
+        B["域级结果<br/>Risk ＋ Applicability"]
     end
 
     %% ---------- Step 3 ----------
