@@ -37,38 +37,47 @@ _系统综述：Vision-Based AI Systems for Post-Stroke Gait Assessment_
 | **`QUADAS2`** | 研究级（1 行 = 1 篇文献） | 汇总四域 RoB & AC，计算总体风险级别，并标记核心 40 篇 |
 | **`QUADAS2_Items`** | 信号问题级（19 行 × 每篇） | 记录原始打分、共识与佐证；规则自动回写域级标志 |
 
+#### QUADAS-2 数据处理三步流 · 总览示意图
+
 ```mermaid
 flowchart LR
-  %% ─────────── ① 原始打分 ───────────
-  subgraph S1["步骤 ① · 原始打分 (`QUADAS2_Items`)"]
-    direction TB
-    A["19 × 信号问题<br/>（每篇文献）"]
-  end
+    %% ---------- Step 1 ----------
+    subgraph STEP1["步骤 1｜原始打分<br/>(03_QUADAS2_Items)"]
+        direction TB
+        %% 空白占位，避免标题压盖
+        SP1[" "]
+        A["19 × 信号问题<br/>(每篇文献)"]
+    end
 
-  %% ─────────── ② 域级聚合 ───────────
-  subgraph S2["步骤 ② · 域级聚合 (D1–D4)"]
-    direction TB
-    B["域级结果<br/>Risk + Applicability"]
-  end
+    %% ---------- Step 2 ----------
+    subgraph STEP2["步骤 2｜域级聚合<br/>(D1–D4)"]
+        direction TB
+        SP2[" "]
+        B["域级结果<br/>Risk ＋ Applicability"]
+    end
 
-  %% ─────────── ③ 研究级输出 ───────────
-  subgraph S3["步骤 ③ · 研究级输出 (`QUADAS2`)"]
-    direction TB
-    C1["LowRisk_Count"]
-    C2["Overall_Score4"]
-    C3["Overall_RiskLevel"]
-    C4["Core40_Flag"]
-  end
+    %% ---------- Step 3 ----------
+    subgraph STEP3["步骤 3｜研究级输出<br/>(03_QUADAS2)"]
+        direction TB
+        SP3[" "]
+        C1["LowRisk_Count"]
+        C2["Overall_Score4"]
+        C3["Overall_RiskLevel"]
+        C4["Core40_Flag"]
+    end
 
-  %% ─────────── 边 ───────────
-  A -- 规则映射 --> B
-  B --> C1 & C3
-  C1 --> C2
-  C3 --> C4
+    %% ----------- Edges -----------
+    A -- 规则映射 --> B
+    B --> C1
+    C1 --> C2
+    B --> C3
+    C3 --> C4
 
-  classDef box fill:#E8F7F0,stroke:#2CA58D,color:#145A32,stroke-width:1px,rx:4,ry:4;
-  class A,B,C1,C2,C3,C4 box;
-C2,C3,C4 node;
+    %% ----------- Styles ----------
+    classDef box   fill:#E8F7F0,stroke:#2CA58D,color:#145A32,stroke-width:1px;
+    classDef blank fill:none,stroke:none;
+    class A,B,C1,C2,C3,C4 box;
+    class SP1,SP2,SP3 blank;
 ```
 
 ---
@@ -124,49 +133,6 @@ C2,C3,C4 node;
   </tbody>
 </table>
 </div>
-
-#### QUADAS-2 数据处理三步流 · 总览示意图
-
-```mermaid
-flowchart LR
-    %% ---------- Step 1 ----------
-    subgraph STEP1["步骤 1｜原始打分<br/>(03_QUADAS2_Items)"]
-        direction TB
-        %% 空白占位，避免标题压盖
-        SP1[" "]
-        A["19 × 信号问题<br/>(每篇文献)"]
-    end
-
-    %% ---------- Step 2 ----------
-    subgraph STEP2["步骤 2｜域级聚合<br/>(D1–D4)"]
-        direction TB
-        SP2[" "]
-        B["域级结果<br/>Risk ＋ Applicability"]
-    end
-
-    %% ---------- Step 3 ----------
-    subgraph STEP3["步骤 3｜研究级输出<br/>(03_QUADAS2)"]
-        direction TB
-        SP3[" "]
-        C1["LowRisk_Count"]
-        C2["Overall_Score4"]
-        C3["Overall_RiskLevel"]
-        C4["Core40_Flag"]
-    end
-
-    %% ----------- Edges -----------
-    A -- 规则映射 --> B
-    B --> C1
-    C1 --> C2
-    B --> C3
-    C3 --> C4
-
-    %% ----------- Styles ----------
-    classDef box   fill:#E8F7F0,stroke:#2CA58D,color:#145A32,stroke-width:1px;
-    classDef blank fill:none,stroke:none;
-    class A,B,C1,C2,C3,C4 box;
-    class SP1,SP2,SP3 blank;
-```
 
 ---
 
