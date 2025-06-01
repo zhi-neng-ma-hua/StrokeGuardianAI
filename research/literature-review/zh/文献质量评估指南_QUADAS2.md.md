@@ -19,8 +19,8 @@ _系统综述：Vision-Based AI Systems for Post-Stroke Gait Assessment_
 <a id="sec1"></a>
 ## 1 │ 工具定位
 本指南将 **QUADAS-2** (Quality Assessment of Diagnostic Accuracy Studies-2) 扩展为 _深度学习+步态学_ 语境专用模板，用于评价单篇研究的 **风险偏倚 (RoB)** 与 **可适用性顾虑 (AC)**。  
-- **Sheet `03_QUADAS2`** 域级/研究级聚合结论  
-- **Sheet `03_QUADAS2_Items`** 19 条信号问题逐项打分与证据链  
+- **Sheet `QUADAS2`** 域级/研究级聚合结论  
+- **Sheet `QUADAS2_Items`** 19 条信号问题逐项打分与证据链  
 
 > **自下而上链式更新**  
 > `SQ → Domain → Study` 任何上游改动必须向下游自动同步，保证可追溯性与机读一致性。
@@ -79,35 +79,40 @@ _系统综述：Vision-Based AI Systems for Post-Stroke Gait Assessment_
 </table>
 </div>
 
-<!-- ───── 简明工作流示意 ───── -->
+%% ==========================================
+%%   QUADAS-2 数据处理三步流 · 总览示意图
+%% ==========================================
 ```mermaid
 flowchart LR
-    %% ────────── 步骤 1 ──────────
-    subgraph STEP1["步骤 1｜原始打分 (QUADAS2_Items)"]
+    %% ---------- Step 1 ----------
+    subgraph STEP1["步骤 1｜原始打分<br/>(03_QUADAS2_Items)"]
+        direction TB
         A["19 × 信号问题<br/>（每篇文献）"]
     end
 
-    %% ────────── 步骤 2 ──────────
-    subgraph STEP2["步骤 2｜域级聚合 (D1–D4)"]
+    %% ---------- Step 2 ----------
+    subgraph STEP2["步骤 2｜域级聚合<br/>(D1–D4)"]
+        direction TB
         B["域级结果<br/>Risk + Applicability"]
     end
 
-    %% ────────── 步骤 3 ──────────
-    subgraph STEP3["步骤 3｜研究级输出 (QUADAS2)"]
+    %% ---------- Step 3 ----------
+    subgraph STEP3["步骤 3｜研究级输出<br/>(03_QUADAS2)"]
+        direction TB
         C1["LowRisk_Count"]
         C2["Overall_Score4"]
         C3["Overall_RiskLevel"]
         C4["Core40_Flag"]
     end
 
-    %% ────────── 关系 ──────────
+    %% ----------- 流向 -----------
     A -- 规则映射 --> B
     B --> C1
     C1 --> C2
     B --> C3
     C3 --> C4
 
-    %% ────────── 视觉样式 ──────────
+    %% ----------- 视觉样式 -----------
     classDef box fill:#F0FAF5,stroke:#2CA58D,color:#145A32,stroke-width:1px;
     class A,B,C1,C2,C3,C4 box;
 ```
