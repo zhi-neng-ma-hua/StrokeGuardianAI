@@ -80,29 +80,6 @@ _系统综述：Vision-Based AI Systems for Post-Stroke Gait Assessment_
 <a id="sec5"></a>
 ## 5 │ 19 项信号问题与可操作判据
 
-| 域 | SQ | 简述 | **判 Yes 的实操标准** |
-|----|----|------|------------------------|
-| **D1 Patient Selection** | 1 | 连续/随机样本？ | 明示“连续”或随机抽样；拒绝便利样本 |
-|  | 2 | 避免病例-对照？ | 设计非 case-control；无 spectrum bias |
-|  | 3 | 无不当排除？ | 排除率 < 10% 且理由合理 |
-|  | 4 | ≥ 10 例卒中？ | 卒中子样本 ≥ 10 |
-|  | 5 | 病程均衡？ | 急/亚急/慢性 ≤ 70 % 集中单阶段 |
-| **D2 Index Test** | 1 | Index 盲法？ | 结果解读者不知参考标准 |
-|  | 2 | 预设阈值？ | 阈值/权重在外部测试前已锁定 |
-|  | 3 | 模型冻结？ | 报告“model frozen”或仅推断不调参 |
-|  | 4 | 无数据泄漏？ | 训练/验证/测试严格隔离 |
-| **D3 Reference Standard** | 1 | 参考准确？ | 3D MoCap、GAITRite、MRI 等一线金标准 |
-|  | 2 | 参考盲法？ | 评估者未知 Index 结果 |
-|  | 3 | 使用金标准装置？ | Vicon、Qualisys、压力板等 |
-|  | 4 | 报告精度？ | 提供 ICC/SEM/±SD ≥ 1 项 |
-| **D4 Flow & Timing** | 1 | 间隔合适？ | Index-Ref ≤ 30 min（室内）或 ≤ 24 h |
-|  | 2 | 全体接受参考？ | `n_ref ≥ 95 % n_total` |
-|  | 3 | 完整分析？ | 采用 ITT 或报告全部样本 |
-|  | 4 | 同步采集？ | 同一试次或同步触发 |
-|  | 5 | 透明缺失？ | 缺失原因+插补/敏感性分析 |
-
-**一票否决**：★ 标记的关键 SQ 为 **No** 即该域直接判 *High Risk*。  
-
 <!-- ───────────── 19 Signal Questions Quick-Ref ───────────── -->
 <div style="overflow-x:auto; font-size: 14px">
 
@@ -237,7 +214,6 @@ _系统综述：Vision-Based AI Systems for Post-Stroke Gait Assessment_
 1. 表格中行内 `<br>` 换行已测试通过 GitHub Markdown 渲染。  
 2. 如需在本地查看，可直接打开 `.md` 文件或使用 VS Code + *Markdown Preview Enhanced*。  
 3. 若需打印版，可把 README 导入 **Typora / Obsidian → PDF**，所有列宽会随 `<colgroup>` 固定而对齐。
-
 
 ---
 
