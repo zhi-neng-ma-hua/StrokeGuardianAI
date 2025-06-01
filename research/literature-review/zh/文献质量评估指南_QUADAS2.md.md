@@ -24,6 +24,7 @@ _系统综述：Vision-Based AI Systems for Post-Stroke Gait Assessment_
 | 目标 | 说明 |
 |------|------|
 | **风险偏倚（Risk of Bias, RoB）** | 判断研究设计、实施与报告过程中是否可能系统性地夸大或低估 AI 步态评估性能 |
+
 | **可适用性顾虑（Applicability Concern, AC）** | 评估研究结果在 _post-stroke gait_ 场景中的外推有效性，与本系统综述 PICO 是否契合 |
 
 > **本模板在 QUADAS-2 的两项定制化扩展**  
