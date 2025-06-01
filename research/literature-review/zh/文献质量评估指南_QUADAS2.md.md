@@ -81,7 +81,7 @@ _系统综述：Vision-Based AI Systems for Post-Stroke Gait Assessment_
 
 <!-- ───── 简明工作流示意 ───── -->
 <div align="center">
-  
+```mermaid
 flowchart LR
     %% ────────── Layer 1 ──────────
     subgraph RawScoring["① 原始打分 (03_QUADAS2_Items)"]
