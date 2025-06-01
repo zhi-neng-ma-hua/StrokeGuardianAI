@@ -83,17 +83,17 @@ _系统综述：Vision-Based AI Systems for Post-Stroke Gait Assessment_
 ```mermaid
 flowchart LR
     %% ────────── 步骤 1 ──────────
-    subgraph STEP1 ["步骤 1 · 原始打分\n（03_QUADAS2_Items）"]
-        A["19 × 信号问题\n每篇文献"]
+    subgraph STEP1["步骤 1｜原始打分<br/>(03_QUADAS2_Items)"]
+        A["19 × 信号问题<br/>（每篇文献）"]
     end
 
     %% ────────── 步骤 2 ──────────
-    subgraph STEP2 ["步骤 2 · 域级聚合\n（D1‒D4）"]
-        B["域级结果：\n风险 & 适用性"]
+    subgraph STEP2["步骤 2｜域级聚合<br/>(D1–D4)"]
+        B["域级结果<br/>Risk + Applicability"]
     end
 
     %% ────────── 步骤 3 ──────────
-    subgraph STEP3 ["步骤 3 · 研究级输出\n（03_QUADAS2）"]
+    subgraph STEP3["步骤 3｜研究级输出<br/>(03_QUADAS2)"]
         C1["LowRisk_Count"]
         C2["Overall_Score4"]
         C3["Overall_RiskLevel"]
@@ -101,11 +101,15 @@ flowchart LR
     end
 
     %% ────────── 关系 ──────────
-    A  -->|规则映射| B
-    B  --> C1
+    A -- 规则映射 --> B
+    B --> C1
     C1 --> C2
-    B  --> C3
+    B --> C3
     C3 --> C4
+
+    %% ────────── 视觉样式 ──────────
+    classDef box fill:#F0FAF5,stroke:#2CA58D,color:#145A32,stroke-width:1px;
+    class A,B,C1,C2,C3,C4 box;
 ```
 
 ---
