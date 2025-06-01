@@ -83,19 +83,19 @@ _系统综述：Vision-Based AI Systems for Post-Stroke Gait Assessment_
 ```mermaid
 flowchart LR
     %% ---------- Step 1 ----------
-    subgraph STEP1["步骤 1｜原始打分<br/>(03_QUADAS2_Items)"]
+    subgraph STEP1["步骤 1｜原始打分 (03_QUADAS2_Items)"]
         direction TB
         A["19 × 信号问题（每篇文献）"]
     end
 
     %% ---------- Step 2 ----------
-    subgraph STEP2["步骤 2｜域级聚合<br/>(D1–D4)"]
+    subgraph STEP2["步骤 2｜域级聚合 (D1–D4)"]
         direction TB
-        B["域级结果<br/>Risk + Applicability"]
+        B["域级结果 Risk + Applicability"]
     end
 
     %% ---------- Step 3 ----------
-    subgraph STEP3["步骤 3｜研究级输出<br/>(03_QUADAS2)"]
+    subgraph STEP3["步骤 3｜研究级输出 (03_QUADAS2)"]
         direction TB
         C1["LowRisk_Count"]
         C2["Overall_Score4"]
