@@ -83,24 +83,25 @@ _系统综述：Vision-Based AI Systems for Post-Stroke Gait Assessment_
 <div align="center">
 flowchart LR
     %% ---------- Step 1 ----------
-    subgraph Step1["Step 1: Raw Scoring (03_QUADAS2_Items)"]
-        A["19 x SQ per study"]
+    subgraph STEP1 ["Step 1 · Raw Scoring<br/>(03_QUADAS2_Items)"]
+        A["19 × SQ<br/>per study"]
     end
 
     %% ---------- Step 2 ----------
-    subgraph Step2["Step 2: Domain Aggregation (D1–D4)"]
-        B["Domain-level Risk & Applicability"]
+    subgraph STEP2 ["Step 2 · Domain Aggregation<br/>(D1 – D4)"]
+        B["Domain-level<br/>Risk & Applicability"]
     end
 
     %% ---------- Step 3 ----------
-    subgraph Step3["Step 3: Study-level Outputs (03_QUADAS2)"]
+    subgraph STEP3 ["Step 3 · Study-level Outputs<br/>(03_QUADAS2)"]
         C1["LowRisk_Count"]
         C2["Overall_Score4"]
         C3["Overall_RiskLevel"]
         C4["Core40_Flag"]
     end
 
-    A -->|Rules| B
+    %% ----------- Edges -----------
+    A -- 规则映射 --> B
     B --> C1
     C1 --> C2
     B --> C3
