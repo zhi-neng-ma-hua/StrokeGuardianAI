@@ -1,87 +1,93 @@
-# README — *03_QUADAS2* Data Model  
-*Systematic Review: Vision-Based AI Systems for Post-Stroke Gait Assessment*  
-**Version 1.0 | Last updated:** 2025-06-01  
+# 文献质量评估指南 — QUADAS-2 数据字典  
+*系统综述：基于视觉的 AI 步态评估（卒中后）*  
+**版本 1.1 | 最近更新：2025-06-01**  
 
 ---
 
-## 1. 目的与定位  
-本工作簿依据 **QUADAS-2** 官方指南（2011, Ann Intern Med 155:529-536）扩展，用于系统评价中**单篇研究的质量与可适用性判定**。  
-- **`03_QUADAS2`** Sheet：域-级（Domain-level）与整体（Study-level）结论。  
-- **`03_QUADAS2_Items`** Sheet：19 个信号问题（Signalling Questions, SQ）逐条原始打分与佐证信息。  
+## 1 │ 定位与范围
+本指南用于 **单篇原始研究** 的风险偏倚（Risk of Bias，RoB）与可适用性（Applicability Concern，AC）定量标注；扩展自 QUADAS-2 标准流程 [[1]](#ref1)。  
+- **Sheet `03_QUADAS2`** : *域级 / 研究级* 结论与聚合指标。  
+- **Sheet `03_QUADAS2_Items`** : 19 条信号问题（Signalling Questions, SQ）逐项打分与证据链。  
 
-> ✅ **“先细后粗”**：任何汇总结论（Risk / App etc.）必须由 *Items → Domain → Study* 自底向上传递，可机读复核。  
-
----
-
-## 2. 字段说明  
-
-### 2.1 `03_QUADAS2`（Study-level）  
-
-| 字段 | 类型 | 允许值 / 格式 | 释义 |
-|------|------|---------------|------|
-| `Study_ID` | string | `Acronym-YY` 或 `SurnameYY` | 元数据主键，与 *01_Studies* 表一致。 |
-| `Author_Year` | string | `FirstAuthor (YYYY)` | 显示友好型。 |
-| `Reviewer_1 / _2` | string | 姓名缩写 | 首轮独立评审者。 |
-| `Consensus_Date` | date | `YYYY-MM-DD` | 完成域级共识的日期。 |
-| `D1_Risk` – `D4_Risk` | enum | **L** / **H** / **U** | 四大域偏倚风险：Low / High / Unclear。 |
-| `D1_App` – `D4_App` | enum | **L** / **H** / **U** | 四大域可适用性 Concern。 |
-| `LowRisk_Count` | int | 0-4 | 4 个域中判为 **L** 的数量。 |
-| `Overall_RiskLevel` | enum | **Low** / **Moderate** / **High** | 规则：<br>· **Low** = 全域 *L*；<br>· **High** = 任一域 *H*；<br>· **Moderate** = 其他情况。 |
-| `Overall_Score4` | int | 0-4 | `LowRisk_Count` 的复制列，可用于森林图配色。 |
-| `Core40_Flag` | bool | 1 / 0 | 是否进入“核心40篇”深度分析池。 |
-| `Consensus?` | bool | Y / N | 域级结论是否经双方确认。 |
-| `Notes_Expert` | long-text |   | 顶级临床/AI 咨询的额外备注。 |
-
-### 2.2 `03_QUADAS2_Items`（Signalling-question level）  
-
-| 字段 | 类型 | 允许值 | 释义 |
-|------|------|---------|------|
-| `Study_ID` | string | 见上 |
-| `D1_SQ1` ·· `D4_SQ5` | enum | **Y** / **N** / **U** | 19 个信号问题（详见 §3）。 |
-| `Response_R1 / _R2` | enum | Y / N / U | 初评答案（与列顺序一一对应）。 |
-| `Consensus` | enum | Y / N / U | 共识答案（机器用于自动回填 *SQ* 字段）。 |
-| `Justification` | string | 50-250 字符 | 关键语句或数据；可引用表格或原文语句。 |
-| `Source_Evidence` | string | “p 3, Table 1” | 页码、图表编号或 DOI-定位。 |
-| `Risk_Flag` | enum | L / H / U | 遇到“**任何关键 SQ=No**”则域判 *High*；*All Yes* → Low；否则 *Unclear*。 |
-| `Applicability_Flag` | enum | L / H / U | 按 QUADAS-2 指南结合综述 PICO。 |
-| `Last_Update` | date | YYYY-MM-DD | 最近一次修改时间戳。 |
-| `AI_Specific?` | bool | 1 / 0 | 仅 AI-特有项（如 D2_SQ3/4）标 1。 |
-| `Direction_of_Bias` | enum | + / – / ? | 若判 *High*，标注可能方向：+ = 高估性能；– = 低估；? = 不确定。 |
-| `Auto_QC_Status` | enum | pass / warn / fail | 由脚本验证值域、留空等。 |
+> **分层逻辑** Items → Domain → Study 任一上游修改须同步刷新下游结果，  
+>  脚本可据此自动执行一致性与留空校验（见 § 5）。  
 
 ---
 
-## 3. 信号问题（19 Items）与判定规则  
+## 2 │ 字段定义与取值域  
 
-| 域(D) | SQ | 中文简述 | 判 *Yes* 的操作化标准 |
-|-------|----|----------|-----------------------|
-| **D1 Patient Selection** | 1 | 连续或随机样本？ | 招募过程明示 “连续”/“随机抽取”；无便利样本。 |
-| | 2 | 避免病例-对照？ | 研究设计非病例-对照 (case–control)。 |
-| | 3 | 无不当排除？ | 排除理由合理且 <10% 为“技术失败/资料缺失”。 |
-| | 4 | ≥10 stroke 患者？ | 样本量报告 ≥10；若混合队列统计 stroke≥10。 |
-| | 5 | 病程均衡？ | 急 / 亚急 / 慢性 比例有说明且任一阶段 ≤70%。 |
-| **D2 Index Test** | 1 | Index 解读盲法？ | 分析者不知参考标准结果；或自动管线。 |
-| | 2 | 预设阈值？ | 模型阈值 / 权重在训练集外预先定义。 |
-| | 3 | 上线前锁定模型？ | 明言“模型冻结”或外部验证仅推断不调参。 |
-| | 4 | 无数据泄漏？ | 训练/验证/测试严格独立；无预处理共享信息。 |
-| **D3 Reference Standard** | 1 | 参考标准准确？ | 3D MoCap / GAITRite / 临床确诊 MRI 等一线金标准。 |
-| | 2 | 参考盲法？ | 参考评估者未知 Index 结果。 |
-| | 3 | 使用金标准装置？ | 如 Vicon、Qualisys、GAITRite、压力板。 |
-| | 4 | 报告精度？ | 提供误差(±SD)或 ICC/SEM ≥1 指标。 |
-| **D4 Flow & Timing** | 1 | 时间间隔合适？ | Index–Ref ≤30 min；若居家/院外 ≤24 h。 |
-| | 2 | 全体接受参考？ | `n_ref == n_total` 或 差异 <5%。 |
-| | 3 | 完整分析？ | 报告全部受试者数据；无“per-protocol”删减。 |
-| | 4 | 同步采集？ | Index 与 Ref 同步或同一试次。 |
-| | 5 | 透明处理缺失？ | 明示缺失原因；采用合适插补/敏感性分析。 |
+### 2.1 Sheet `03_QUADAS2` （Study-level）
 
-> ⚠️ “一票否决”：若 **任何** 关键 SQ (粗体) ＝ No → 该域直接标 *High Risk*。  
+| 字段 | 类型 | 取值/格式 | 专业释义 |
+|------|------|-----------|----------|
+| **Study_ID** | `string` | `SurnameYY` 或 `Acrn-YY` | 数据主键，全工作簿唯一；与 *01_Studies* 同步。 |
+| **Author_Year** | `string` | `FirstAuthor (YYYY)` | 便于人工检索的可读标签。 |
+| **Reviewer_1 / _2** | `string` | 姓名缩写 | 独立初评者标识。 |
+| **Consensus_Date** | `date` | `YYYY-MM-DD` | 完成域级共识日期。 |
+| **D1_Risk – D4_Risk** | `enum` | **L / H / U** | 四域风险 (Low, High, Unclear)。 |
+| **D1_App – D4_App** | `enum` | **L / H / U** | 四域可适用性 Concern。 |
+| **LowRisk_Count** | `int` | 0 – 4 | 4 个域中被判 *Low Risk* 的数量。 |
+| **Overall_RiskLevel** | `enum` | Low / Moderate / High | 规则：<br>  ➊ 全域 L → Low；➋ 任一域 H → High；➌ 其余 → Moderate。 |
+| **Overall_Score4** | `int` | 0 – 4 | 与 *LowRisk_Count* 等值，用于森林图配色。 |
+| **Core40_Flag** | `bool` | 1 / 0 | 是否归入“核心 40” 深度分析池。 |
+| **Consensus?** | `bool` | Y / N | 域级结论是否已双评一致。 |
+| **Notes_Expert** | `text` | — | 院士/领域专家的附加见解（可 Markdown 列表）。 |
 
 ---
 
-## 4. 域-级与整体评分算法  
+### 2.2 Sheet `03_QUADAS2_Items` （SQ-level）
 
+| 字段 | 类型 | 取值 | 释义 |
+|------|------|------|------|
+| **Study_ID** | `string` | — | 主外键。 |
+| **D1_SQ1 … D4_SQ5** | `enum` | **Y / N / U** | 19 项信号问题原始判定。 |
+| **Response_R1 / _R2** | `enum` | Y / N / U | 两位评审的独立打分（与 SQ 顺序对应）。 |
+| **Consensus** | `enum` | Y / N / U | 协商后共识打分；用于覆写 SQ 列。 |
+| **Justification** | `string` | 50–250 字 | 关键语句 / 数据；可引用表格、附录。 |
+| **Source_Evidence** | `string` | `p x, Fig y` | 页码或图、表、附录索引。 |
+| **Risk_Flag** | `enum` | L / H / U | 根据 19 项 SQ→域规则自动生成。 |
+| **Applicability_Flag** | `enum` | L / H / U | 依 PICO 匹配度评定。 |
+| **Last_Update** | `date` | YYYY-MM-DD | 最后编辑时间戳。 |
+| **AI_Specific?** | `bool` | 1 / 0 | D2_SQ3 / SQ4 等 AI 独有条目标 1。 |
+| **Direction_of_Bias** | `enum` | + / – / ? | 若 Risk_Flag = H：+ 高估；– 低估；? 不确定。 |
+| **Auto_QC_Status** | `enum` | pass / warn / fail | 脚本校验：留空/越界/逻辑冲突。 |
+
+---
+
+## 3 │ 19 条信号问题与操作化标准  
+
+| 域 (D) | SQ | 中文简述 | 判 *Yes* 的 **可操作标准** |
+|--------|----|----------|---------------------------|
+| **D1 Patient Selection** | 1 | 连续或随机样本？ | 报告“连续”或“随机抽样”；非方便样本。 |
+| | 2 | 避免病例-对照？ | 设计非 *case-control*；无显著 spectrum bias。 |
+| | 3 | 无不当排除？ | 排除理由充分；排除率 < 10%。 |
+| | 4 | ≥10 例卒中？ | 报告卒中子样本 ≥ 10。 |
+| | 5 | 病程均衡？ | 急/亚急/慢性 ≤ 70% 集中于单阶段。 |
+| **D2 Index Test** | 1 | Index 盲法？ | Index 结果解读时未知参考标准。 |
+| | 2 | 预设阈值？ | 阈值/权重在外部验证前已锁定。 |
+| | 3 | 上线前锁定模型？ | 报告“模型冻结”或仅推断不调参。 |
+| | 4 | 无数据泄漏？ | 训练/验证/测试严格隔离；特征工程不越界。 |
+| **D3 Reference Standard** | 1 | 标准准确？ | Vicon、GAITRite 或临床公认诊断依据。 |
+| | 2 | 参考盲法？ | 参考评估者不知 Index 结果。 |
+| | 3 | 金标准装置？ | MoCap、压力板等。 |
+| | 4 | 报告精度？ | 量化误差 ±SD、ICC、SEM 任一。 |
+| **D4 Flow & Timing** | 1 | 间隔合适？ | Index-Ref ≤ 30 min（室内）；≤ 24 h（外设）。 |
+| | 2 | 全体接受参考？ | `n_ref == n_total` 或 差异 < 5%。 |
+| | 3 | 完整分析？ | 无 “per-protocol” 删减；ITT 或全部样本。 |
+| | 4 | 同步采集？ | 同步或同一试次完成。 |
+| | 5 | 透明缺失？ | 缺失原因列举；有插补/敏感度分析。 |
+
+> **一票否决原则** 任一带 **✱** 号核心 SQ = No → 该域直接判 *High Risk*。  
+
+---
+
+## 4 │ 域级与整体评分算法
 ```mermaid
-graph TD
-  Items --规则--> Domain(Risk/App)
-  Domain --LowRisk_Count--> Overall_Score4
-  Overall_Score4 --> Overall_RiskLevel
+flowchart LR
+  subgraph SQ级
+    A1[19× SQ<br>(Y/N/U)]
+  end
+  A1 --> B1[域级 Risk / App<br>(D1–D4)]
+  B1 --> C1[LowRisk_Count]
+  C1 --> D1[Overall_Score4]
+  B1 --> D2[Overall_RiskLevel]
