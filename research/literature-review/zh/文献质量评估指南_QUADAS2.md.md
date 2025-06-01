@@ -94,7 +94,6 @@ flowchart LR
         C[03_QUADAS2<br/>Overall_RiskLevel<br/>Core40_Flag]
     end
     A -->|规则映射| B --> C
-```
 </div>
 
 ---
