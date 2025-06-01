@@ -60,20 +60,104 @@ _系统综述：Vision-Based AI Systems for Post-Stroke Gait Assessment_
 <a id="sec4"></a>
 ## 4 │ 字段定义 — `QUADAS2_Items`（信号问题级）
 
-| 字段 | 数据型 | 合法值 | 说明 |
-|------|--------|--------|------|
-| `Study_ID` | `string` | — | 外键 |
-| `D1_SQ1 … D4_SQ5` | `enum` | **Y/N/U** | 19 项 SQ 最终共识 |
-| `Response_R1` / `_R2` | `enum` | Y/N/U | 初评答案（列顺序 × SQ 顺序） |
-| `Consensus` | `enum` | Y/N/U | 若双评不一致需第三方裁决 |
-| `Justification` | `text` | 50–250 字 | 关键信息或引用原文 |
-| `Source_Evidence` | `string` | `p 3, Fig 2` | 页码/图表/附录编号 |
-| `Risk_Flag` | `enum` | L/H/U | 域级 RoB 自动回填 |
-| `Applicability_Flag` | `enum` | L/H/U | 域级 AC 自动回填 |
-| `Last_Update` | `date` | YYYY-MM-DD | 最近编辑 |
-| `AI_Specific?` | `bool` | 1/0 | D2_SQ3/4 设 1 |
-| `Direction_of_Bias` | `enum` | + / – / ? | RoB=H 时：+高估 –低估 |
-| `Auto_QC_Status` | `enum` | pass / warn / fail | 脚本校验结果 |
+<!-- ─────────── 字段定义表：03_QUADAS2_Items ─────────── -->
+<div style="overflow-x:auto; font-size:15px; line-height:1.55">
+
+<table>
+  <colgroup>  <!-- 统一列宽：4 × 25 % -->
+    <col style="width:22%">
+    <col style="width:13%">
+    <col style="width:25%">
+    <col style="width:40%">
+  </colgroup>
+  <thead>
+    <tr style="background:#fafafa">
+      <th>字段</th>
+      <th>数据类型<br/>(SQL / CSV)</th>
+      <th>合法值 / 格式</th>
+      <th>专业释义 &nbsp;|&nbsp; 示例说明</th>
+    </tr>
+  </thead>
+  <tbody>
+
+  <tr><td><strong>Study_ID</strong></td>
+      <td>VARCHAR(30)</td>
+      <td>如 <code>Smith24</code></td>
+      <td>连接主键，唯一标识单篇文献；与 *01_Studies* 中 <code>Study_ID</code> 完全一致。</td></tr>
+
+  <tr><td><strong>D1_SQ1</strong> – <strong>D4_SQ5</strong></td>
+      <td>ENUM<br/>(Y,N,U)</td>
+      <td>Y = 是<br/>N = 否<br/>U = 不确定</td>
+      <td>19 个信号问题最终 <u>共识</u> 答案。字段顺序 = 表&nbsp;§5 的 SQ 顺序。</td></tr>
+
+  <tr><td><strong>Response_R1</strong><br/><strong>Response_R2</strong></td>
+      <td>ENUM<br/>(Y,N,U)</td>
+      <td>同上</td>
+      <td>两名评审者首次独立打分的原始结果（用于偏差检测）。</td></tr>
+
+  <tr><td><strong>Consensus</strong></td>
+      <td>ENUM<br/>(Y,N,U)</td>
+      <td>见上</td>
+      <td>若 <code>Response_R1</code> ≠ <code>Response_R2</code>，由第三评审裁决的最终值；否则复制原值。</td></tr>
+
+  <tr><td><strong>Justification</strong></td>
+      <td>TEXT</td>
+      <td>50–250 字</td>
+      <td>引用原文关键句、表格或统计量以支持“是/否”判断；鼓励同时提供英/中简释。</td></tr>
+
+  <tr><td><strong>Source_Evidence</strong></td>
+      <td>VARCHAR(40)</td>
+      <td>如 <code>p 7, Fig 2</code></td>
+      <td>定位信息：页码、图表编号、附录，或 PDF 行号 (例如 <code>L256-L270</code>)。</td></tr>
+
+  <tr><td><strong>Risk_Flag</strong></td>
+      <td>ENUM<br/>(L,H,U)</td>
+      <td>L 低风险<br/>H 高风险<br/>U 不确定</td>
+      <td>由脚本根据 19 个 SQ 自动汇总至“域-级风险”（见 §6 算法）。</td></tr>
+
+  <tr><td><strong>Applicability_Flag</strong></td>
+      <td>ENUM<br/>(L,H,U)</td>
+      <td>同上</td>
+      <td>同理自动汇总“域-级适用性 Concern”。</td></tr>
+
+  <tr><td><strong>Last_Update</strong></td>
+      <td>DATE</td>
+      <td><code>YYYY-MM-DD</code></td>
+      <td>任何字段被修改时必须刷新；CI/CD 可用作增量校验触发器。</td></tr>
+
+  <tr><td><strong>AI_Specific?</strong></td>
+      <td>BOOLEAN</td>
+      <td>1 / 0</td>
+      <td>仅对 AI 独有的 SQ（目前 <code>D2_SQ3</code>, <code>D2_SQ4</code>）标记为 <code>1</code>；其余默认 0。</td></tr>
+
+  <tr><td><strong>Direction_of_Bias</strong></td>
+      <td>ENUM<br/>(+,&nbsp;−,&nbsp;?)</td>
+      <td>+ 高估<br/>− 低估<br/>? 未知</td>
+      <td>当 <code>Risk_Flag = H</code> 时填写：<br/>+ = 可能夸大诊断性能；− = 可能保守。</td></tr>
+
+  <tr><td><strong>Auto_QC_Status</strong></td>
+      <td>ENUM<br/>(pass,warn,fail)</td>
+      <td>—</td>
+      <td>自动脚本校验结果：<br/><code>pass</code> = 全部合法值；<br/><code>warn</code> = 非关键字段留空；<br/><code>fail</code> = 枚举越界或逻辑冲突。</td></tr>
+
+  </tbody>
+</table>
+</div>
+
+<details>
+<summary><strong>字段补充说明</strong></summary>
+
+* **ENUM 值区分大小写**：<code>Y</code>/<code>N</code>/<code>U</code> 均需大写，便于 R/Python 解析。  
+* **文本字段避免换行**：若需多行，使用 <code>&lt;br/&gt;</code> 以兼容 CSV→HTML 转换。  
+* **方向性 (+/−)**：参考 **Whiting et al. 2021** 推荐做法：若无法推断方向请填 “?”，而非留空。  
+* **Auto_QC 触发器示例**  
+  ```python
+  if field not in {'Y','N','U'}:
+      qc = 'fail'
+  elif justification == '' and field != 'U':
+      qc = 'warn'
+  else:
+      qc = 'pass'
 
 ---
 
