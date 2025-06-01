@@ -79,12 +79,11 @@ _系统综述：Vision-Based AI Systems for Post-Stroke Gait Assessment_
 </table>
 </div>
 
-%% ========== QUADAS-2 数据处理三步流 · 总览示意图 ========== %% 
-```mermaid
 %% ==========================================
 %%   QUADAS-2 数据处理三步流 · 总览示意图
 %%   —— 通过 “SPACER” 隐形节点留白
 %% ==========================================
+```mermaid
 flowchart LR
     %% —— Step 1 : Raw scoring ——————————
     subgraph STEP1["步骤 1｜原始打分<br/>(03_QUADAS2_Items)"]
