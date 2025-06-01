@@ -7,8 +7,8 @@ _系统综述：Vision-Based AI Systems for Post-Stroke Gait Assessment_
 ## 目录
 1. [工具定位](#sec1)  
 2. [数据表概览](#sec2)  
-3. [`03_QUADAS2` 字段定义（Study level）](#sec3)  
-4. [`03_QUADAS2_Items` 字段定义（SQ level）](#sec4)  
+3. [`QUADAS2` 字段定义（Study level）](#sec3)  
+4. [`QUADAS2_Items` 字段定义（SQ level）](#sec4)  
 5. [19 项信号问题与“是/否”判据](#sec5)  
 6. [域级与研究级评分算法](#sec6)  
 7. [自动质量控制（Auto-QC）脚本规则](#sec7)  
@@ -32,8 +32,8 @@ _系统综述：Vision-Based AI Systems for Post-Stroke Gait Assessment_
 
 | Sheet | 角色 | 粒度 | 关键输出 |
 |-------|------|------|----------|
-| **03_QUADAS2** | 结论表 | Study | 4 域 RoB & AC，整体风险级别，核心文献标记 |
-| **03_QUADAS2_Items** | 原始表 | SQ | 19×Y/N/U 判定、佐证、偏倚方向、脚本 QC |
+| **QUADAS2** | 结论表 | Study | 4 域 RoB & AC，整体风险级别，核心文献标记 |
+| **QUADAS2_Items** | 原始表 | SQ | 19×Y/N/U 判定、佐证、偏倚方向、脚本 QC |
 
 ---
 
@@ -110,10 +110,15 @@ _系统综述：Vision-Based AI Systems for Post-Stroke Gait Assessment_
 
 ```mermaid
 flowchart LR
-  subgraph SQ(19)
-    A[Signalling Questions<br>(Y/N/U)]
-  end
-  A --规则--> B(Domain RoB/AC)
-  B --> C[LowRisk_Count]
-  C --> D1[Overall_Score4]
-  B --> D2[Overall_RiskLevel]
+    %% --- Signalling-question layer ----------------
+    subgraph SQ19["Signalling Questions (19 items)"]
+        A[19 × SQ<br/>(Y / N / U)]
+    end
+
+    %% --- Domain layer ----------------------------
+    A -->|scoring rules| B[Domain-level<br/>RoB & Applicability]
+
+    %% --- Study layer -----------------------------
+    B --> C[LowRisk_Count]
+    C --> D[Overall_Score4]
+    B --> E[Overall_RiskLevel]
