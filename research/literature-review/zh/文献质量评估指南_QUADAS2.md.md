@@ -109,18 +109,30 @@ _系统综述：Vision-Based AI Systems for Post-Stroke Gait Assessment_
 ## 6 │ 评分算法
 
 ```mermaid
-flowchart LR
-    %% ---------- 信号问题 ----------
-    SQ["19 条信号问题\n(Y / N / U)"]
+flowchart TD
+    %% ---------- Layer 1 : Signalling Questions ----------
+    SQ["信号问题层<br/>(19 项 SQ)"]
+    class SQ sqStyle;
 
-    %% ---------- 域 ----------
-    SQ -->|域内规则| D["4 大域\n风险 & 适用性"]
+    %% ---------- Layer 2 : QUADAS-2 Domains ----------
+    D["域层<br/>(D1–D4)"]
+    class D domStyle;
 
-    %% ---------- 研究整体 ----------
-    D --> C["LowRisk_Count"]
-    C --> S4["Overall_Score4"]
-    D --> R["Overall_RiskLevel"]
+    %% ---------- Layer 3 : Study-level Outputs ----------
+    subgraph Study["研究层"]
+        LR["LowRisk_Count"]
+        S4["Overall_Score4"]
+        RL["Overall_RiskLevel"]
+    end
+    class Study studyStyle;
 
-    %% ---------- 样式 ----------
-    classDef box fill:#f8f9fa,stroke:#333,stroke-width:1px;
-    class SQ,D,C,S4,R box
+    %% ----------- Edges -----------
+    SQ  -->|"规则汇总"| D
+    D   --> LR
+    LR  --> S4
+    D   --> RL
+
+    %% ----------- Custom Styles -----------
+    classDef sqStyle   fill:#E9F5FF,stroke:#0B83D9,color:#0B83D9,stroke-width:1px;
+    classDef domStyle  fill:#FFF9DB,stroke:#F7A100,color:#F7A100,stroke-width:1px;
+    classDef studyStyle fill:#E8F7E0,stroke:#26933B,color:#26933B,stroke-width:1px;
