@@ -103,6 +103,142 @@ _系统综述：Vision-Based AI Systems for Post-Stroke Gait Assessment_
 
 **一票否决**：★ 标记的关键 SQ 为 **No** 即该域直接判 *High Risk*。  
 
+<!-- ───────────── 19 Signal Questions Quick-Ref ───────────── -->
+<div style="overflow-x:auto; font-size: 14px">
+
+<table>
+  <colgroup>
+    <col style="width: 6%">
+    <col style="width: 4%">
+    <col style="width: 18%">
+    <col style="width: 26%">
+    <col style="width: 28%">
+    <col style="width: 18%">
+  </colgroup>
+  <thead>
+    <tr>
+      <th>域</th>
+      <th>SQ</th>
+      <th>问题（中文缩写）</th>
+      <th><strong>判 Yes 的<strong>“可操作”标准</th>
+      <th>Why it matters / 易错示例</th>
+      <th>关键判否逻辑</th>
+    </tr>
+  </thead>
+  <tbody>
+
+  <!-- ── D1 ─────────────────────────── -->
+  <tr><td rowspan="5"><strong>D1<br>Patient<br>Selection</strong></td>
+      <td>1★</td>
+      <td>连续 / 随机样本？</td>
+      <td>招募段落或流程图明确写出 “consecutive”<br>或使用随机号码表抽样；<br>不接受“方便取样 (convenience)”</td>
+      <td>避免 spectrum bias；便利样本往往排除重症/合并症</td>
+      <td>若发现“convenience sample”“retrospective chart screen” ⇒ **No**</td></tr>
+
+  <tr><td>2★</td><td>避免病例-对照？</td>
+      <td>研究设计非 case-control；若为诊断准确度研究须为 cohort / cross-sectional</td>
+      <td>病例-对照易夸大 AUC 与敏感度</td>
+      <td>明言 “case–control” 或 组间配对招募 ⇒ **No**</td></tr>
+
+  <tr><td>3★</td><td>无不当排除？</td>
+      <td>筛查 → 纳入全流程列出排除理由；总体排除 &lt; 10%</td>
+      <td>高排除率 = 选择性偏倚</td>
+      <td>排除占样本 ≥ 10% 且无正当理由 ⇒ **No**</td></tr>
+
+  <tr><td>4</td><td>≥ 10 例 stroke？</td>
+      <td>样本量表或结果段明示 n ≥ 10</td>
+      <td>小样本不具备稳定的准确度估计</td>
+      <td>n &lt; 10（或未报告）⇒ **Unclear** / **High**</td></tr>
+
+  <tr><td>5</td><td>病程均衡？</td>
+      <td>急 / 亚急 / 慢性 任一类比例 ≤ 70%</td>
+      <td>单一病程阶段主导会削弱外部适用性</td>
+      <td>≥ 70% 集中同一阶段且无分层分析 ⇒ **Unclear**</td></tr>
+
+  <!-- ── D2 ─────────────────────────── -->
+  <tr><td rowspan="4"><strong>D2<br>Index&nbsp;Test</strong></td>
+      <td>1★</td><td>Index 盲法？</td>
+      <td>算法或读片人员在得出结果时**未获知**参考标准</td>
+      <td>防止“诊断决策回溯”偏倚</td>
+      <td>同一团队先看 GAITRite 再标注 AI 输出 ⇒ **No**</td></tr>
+
+  <tr><td>2</td><td>预设阈值？</td>
+      <td>阈值 / cut-point 在 protocol 或注册表上预声明</td>
+      <td>事后调阈会抬高准确度</td>
+      <td>“best-Youden” post-hoc 优化 ⇒ **No**</td></tr>
+
+  <tr><td>3</td><td>模型冻结？</td>
+      <td>外部测试集仅 forward 推断，无任何再训练</td>
+      <td>防止 leakage-fine-tune</td>
+      <td>若报告“fine-tuned on test” ⇒ **No**</td></tr>
+
+  <tr><td>4★</td><td>无数据泄漏？</td>
+      <td>全流程分区：Train / Val / Test 互斥；<br>无“patient-overlap”或时间穿越</td>
+      <td>leakage 可能高估性能 ≥ 20%</td>
+      <td>同一患者步态循环跨 Train/Test ⇒ **No**</td></tr>
+
+  <!-- ── D3 ─────────────────────────── -->
+  <tr><td rowspan="4"><strong>D3<br>Reference<br>Standard</strong></td>
+      <td>1★</td><td>参考准确？</td>
+      <td>3D MoCap / GAITRite / MRI / 临床多学科共识诊断</td>
+      <td>基准不准＝结果不可信</td>
+      <td>自制简易摄像或问卷代替金标准 ⇒ **No**</td></tr>
+
+  <tr><td>2</td><td>参考盲法？</td>
+      <td>参考评估者不接触 Index 输出</td>
+      <td>减少 review bias</td>
+      <td>双盲未说明 ⇒ **Unclear**</td></tr>
+
+  <tr><td>3</td><td>使用金标准装置？</td>
+      <td>Vicon、Qualisys、GAITRite、Kistler FP 等</td>
+      <td>保证度量物理准确度</td>
+      <td>仅手机计步器 ⇒ **No**</td></tr>
+
+  <tr><td>4</td><td>报告精度？</td>
+      <td>参考装置给出 ICC、SEM、RMSE 等 ≤ 公认阈值</td>
+      <td>便于评估总误差</td>
+      <td>未报告任何精度指标 ⇒ **Unclear**</td></tr>
+
+  <!-- ── D4 ─────────────────────────── -->
+  <tr><td rowspan="5"><strong>D4<br>Flow & Timing</strong></td>
+      <td>1</td><td>间隔合适？</td>
+      <td>室内同日 ≤ 30 min；<br>若跨机构 ≤ 24 h 且病情稳定</td>
+      <td>病程可能在间隔中变化</td>
+      <td>间隔 > 7 天 且无解释 ⇒ **No**</td></tr>
+
+  <tr><td>2</td><td>全体接受参考？</td>
+      <td><code>n_ref / n_total ≥ 0.95</code></td>
+      <td>避免 verification bias</td>
+      <td>大幅缺少参考标准 ⇒ **High**</td></tr>
+
+  <tr><td>3</td><td>完整分析？</td>
+      <td>使用 ITT 或 <u>列出</u>排除清单；无“per-protocol only”</td>
+      <td>排除失败样本易高估性能</td>
+      <td>仅分析“成功帧” ⇒ **No**</td></tr>
+
+  <tr><td>4★</td><td>同步采集？</td>
+      <td>Index 与 Ref 同步触发或同一试次</td>
+      <td>取消行为差异/疲劳影响</td>
+      <td>轮流走两遍、顺序固定 ⇒ **Unclear** / **No**</td></tr>
+
+  <tr><td>5</td><td>透明缺失？</td>
+      <td>说明缺失原因 + 采用插补 / 敏感度分析</td>
+      <td>缺失非随机 → 偏倚</td>
+      <td>未解释缺失 &gt; 5% ⇒ **No**</td></tr>
+  </tbody>
+</table>
+</div>
+
+> **一票否决原则** 带 “★” 的 SQ 若回答 **No**，该域直接标为 **High Risk**。 若所有 SQ = Yes ⇒ **Low Risk**； 否则 **Unclear**。  
+
+---
+
+#### 使用说明
+1. 表格中行内 `<br>` 换行已测试通过 GitHub Markdown 渲染。  
+2. 如需在本地查看，可直接打开 `.md` 文件或使用 VS Code + *Markdown Preview Enhanced*。  
+3. 若需打印版，可把 README 导入 **Typora / Obsidian → PDF**，所有列宽会随 `<colgroup>` 固定而对齐。
+
+
 ---
 
 <a id="sec6"></a>
