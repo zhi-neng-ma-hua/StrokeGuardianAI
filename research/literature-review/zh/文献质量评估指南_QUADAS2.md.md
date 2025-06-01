@@ -81,38 +81,45 @@ _系统综述：Vision-Based AI Systems for Post-Stroke Gait Assessment_
 
 %% ========== QUADAS-2 数据处理三步流 · 总览示意图 ========== %% 
 ```mermaid
+%% ==========================================
+%%   QUADAS-2 数据处理三步流 · 总览示意图
+%%   —— 通过 “SPACER” 隐形节点留白
+%% ==========================================
 flowchart LR
-    %% ---------- Step 1 ----------
-    subgraph STEP1["步骤 1｜原始打分 (03_QUADAS2_Items)"]
+    %% —— Step 1 : Raw scoring ——————————
+    subgraph STEP1["步骤 1｜原始打分<br/>(03_QUADAS2_Items)"]
         direction TB
-        A["19 × 信号问题（每篇文献）"]
+        SP1((" ")):::blank         %% 占位，防止遮挡
+        A["19 × 信号问题<br/>（每篇文献）"]
     end
 
-    %% ---------- Step 2 ----------
-    subgraph STEP2["步骤 2｜域级聚合 (D1–D4)"]
+    %% —— Step 2 : Domain aggregation ————
+    subgraph STEP2["步骤 2｜域级聚合<br/>(D1–D4)"]
         direction TB
-        B["域级结果 Risk + Applicability"]
+        SP2((" ")):::blank
+        B["域级结果<br/>Risk + Applicability"]
     end
 
-    %% ---------- Step 3 ----------
-    subgraph STEP3["步骤 3｜研究级输出 (03_QUADAS2)"]
+    %% —— Step 3 : Study-level outputs ————
+    subgraph STEP3["步骤 3｜研究级输出<br/>(03_QUADAS2)"]
         direction TB
+        SP3((" ")):::blank
         C1["LowRisk_Count"]
         C2["Overall_Score4"]
         C3["Overall_RiskLevel"]
         C4["Core40_Flag"]
     end
 
-    %% ----------- 流向 -----------
+    %% —— Edges ————————————————
     A -- 规则映射 --> B
-    B --> C1
+    B --> C1 & C3
     C1 --> C2
-    B --> C3
     C3 --> C4
 
-    %% ----------- 视觉样式 -----------
+    %% —— Styles ————————————————
     classDef box fill:#F0FAF5,stroke:#2CA58D,color:#145A32,stroke-width:1px;
     class A,B,C1,C2,C3,C4 box;
+    classDef blank fill:none,stroke:none;
 ```
 
 ---
