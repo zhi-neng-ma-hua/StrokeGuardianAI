@@ -40,20 +40,109 @@ _系统综述：Vision-Based AI Systems for Post-Stroke Gait Assessment_
 <a id="sec3"></a>
 ## 3 │ 字段定义 — `QUADAS2`（研究级）
 
-| 字段 | 数据型 | 合法值 | 说明 |
-|------|--------|--------|------|
-| `Study_ID` | `string` | `Smith23` / `ABC-23` | 主键，与 _01_Studies_ 对齐 |
-| `Author_Year` | `string` | `Smith (2023)` | 可读引用 |
-| `Reviewer_1` / `_2` | `string` | 姓名缩写 | 双盲初评者 |
-| `Consensus_Date` | `date` | `YYYY-MM-DD` | 域级共识落款 |
-| `D1_Risk` – `D4_Risk` | `enum` | **L/H/U** | Patient - Index - Reference - Flow |
-| `D1_App` – `D4_App` | `enum` | **L/H/U** | 同上四域的适用性 Concern |
-| `LowRisk_Count` | `int` | 0–4 | 四域中 *Low Risk* 数量 |
-| `Overall_RiskLevel` | `enum` | Low / Moderate / High | 规则见 § 6 |
-| `Overall_Score4` | `int` | 0–4 | 与 `LowRisk_Count` 等值，便于可视化 |
-| `Core40_Flag` | `bool` | 1/0 | 是否进入“核心 40” |
-| `Consensus?` | `bool` | Y/N | 域级结论已达一致？ |
-| `Notes_Expert` | `text` | — | 院士/专业顾问补充 |
+<!-- ─────────── 字段定义表：03_QUADAS2 ─────────── -->
+<div style="overflow-x:auto; font-size:15px; line-height:1.55">
+
+<table>
+  <colgroup>  <!-- 4 列均 25 %；在窄屏自动横向滚动 -->
+    <col style="width:25%">
+    <col style="width:18%">
+    <col style="width:22%">
+    <col style="width:35%">
+  </colgroup>
+  <thead>
+    <tr style="background:#f8f8f8">
+      <th>字段</th>
+      <th>数据类型<br/>(SQL / CSV)</th>
+      <th>合法值 / 格式</th>
+      <th>专业释义 &nbsp;|&nbsp; 运用示例</th>
+    </tr>
+  </thead>
+  <tbody>
+
+  <tr><td><strong>Study_ID</strong></td>
+      <td>VARCHAR(30)</td>
+      <td><code>Smith23</code> / <code>ABC-23</code></td>
+      <td>主键；必须与 *01_Studies* 的 <code>Study_ID</code> 一致，用作多表连接。</td></tr>
+
+  <tr><td><strong>Author_Year</strong></td>
+      <td>VARCHAR(40)</td>
+      <td><code>Smith&nbsp;(2023)</code></td>
+      <td>可读格式，方便人工检索；机器分析仍以 <code>Study_ID</code> 为准。</td></tr>
+
+  <tr><td><strong>Reviewer_1</strong><br/><strong>Reviewer_2</strong></td>
+      <td>VARCHAR(10)</td>
+      <td>姓名缩写</td>
+      <td>首轮双盲打分者；如团队 <abbr title="表示审稿人">LHZ</abbr>、<abbr title="表示审稿人">MXW</abbr>。</td></tr>
+
+  <tr><td><strong>Consensus_Date</strong></td>
+      <td>DATE</td>
+      <td><code>YYYY-MM-DD</code></td>
+      <td>四域均达成共识的日期；供追溯与版本控制。</td></tr>
+
+  <!-- ──── 域级风险 ──── -->
+  <tr style="background:#fafafa"><td colspan="4"><em><strong>域级风险（RoB）与适用性（Concern）</strong></em></td></tr>
+
+  <tr><td><strong>D1_Risk</strong> – <strong>D4_Risk</strong></td>
+      <td>ENUM<br/>(L,H,U)</td>
+      <td>L = 低风险<br/>H = 高风险<br/>U = 不确定</td>
+      <td>四域：<u>Patient Selection</u>、<u>Index Test</u>、<u>Reference Standard</u>、<u>Flow & Timing</u>。</td></tr>
+
+  <tr><td><strong>D1_App</strong> – <strong>D4_App</strong></td>
+      <td>ENUM<br/>(L,H,U)</td>
+      <td>同左</td>
+      <td>面向本综述 PICO 的适用性 Concern；判规则见 QUADAS-2 官方指南。</td></tr>
+
+  <!-- ──── 全局指标 ──── -->
+  <tr style="background:#fafafa"><td colspan="4"><em><strong>全局指标</strong></em></td></tr>
+
+  <tr><td><strong>LowRisk_Count</strong></td>
+      <td>INT</td>
+      <td>0 – 4</td>
+      <td>四个域中标记为 <code>L</code> 的计数；可直接驱动热图色阶。</td></tr>
+
+  <tr><td><strong>Overall_RiskLevel</strong></td>
+      <td>ENUM<br/>(Low,Moderate,High)</td>
+      <td>—</td>
+      <td><u>自动计算</u>：<br/>
+          - 若任一域 = H → <b>High</b><br/>
+          - 全域 = L → <b>Low</b><br/>
+          - 其余 → <b>Moderate</b></td></tr>
+
+  <tr><td><strong>Overall_Score4</strong></td>
+      <td>INT</td>
+      <td>0 – 4</td>
+      <td><code>LowRisk_Count</code> 的复制列，便于森林图等可视化调色。</td></tr>
+
+  <tr><td><strong>Core40_Flag</strong></td>
+      <td>BOOLEAN</td>
+      <td>1 / 0</td>
+      <td>置 1 = 进入“核心 40”篇深度定量分析池。</td></tr>
+
+  <tr><td><strong>Consensus?</strong></td>
+      <td>BOOLEAN</td>
+      <td>Y / N</td>
+      <td>四域 Risk 与 Applicability 是否已由评审者确认无分歧。</td></tr>
+
+  <tr><td><strong>Notes_Expert</strong></td>
+      <td>TEXT</td>
+      <td>—</td>
+      <td>院士级/领域专家的附加评注或补救策略（可多行使用 &lt;br/&gt;）。</td></tr>
+
+  </tbody>
+</table>
+</div>
+
+<details>
+<summary><strong>使用注意（点开查看）</strong></summary>
+
+| 场景 | 建议做法 |
+|------|---------|
+| **批量录入** | 推荐用 *CSV (UTF-8)*；日期字段保持 ISO-8601。 |
+| **可视化** | 直接读取 <code>Overall_RiskLevel</code> ；<br/>或以 <code>Overall_Score4</code>/<code>LowRisk_Count</code> 映射 0–4 色标。 |
+| **CI/CD 校验** | 修改任何域级字段后自动更新 <code>Consensus_Date</code> 与 <code>Consensus?</code> status。 |
+| **API 调用** | 以 <code>Study_ID</code> 为主键，可快速 JOIN *03_QUADAS2_Items* 与 *01_Studies* 以重建全表。 |
+</details>
 
 ---
 
