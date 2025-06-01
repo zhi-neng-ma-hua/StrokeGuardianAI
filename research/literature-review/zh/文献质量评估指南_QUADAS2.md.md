@@ -30,10 +30,72 @@ _系统综述：Vision-Based AI Systems for Post-Stroke Gait Assessment_
 <a id="sec2"></a>
 ## 2 │ 数据表概览
 
-| Sheet | 角色 | 粒度 | 关键输出 |
-|-------|------|------|----------|
-| **QUADAS2** | 结论表 | Study | 4 域 RoB & AC，整体风险级别，核心文献标记 |
-| **QUADAS2_Items** | 原始表 | SQ | 19×Y/N/U 判定、佐证、偏倚方向、脚本 QC |
+<!-- ─────────── 数据表一览 ─────────── -->
+<div style="overflow-x:auto; font-size:15px; line-height:1.55">
+
+<table>
+  <colgroup>
+    <col style="width:22%">
+    <col style="width:28%">
+    <col style="width:20%">
+    <col style="width:30%">
+  </colgroup>
+  <thead>
+    <tr style="background:#f8f8f8">
+      <th>Sheet 名称</th>
+      <th>功能定位</th>
+      <th>记录粒度</th>
+      <th>核心字段 / 输出</th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <tr>
+    <td><strong>03_QUADAS2</strong></td>
+    <td>域级 &amp; 研究级<br/>结论汇总表</td>
+    <td><u>1 行 = 1 篇文献</u><br/>(Study&nbsp;Level)</td>
+    <td>
+      • <b>D1–D4_Risk / App</b><br/>
+      • <b>Overall_RiskLevel</b><br/>
+      • <b>Overall_Score4</b>（0-4）<br/>
+      • <b>Core40_Flag</b>（核心样本池）<br/>
+      • 专家备注 <code>Notes_Expert</code>
+    </td>
+  </tr>
+
+  <tr>
+    <td><strong>03_QUADAS2_Items</strong></td>
+    <td>信号问题原始打分<br/>与佐证追溯表</td>
+    <td><u>1 行 = 1 个 SQ</u><br/>(19 × SQ per study)</td>
+    <td>
+      • 19 × <b>Y / N / U</b> 共识答案<br/>
+      • <b>Justification</b> &amp; <b>Source_Evidence</b><br/>
+      • 自动派生 <code>Risk_Flag</code>、<code>Applicability_Flag</code><br/>
+      • <code>Direction_of_Bias</code>（+ / – / ?）<br/>
+      • <code>Auto_QC_Status</code>（pass / warn / fail）
+    </td>
+  </tr>
+  </tbody>
+</table>
+</div>
+
+<!-- ───── 简明工作流示意 ───── -->
+<div align="center">
+
+```mermaid
+flowchart LR
+    subgraph ① 原始打分
+        A[03_QUADAS2_Items<br/>(19 × SQ × 每篇文献)]
+    end
+    subgraph ② 域级汇总
+        B[算法聚合<br/>D1–D4 Risk &amp; App]
+    end
+    subgraph ③ 研究级结论
+        C[03_QUADAS2<br/>Overall_RiskLevel<br/>Core40_Flag]
+    end
+    A -->|规则映射| B --> C
+```
+</div>
 
 ---
 
