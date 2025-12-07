@@ -7,7 +7,7 @@ Stage 1  R1/R2/R3 screening results – final inclusion statistics and export to
 Main functions
 --------------
 1. Read the Stage 1 results file:
-   data/systematic_review/double_blind/r1_r2_r3_final_included_merger/R1_R2_R3_analysis_results.xlsx
+   data/systematic_review/double_blind/stage1_title_abstract/R1_R2_R3_analysis_results.xlsx
 
 2. After normalizing decision columns (Decision_R1 / Decision_R2 / Decision_R3),
    classify finally included studies and collect No. lists:
@@ -20,10 +20,10 @@ Main functions
    (2) Decision_R1 ≠ Decision_R2 AND Decision_R3 is blank
 
 4. Write all finally included studies (union of the three include categories) to:
-   data/systematic_review/double_blind/r1_r2_r3_final_included_merger/R1_R2_R3_final_included_studies.xlsx
+   data/systematic_review/double_blind/stage1_title_abstract/R1_R2_R3_final_included_studies.xlsx
 
 5. Write a concise, structured TXT summary report to:
-   data/systematic_review/double_blind/r1_r2_r3_final_included_merger/R1_R2_R3_final_included_summary.txt
+   data/systematic_review/double_blind/stage1_title_abstract/R1_R2_R3_final_included_summary.txt
 
 Author: Aiden Cao <zhinengmahua@gmail.com>
 Date  : 2025-07-13
