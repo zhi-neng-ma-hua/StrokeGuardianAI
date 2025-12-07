@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-r1_r2_r3_final_included_merger.py
+r1_r2_r3_included_merger.py
 
 Stage 1  R1/R2/R3 screening results – final inclusion statistics and export tool.
 
@@ -20,10 +20,10 @@ Main functions
    (2) Decision_R1 ≠ Decision_R2 AND Decision_R3 is blank
 
 4. Write all finally included studies (union of the three include categories) to:
-   data/systematic_review/double_blind/stage1_title_abstract/R1_R2_R3_final_included_studies.xlsx
+   data/systematic_review/double_blind/stage1_title_abstract/R1_R2_R3_included_studies.xlsx
 
 5. Write a concise, structured TXT summary report to:
-   data/systematic_review/double_blind/stage1_title_abstract/R1_R2_R3_final_included_summary.txt
+   data/systematic_review/double_blind/stage1_title_abstract/R1_R2_R3_included_summary.txt
 
 Author: Aiden Cao <zhinengmahua@gmail.com>
 Date  : 2025-07-13
@@ -59,15 +59,15 @@ def setup_logger(
     )
 
 
-class Stage1R1R2R3FinalInclusionAnalyzer:
+class Stage1R1R2R3InclusionAnalyzer:
     """
     Controller for final inclusion statistics and export of Stage 1 R1 R2 R3
     R1/R2/R3 screening results.
     """
 
     INPUT_FILENAME = "R1_R2_R3_analysis_results.xlsx"
-    OUTPUT_FILENAME = "R1_R2_R3_final_included_studies.xlsx"
-    SUMMARY_FILENAME = "R1_R2_R3_final_included_summary.txt"
+    OUTPUT_FILENAME = "R1_R2_R3_included_studies.xlsx"
+    SUMMARY_FILENAME = "R1_R2_R3_included_summary.txt"
 
     def __init__(self, logger: Optional[logging.Logger] = None) -> None:
         """
@@ -625,7 +625,7 @@ def main() -> None:
     logger = setup_logger(verbose=True)
     logger.info("[MAIN] Stage 1 R1 R2 R3 final inclusion summary started")
 
-    analyzer = Stage1R1R2R3FinalInclusionAnalyzer(logger=logger)
+    analyzer = Stage1R1R2R3InclusionAnalyzer(logger=logger)
     analyzer.run()
 
     logger.info("[MAIN] Stage 1 R1 R2 R3 final inclusion summary finished")
